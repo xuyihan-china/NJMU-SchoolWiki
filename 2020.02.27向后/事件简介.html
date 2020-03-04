@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<!-- 可以在事件的属性中设置一些js代码 这样在时间触发时这些代码会执行 -->
+		<button  id="btn" >anniu</button>
+		<!-- 为了方便维护，不适用结构行为耦合 -->
+		<!-- 我们可以用按钮对应的事件的形式来响应事件 这样事件触发的时候才执行 -->
+		<script type="text/javascript">
+			/* 事件是用户和浏览器之间的交互行为
+			 *  关键在于处理事件
+			 */
+			var btn = document.getElementById("btn");
+			btn.onclick = function(){
+				alert("你还点");
+			};
+		</script><!-- script标签要在后面 -->
+		<!-- 绑定一个单击事件 像这样单击事件绑定的函数我们称为单机响应函数	 -->
+	</body>
+</html>

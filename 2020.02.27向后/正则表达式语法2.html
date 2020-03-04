@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *检查字符串中是否有 . 表示任意字符 要使用转义字符\
+			 * /\./ 表示一个点 \\表示 一个斜杠
+			 * 在构造函数里也要写  \\
+			 * \w 任意字母和数字 下划线
+			 * \W 除了字母数字下划线
+			 * \d 数字
+			 * \D 除了数字
+			 * \s 空格
+			 * \S 除了空格
+			 * \b 单词边界
+			 * \B 除了单词边界
+			 */
+			/* 创建正则表达式检查一个字符串是否有child */
+			reg = /\bchild\b/;
+			console.log(reg.test("hello child"));
+			
+			//接受以一个用户的用户名
+			/* var str = prompt("请输入你的用户名：");
+			console.log(str); */
+			var str =" hel   lo ";
+			//用空串来替换空格
+			console.log(str);
+			var result = str.replace(/^\s*/g,"");
+			//去除前边的空格
+			var result = str.replace(/\s*$/,"");
+			//去除结尾的空格
+			
+			//匹配开头或结尾的空格
+			str = str.replace(/^\s*|\s*$/,"");
+			
+			console.log(result);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

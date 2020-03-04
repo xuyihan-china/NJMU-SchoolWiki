@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 * 
+			 */
+			window.onload = function(){
+				var body = document.body;//document中含有body属性可以直接调用
+				console.log(body);
+				var de = document.documentElement;//document中的根标签
+				var all =document.all;//页面中的所有标签
+				console.log(all.length);
+				all = document.getElementsByTagName("*");//所有标签
+				//更据class属性值查询一组元素节点
+				var box1 = document.getElementsByClassName("box1");//document中的类对象 获取getElementsByClassName
+				console.log(box1.length);//需要ie9以上
+				//document.query  类似css来选择
+				var div=document.querySelector(".box1 div");
+				var div=document.querySelector(".box1");
+				//可以用来查找类 代替 getElementsByClassName
+				//很强大，根据选择器的字符串来查询一个元素节点对象
+				console.log(div.innerHTML);
+				//特点：总会返回唯一的元素 如果有多个元素 只会返回第一个
+				
+				//querySelectorAll 
+				var div = document.querySelectorAll()//会返回多个元素 用法类似 符合元素相似  会返回到一个类数组中返回
+				//即使返回的元素只有一个 ，还是只会返回数组
+				
+ 				}
+		</script>
+	</head>
+	<body>
+		<div class="box1">
+			<div>ahode</div>
+		</div>
+		<div class="box1"></div>
+	</body>
+</html>

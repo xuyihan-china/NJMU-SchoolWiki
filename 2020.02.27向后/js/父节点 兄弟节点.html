@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 * parentNode          当前节点的父节点
+			 * previousSibiling   当前节点的前一个兄弟节点
+			 * nextSibiling        当前节点的后一个兄弟节点 这些都是属性
+			 * 就是当你获取到一个节点之后 再获取另外一个节点 就要用元素名+属性值来调用
+			 * 这六个属性都是这样 前三个是节点内 后三个是节点外
+			 * previousElementSibling 获取前一个兄弟元素
+			 */
+			//指定一个函数在全局作用域中，指定元素绑定单机响应函数
+			//idstr 绑定单机函数对象的id属性值
+			function myClick(idstr,fun){
+				 var btn = document.getElementById(idstr);//绑定id号码
+				 btn.onclick = fun;//其实btn不需要不同只是需要的是绑定到参数上 btn只是一个标签罢了
+			}
+			//fun是事件的回调函数 单机元素时函数将会被触发
+			myClick("btn07",function(){
+				var bj = document.getElementById("bj");
+				var pn = bj.parentNode;
+				alert(pn);
+			});//函数也是对象可以通过对象传递
+			/* 
+			 innnertext可以把标签去除 和innerhtml类似 innnertext是自动将标签去除
+			 
+			 */
+			myClick("btn09",function(){
+				var and = document.getElementById("amdroid");
+				var  ps  =and.previousSibling;
+				var ps = and.previousElementSibling;//元素节点 
+				alert(ps.innerHTML);//有空格会获取空白的文本
+			});
+			 myClick("btn10",function(){
+				var um = document.getElementById("input");
+				//读取value的属性值 就是文本框中的填写的内容
+ 				um.value = ？？？？？;//表示修改input标签中的内容
+			})
+			myClick("btn11",function(){
+				//获取id为bj的元素
+				var bj = document.getElementById("bj");//获取id为bj的biaoqian
+				alert(bj.innerHTML);//这表示读取在bj中的内容
+				//如果是子节点是文本 首先是获取文本对象的节点 然后通过寻找子节点的节点属性 nodevalue来获取当中的文本
+				
+			})
+			myClick("btn12",function(){
+				
+			})
+			myClick("btn13",function(){
+				
+			}) 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
