@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj =new Object();
+			obj.name ="sun wuk";
+			obj.age =18;
+			//对象属性值可以是任何数据类型，也可以是一个函数
+			obj.sayname= function(){
+				console.log(obj.sayname);//对象的属性值也可以是一个函数 
+			}
+			console.log(obj.sayname);
+		    /* 函数也可以作为对象的属性 那么我们称这个函数是对象的方法 调用对象叫调用对象的方法*/
+			/* 如同上例：调用obj的sayname方法 因为函数是在属性值中的 */
+			/* 但是只是名称的区别 没有其他区别 */
+			
+			/* 这个叫调函数 有点 调方法  obj.sayname*/
+			/* console.log 调用console的log方法 */
+			
+			
+			var obj2={
+				name:"猪八戒",
+				age:18,
+				sayname:function(){
+					console.log(obj2.name);
+				}
+			}
+			obj2.sayname();/* 调用obj2的sayanme方法 */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

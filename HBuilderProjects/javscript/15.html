@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title><!-- 实参可以是任意值 -->
+		<script type="text/javascript">
+		/* function area(r){
+			return 3.14*r*r;
+		}
+		var result=area(10);
+		console.log("result ="+result); */
+		/* 实参可以是任意数据类型 所以传递参数可以把多个参数放在一个对象封装在一个对象中 */
+		function sayhello(o){
+			console.log("我是"+o.name+",今年我"+o.age+"岁了,我是一个"+o.gender+"人,住在"+o.address);
+			}
+			var obj ={
+				name:"孙悟空",
+				age:18,
+				gender:"men",
+				address:"mountain hua"
+			}
+			sayhello(obj);/*参数也可以是一个对象,解决了顺序问题  实参可以是一个函数*/
+			
+			function fun(a){
+				// console.log("a= "+a);
+				a(obj);//函数也可以作为参数
+				
+			}
+	        fun(sayhello);
+			fun(function(){alert("hello")});
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

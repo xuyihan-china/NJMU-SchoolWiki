@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			*内建对象
+			*宿主对象
+			*自定义对象
+			* 
+			* 数组(array)
+			*   数组也是一个对象 它和普通的对象功能类似 也是用来存储一些值
+			*   不同的是普通对象是使用字符串来作为属性名的
+			*   数组通过数字来操控元素的
+            *   数组通过索引(index)的方式来操作元素 数组存储性能好
+			*   找对象 搞对象
+			*/
+		    //创建数组对象
+			var arr = new Array();
+			//用typeof会返回object
+			console.log(typeof arr);
+			//添加元素 语法 ：数组[索引]= 值
+			arr[0]=10;
+			arr[1]=123;
+			arr[2]=32;
+			arr[3]=4;
+			
+			
+			 //读取数组中的元素
+			 //如果读取不存在的索引 返回undefined
+			 console.log(arr[0]);
+			console.log(arr);
+			//获取数组长度 有几个元素
+			//语法 数组名.length 获取数组长度
+			//需要连续的数组 arr[10]=31; 会变成11个元素 非连续数组会出错
+			//length还可以设置数组长度
+			arr.length =10; //如果修改的元素大于原来的元素 那么会空出来
+			//如果小于 那么会减少元素个数(删除)
+			
+			console.log(arr.length);
+			//如果想向数组的最后的位置添加 最大索引加一
+			arr[arr.length]=80;//这么写会向数组的最后添加元素
+			//语法：数组 [数组.length]=值
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		
+			/* 字符串方法*/
+			/* string对象的方法 */
+			//var str ="helloa";
+			 /*
+			  *字符串是字符数组的形式传递
+			  *["h","e",""]
+			  *字符数组的长度length 可以用来输出字符串的长度
+			  */
+			 //console.log(str.length);
+			 /* charAt 返回指定位置的字符*/
+			 //var result = str.charAt(0);//根据索引来获取指定位置的字符 从0开始
+			 /* charcodeat 可以查看相应索引的unicode的编码*/
+			 /*
+			  *formCharCode() 根据字符编码来获取字符
+			  * */
+			  var result2 = String.fromCharCode(20011);/* 用string 这个不是用对象来调用 */
+			 console.log(result2);//字符编码来使用 0x显示16进制
+			 /* concat 可以连接两个或者多个字符串 作用和加号一样 不会改变原来的字符*/
+			 
+			 /* indexof 该方法可以检索一个字符串是否含有指定内容*/
+			 var str = "hekkoe";
+			 //var result3 = str.indexOf("e",x);//第一次出现的索引 指定一个x是开始往后查找的位置
+			 //console.log(result3);
+			 /* lastIndexOf()*/
+			 var result4= str.lastIndexOf("e")//返回值是所在的位置
+			 console.log(result4);//lastIndexOf是从后往前找  后面加一个参数 从第几个往前找
+			 
+			 
+			 
+			 
+			 
+			 /* slice可以截取指定的内容 str.slice(开始的索引,结束的索引) */
+			 /* 不会改变原来的数组 */
+			 var str2 ="afdjkaslfdasjlk";
+			 result =str.slice(1,4);
+			 console.log(result);//省略第二个参数会 从这里开始一直到结束
+			 /* 第二个参数 是负号 从倒数开始截取*/
+			 
+			 /* substring 可以用来截取一个字符串 和silce接近*/
+			 /* 参数 开始截取的索引 不包括结束位置的索引 不同的是不可以传递负值作为参数 */
+			 /* 自动调整参数位置 第二个参数比第一个参数小 会自动调整参数的位置*/
+			 
+			 /* substr() 截取字符串 */
+			 /* 参数 截取开始的索引 第二个参数截取数组的长度*/
+			 /* 以上是三个截取字符串的*/
+			 
+			 /* 
+			   *split 可以将一个字符串拆分为一个数组
+				* 参数：
+				* 要一个字符串作为参数，根据字符串来拆分数组
+				* 
+			   * */
+			 var str10 ="as,fs,d,asdf,sdfsa,afadf,afas,dfa,fdasdf";
+			 result = str10.split(",");//以什么字符为分割拆分 指定 空串会把每一个字符拆分为数组中的一个元素
+			 console.log(result.length);
+			 
+			 /* */
+			 str ="abcdefg";
+			 var result = str.toUpperCase();
+			 console.log(result);
+			 /* 转化为大写*/
+			 str.toLocaleLowerCase()//是小写	 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

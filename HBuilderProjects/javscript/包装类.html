@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+		 /*
+		  *基本数据类型
+		  *string bool null number undefined 
+		  *引用数据类型
+		  * obj
+		  *在js中为我们提供了三个包装类 通过这三个类可以将基本数据类型转换成对象
+		  * String()
+		  * Number()
+		  * Boolean() 可以将基本数据类型转换为 响应的对象
+		 */
+		  /* var a =123;
+		  console.log(typeof a);
+		  var num = new Number();
+		  var str = new String("hello");
+		  /ar bool = new Boolean(true);/包装类 转化 */
+		  
+		  /* 但是我们不会使用基本数据类型的转换 比较时可能会带来不可预期的结果*/
+		  
+		  var s =123;
+		  s = s.toString();//方法和属性只能添加给对象 不能添加给基本数据类型
+		  //但是没有报错 当我面对一些基本数据类型的值时 浏览器会临时使用包装类转化为对象 然后再调用一个tostring
+		  //然后再将其转换为基本数据类型
+		  s.hello ="nihao";//算是临时转换为对象 然后对象就销毁了 所以调用时就会出现undefined
+		  //两次转换 两次的对象不同 包装是底层 浏览器使用的 知道原理
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

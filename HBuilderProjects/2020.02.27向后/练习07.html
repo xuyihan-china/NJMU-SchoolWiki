@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#info{
+				width:300px;
+				height: 300px;
+				background-color: #5F9EA0;
+				overflow: auto;
+			}
+		</style>
+		<script type="text/javascript">
+			window.onload = function(){
+				/* 垂直滚动到底使表单项可用 onscroll 滚动时触发*/
+				var info = document.getElementById("info");
+				var inputs = document.getElementsByTagName("input");
+				info.onscroll = function(){
+					if(info.scrollHeight - info.scrollTop == info.clientHeight){
+						inputs[0].disabled = false;
+						inputs[1].disabled = false;
+				}
+				
+			}
+		</script>
+	</head>
+	<body>
+			<h1>panda please read carefully</h1>
+			<p id="info"> please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefullyplease read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully</p>
+			<input type="checkbox"  disabled="disabled" />i have read and obey it
+			<br>
+	 <input type="submit" value="注册"  disabled="disabled />
+	 </body>
+	 </head>
+	 
+</html>
+

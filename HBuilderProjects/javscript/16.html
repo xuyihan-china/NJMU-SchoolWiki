@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function fun(){
+				alert("函数要执行了");
+				for(var i=0;i<5;i++)
+				{
+					console.log(i);
+					if(i==2){
+						break;
+					}
+				}
+				alert("函数要执行完了");
+			}
+			fun();
+			// continue 跳过当此循环
+			// 函数结束return
+			// 整个循环 break
+			function fun2(){
+				var obj ={name:"sha"}
+				return obj;
+			}
+			var a = fun2();
+			console.log(a.name);//返回值可以是对象当然函数也可以，函数也是对象
+			function fun3(){
+				function fun4(){
+					alert("woshi function 4");
+				}
+			}
+			fun3();/* 在函数内部也可以申明变量 */
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

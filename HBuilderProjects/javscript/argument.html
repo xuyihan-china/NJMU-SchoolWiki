@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* arguments
+			   在调用函数时，浏览器每次都会传递两个隐含参数：
+			    1.函数的上下文对象this
+				2.实参的对象arguments
+				  arguments是一个类数组对象。但不是数组 
+				  可以通过类索引来获取对象
+			 */
+			function fun(){
+				//console.log(arguments instanceof Array);
+				//不是数组 它也可以通过数组索引来操作数据 也可以获取长度
+				//console.log(arguments.length);
+				console.log(arguments[0]);
+				/* 
+				 *即使不用形参，也可以通过arguments来使用实参只不过比较麻烦
+				 *  arguments[0] arguments[1] 表示第一个 第二个实参
+				 *属性 calee 这个属性对应的一个函数对象就是当前执行的函数对象
+				 */
+			}
+			fun("le","hello");
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var a=123;
+			var b=a;
+			a++;
+			console.log(a);
+			console.log(b);
+			var obj =new Object();
+			var obj2 =new Object();
+			obj.name="猪八戒";
+			obj=obj2;
+			obj2.name="sun";
+			console.log(obj.name);/* object是引用数据类型 */
+			/*
+			* 变量是保存到栈内存中的 基本数据类型是保存在栈内存中
+			 * 基本数据类型都是各占一块内存 不会互相影响
+			 * 
+			 * 引用数据类型就是 object 谁都可以修改 是在堆内存中的
+			 * 会在栈内存中保存对象的内存地址 以及在堆内存中开辟一块空间 存放栈内存存放的地址
+			 * OBJECT数据类型存放数据地址
+			 * 
+			 * 因为object属于基本数据类型 所以在栈内存中 只是栈内存中不保存值 而是地址
+			 * 所以令obj2=obj1 都是指向同一块堆内存 对象的应用靠的是操作地址
+			 * 出现new会在堆内存中开辟出一个新的空间
+		      */
+			 var obj4 = new Object();
+			 var obj5 = new Object();
+			 obj4.name="4";
+			 obj5.name="5";
+			 console.log(obj4==obj5);
+			 /* 
+			 *比较基本数据类型，比较值
+			 * 比较引用数据类型 比较的是内存地址 所以上述不相等
+			 */
+		</script>
+	</head>
+	<body>
+		 
+	</body>
+</html>

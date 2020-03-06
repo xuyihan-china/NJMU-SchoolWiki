@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 *创建一个person函数 在每一个person对象中都添加了一个sayname方法
+			 *   目前我们的方法是在函数内部创建的，也就是构造函数每执行一次，就会创建一个sayname方法
+			 *   也就是所有的sayname都是唯一的 每执行一次就创建一个新的
+			 *   执行10000次就会有10000个新的方法，而一万个方法都是一莫一样的
+			 *   这是完全没有必要的 完全可以共享同一个方法
+			 */
+			 function Person(name,age,gender){
+				 this.name=name;
+				 this.age=age;
+				 this.gender=gender;//用this把属性添加到对象中
+				 // 向对象中添加一个方法 方法中指向元素中的内容
+				 /* this.sayname=fun;//在全局中写方法 提升性能空间 */
+			 }
+			 // 创建person实例
+			
+			 /* 
+			 *将sayname在全局作用域中定义 
+			 * 将函数定义在全局作用域中污染了全局作用域中的命名空间
+			 * 而且定义在全局作用域中也很不安全 容易被覆盖
+			 */
+			 /* function fun(){
+					 alert("hello,大家好我是"+this.name);
+				 }; */
+			Person.prototype.sayname =function(){
+				alert("大家好,我是"+this.name);
+				}
+				 
+			var per = new Person("孙悟空",18,"nan");
+			 var per2 = new Person("猪八戒",28,"nan");
+			 console.log(per);
+			 console.log(per2);
+			per2.sayname();
+			per.sayname();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

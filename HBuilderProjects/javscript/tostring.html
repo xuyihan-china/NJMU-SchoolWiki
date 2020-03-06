@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function Person(name,age,gender){
+				this.name=name;
+				this.age=age;
+				this.gender=gender;
+			}
+			//修改tostring的原型
+			Person.prototype.toString= function(){
+				return person[this.name];
+			}
+			
+			var per = new Person("孙悟空",18,"南")//创建person类
+			//直接在页面中打印一个对象时，实际上是输出pre的tostring方法
+			//如果希望不输出[][]可以为对象添加tostring方法 
+			//因为对象pre有的tostring对象 重写对象
+			per.toString=function(){
+				return "papipapapi";
+			}
+			var result = per.toString();
+			console.log(per);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

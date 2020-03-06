@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload= function(){
+				/* 
+				 *点击按钮修改box1的大小
+				 */
+				//获取box1 
+				var box1 = document.getElementById("box1");
+				var btn01 = document.getElementById("btn01");
+				btn01.onclick= function(){
+					//修改box1的宽度
+					/* 
+					 *通过js修改元素的样式
+					 *  语法：元素.style.样式名 = 样式值
+					 * 
+					 */
+					box1.style.width = "300px";
+					box1.style.height = "300px";
+					box1.style.backgroundColor ="yellow";//如果样式名中含有- 是不合法的 
+					//要将这种样式名修改为驼峰命名法 这种方式修改内联样式 有较高的优先级 
+					//往往会立即显示 ！important 优先级比js中的内联样式更加高
+					
+					//读取内容
+					var btn02 = document.getElementById("btn02");
+					btn02.onclick= function(){
+						alert(box1.style.width);//通过js读取的都是内联样式 无法读取样式表中的内容
+					}
+				}
+			}
+		</script>
+		<style type="text/css">
+			#box1{
+				width: 200px;
+				height: 200px;
+				background-color: red;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="box1"></div>
+		<button id="btn01">点我一下</button>
+		<button id="btn02">点我二下</button>
+	</body>
+</html>

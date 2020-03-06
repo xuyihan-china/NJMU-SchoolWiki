@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var name="quanju";
+			function fun(){
+				console.log(this.name);
+			}
+			var obj={
+				name:"sun",
+				sayname:fun
+			}
+			var obj2={
+				name:"shaheshang",
+				sayname:fun
+			}
+			obj.sayname();
+			obj2.sayname();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

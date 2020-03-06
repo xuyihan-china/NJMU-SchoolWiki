@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function creatDog(name, age){
+				var obj = new Object();
+				obj.name = name;
+				obj.age = age;
+				obj.sayhello =function(){
+					alert("ww");
+			}
+			return obj;
+			}
+			var dog = creatDog("wc","dog");
+			console.log(dog);
+			/* 构造函数的对象 */
+			/* 构造函数与普通函数的区别就是调用方式的不同 普通函数直接调用 调用函数需要new关键字来调用 */
+			function Person(){
+				this.name="sun";
+			}
+			var pre =new Person();
+			
+			console.log(pre)
+			/* 
+			立刻创建一个对象 pre
+			将新建的对象设置为函数中的this,在构造函数中用this来引用新的对象
+			执行函数中的代码
+			将新建立的对象作为返回值返回
+			用同一个构造函数创建的对象，称为一类对象 后面的叫做实例
+			 */
+			/* 调用时就是用pre来看对象名 */
+		
+			
+			function dod(name,age,gender){
+				this.name= name;
+				this.age=age;
+				this.gender= gender;
+			}
+			var dog1 = new dod("x","y","h"); //有了new就是调用构造函数 否则就是普通函数
+			var Person = new dod("sjdk","djlfs","fsf");//前面的dog1就是创建的对象
+			                         //dod称为一类对象对象
+		    console.log(dog1);
+			console.log(Person);
+			
+			
+			
+			/* 运算符 */
+			/* console.log(per instanceof Person) //看看per属不属于person */
+			
+			//创建一个bird 构造对象
+			function bird(name,area,place){
+				this.name=name;
+				this.area=area;
+				this.place=place;
+			}
+			/* 创建对象 并以构造函数的方式调用 */
+			var asp = new bird("yinwu","huanan","shushang");
+			console.log(asp);
+			
+			function birds(name,area,place){
+				var as =  new Object();
+				as.name=name;
+				as.area=area;
+				as.place=place;
+				return as;
+				}
+			var obj4= birds("yw","parrot","huanan");
+			console.log(obj4);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

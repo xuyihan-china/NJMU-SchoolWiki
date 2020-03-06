@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function creatPerson(name,age,gender){
+				var obj = new Object();//创建一个新对象 来创建一个对象
+				obj.name =name;
+				obj.age=age;
+				obj.gender=gender
+				obj.sayname=function(){
+					alert(this.name);
+				};
+				return obj;//返回新的对象
+			}
+			var obj2= creatPerson("zhu",18,"ann");
+			console.log(obj2)
+			function bodyofNBA(name,weight,height){
+				var obj= new Object();
+				obj.name= name;
+				obj.height = height;
+				obj.weight = weight;
+				obj.sayweight= function(){
+					alert(obj.weight);
+				}
+				return obj;
+			}
+			var obj3 = bodyofNBA("MANU",199,"75");
+			var obj4 = bodyofNBA("james",200,"120");
+			console.log(obj3);
+			console.log(obj4);
+			
+			function app(a,b,c){
+				var  obj = new Object();
+				obj.a=a;
+				obj.b =b;
+				obj.c = c;
+				return obj;
+			}
+			var app1 = app(78,79,80);
+			var app2 = app(3,43,3);
+			var app4 =app(9,10,22);
+			console.log(app1);
+			console.log(app2);
+			console.log(app4);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			var obj = new Object();
+			obj.name="wukong";
+			obj.var="hellow";
+			console.log(obj.var);//也可以使用任何名字，如果要用特殊属性名，不能使用.的操作
+			/* 语法 对象["属性名=属性值"]  obj["123"]=789
+			console.log(obj["123"])*/
+			obj["123"]=789
+			console.log(obj["123"])
+			/* . new []的优先级是最高的 */
+			
+			/* 使用[]操作属性更加灵活 在中括号中直接传递一个变量
+			传递那个值，就读取哪个变量 */
+			
+			/* 
+			属性值可以是任意的数据类型，什么都可以。 */
+			obj.test="hello"
+			console.log(obj.test);
+			
+			var obj2 = new Object()
+			obj2.name="猪八戒";
+			obj.test= obj2;
+            console.log(obj.test);
+			/* in 运算符 可以检测一个对象里是否含有属性 
+			 console.log("test2" in obj) 检查obj里面有没有test2
+			 属性*/
+			 console.log("test" in obj);
+			 var fun =new Object();
+			 fun.name="xyh";
+			 fun.prefers="butter"
+			 console.log(fun.name);
+			 console.log("name" in fun);
+			 console.log("prefers" in fun);
+			 var aspect =new Object();
+			 aspect["surname"]="mass product";
+			 console.log(aspect["surname"]);
+			 var pa = new Object();
+			 pa["123"]=
+		</script>
+	
+	</head>
+	<body>
+	</body>
+</html>

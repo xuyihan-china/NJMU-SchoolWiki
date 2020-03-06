@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 *date对象
+			  *  在js中使用date对象来表示一个时间
+			  *   
+			 */
+			var d = new Date();//构造函数创建一个对象 对象名就是date 而不是obj
+			//创建一个指定的时间的对象
+			console.log(d);//会封装成13行代码执行的时间
+			var d2 = new Date("09/02/2030 11:10:10");//时间写法 日月年 时间
+			console.log(d2);
+			var da = d.getMonth();
+			console.log(da);
+			/* date的方法 getdate 获取对象中的日期 */
+			/* getDay 返回当前日期是周几
+			   会返回一个0-6的数字
+			   getmonth 要加一等于真实月份 
+			   getFullyear 年份 
+			   其他自己测试
+			*/
+		   /* 
+		   *getTime()
+		   *   获取当前日期的时间戳
+		   * 指的是从格林威治时间197011000 到当前时间的毫秒数 1s =1000毫秒
+		   * 计算机底层保存 时间都是使用时间戳
+                 time = Date.now; 可以用来测试代码的性能  时间差来来计算执行了多少秒
+				 
+		   */
+		  var d3 = new Date();
+		  var time = d3.getTime();
+		  console.log(time);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			 *创建一个构造函数
+			 */
+			function MyClass(){
+				
+			}
+			var mc = new MyClass();
+			MyClass.prototype.name = "我是原型中的名字";
+			console.log(mc.name);
+			console.log("name" in mc);//查看name是不是mc的对象,如果对象中没有但是原型中有，也会返回true
+			// 要查看本身里面有没有这个属性，要用对象的hasownprovoty 
+			console.log(mc.hasOwnProperty(name));//只有自身拥有才可以返回true 所以这里不是mc拥有的 而是Myclass拥有的
+			console.log(mc.hasOwnProperty(mc.hasOwnProperty()));//有些属性没有添加但是可以用是添加在原型对象中的
+			//原型对象也是对象 所以原型对象也有原型 所以当我们使用一个对象或方法时会首先在自身中寻找
+			//自身如果有直接使用，没有去原型对象中寻找
+			//如果原型对象中没有，则去原型的原型中寻找
+			//直到找到object的原型 object的对象的原型没有原型 object中依然没有找到则返回undefined
+			console.log(mc.__proto__.__proto__.hasOwnProperty("hasownprovoty"));
+			//原型链
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script type="text/javascript">
+			window.onload= function(){
+				//1.#checkedAllBtn 点击按钮全选
+				//绑定单及相应函数
+				var checkedAllBtn =document.getElementById("checkedAllBtn");
+				checkedAllBtn.onclick = function(){
+					//获取四个多选框items
+					var items = document.getElementsByName("items");//这个方法就是用来做表单项的
+					//遍历items
+					for (var i=0 ;i<items.length ; i++ ){
+						items[i].checked = true;
+						//通过多选框的checked属性可以设置多选框的选中状态
+					}
+					//设置多选框为选中状态
+					checkedAllBox.checked =true;
+				}
+				//1.#checkedNoBtn 点击按钮 全部不选
+				var checkedNoBtn = document.getElementById("checkedNoBtn");
+				checkedNoBtn.onclick=function(){
+					var items = document.getElementsByName("items");
+					for(var i=0 ; i<items.length ;i++){
+						items[i].checked = false;
+					}
+					checkedAllBox.checked =false;
+				}
+				//1.#checkedRevBtn
+				var checkedRevBtn =document.getElementById("checkedRevBtn");
+				checkedRevBtn.onclick=function(){
+					var items = document.getElementsByName("items");
+					for(var i=0 ; i<items.length ; i++){
+						/* if(items[i].checked){
+							items[i].checked = false;
+						}
+						else{
+							items[i].checked =true;
+						} */
+						items[i].checked = !items[i].checked;//很优秀的写法
+						 checkedAllBox.checked = true;
+						for(var j=0 ; j<items.length ;j++){
+							if(!items[j].checked){
+						         checkedAllBox.checked = false;
+								 //如果进入了判断那么后面就不用看了 直接跳出循环
+								 
+							                      }
+						                                   }
+					}
+					
+				}
+				//1.#sendBtn
+				/* 提交按钮 就是 把所有为true的alret一下 */
+				var sendBtn = document.getElementById("sendBtn");
+				sendBtn.onclick=function(){
+					var items = document.getElementsByName("items");
+					for(var i=0 ; i<items.length ; i++){
+						if(items[i].checked){
+							alert(items[i].value);//直接点value值就可以获取 如果是元素内部的可以用inner text获取
+						}
+					}
+				}
+				//1.#checkedAllBox
+				/* 当它选中时，其他的也选中，当他取消时，其他的也取消 */
+				
+				var checkedAllBox = document.getElementById("checkedAllBox");
+				checkedAllBox.onclick=function(){
+					var items = document.getElementsByName("items");
+					for(var i=0 ; i<items.length ; i++){
+						items[i].checked =checkedAllBox.checked;
+					}
+				}
+				//在事件的响应函数中 响应函数是给谁绑定的this就是谁
+				//为四个多选框绑定单及响应函数
+				var items = document.getElementsByName("items");//获取多选框
+				
+				for (var i=0 ; i<items.length ; i++){//按每一个多选框的时候都要进行判断 为四个多选框绑定对象
+					items[i].onclick = function(){//函数触发的时候要进行判断
+					 checkedAllBox.checked = true;//默认值为true 如果进行了判断则取消勾选
+					for(var j=0 ; j<items.length ;j++){
+						if(!items[j].checked){
+                             checkedAllBox.checked = false;
+							 break; //如果进入了判断那么后面就不用看了 直接跳出循环
+							 
+						                      }
+					                                   }
+				                                    }
+													}
+				
+				
+				//1.items
+			};
+		</script>
+	</head>
+	<body>
+		<form action="" method="post">
+             你最爱好的运动是？<input type="checkbox"  id="checkedAllBox" />全选/全不选
+			 
+			 <br>
+			 <input type="checkbox" name="items"  value="足球" />足球
+			 <input type="checkbox" name="items"  value="篮球" />篮球
+			 
+			 <input type="checkbox" name="items"  value="羽毛球" />羽毛球
+			 <input type="checkbox" name="items"  value="乒乓球" />乒乓球
+			 
+			 <br>
+			 <input type="button"  id="checkedAllBtn" value="全 选" />
+			 <input type="button"  id="checkedNoBtn" value="全不选" />
+			 <input type="button"  id="checkedRevBtn" value="反选" />
+			 <input type="button"  id="sendBtn" value="提交" />
+		</form>
+	</body>
+</html>

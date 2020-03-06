@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/* 
+			 *
+			 */
+			var btn04 = document.getElementById("btn04");
+			btn04.onclick=function(){
+				//id为city的元素
+				var city = document.getElementById("city");
+				var lis = city.getElementsByTagName("li");//这里返回一个类数组 内容放到类数组中
+				//遍历数组中的内容
+				for (var i = 0; i<lis.length ;i++){
+					alert(lis[i].innerHTML);
+				}
+			}
+			//
+			var btn05 =document.getElementById("btn05");
+			btn05.onclick =function(){
+				var city = document.getElementById("city");
+				var cns = city.childNodes;//会包括文本节点在内所有节点
+				//dom标签之间的空白也可以当作文本节点
+				//但是ie8以下，不会将空白文本当成子节点
+				
+				//city的第二个属性  child获取当前元素的子元素  比较推荐
+				var cns2 = city.children;//这种形式不包括空白的节点
+				alert(cns2.length);//childern 属性可以获取当前元素的所有子元素
+			}
+			
+			//getElementsByTagName 返回当前节点指定标签后代节点 返回类数组
+			//childNodes 属性 返回所有的子节点 注意是节点
+			//firstchild 属性 返回当前节点的第一个子节点
+			//lastchild 属性 返回当前节点的最后一个子节点
+			//为btn06绑定一个单及相应函数
+			var btn06 =document.getElementById("btn06");//获取按钮 设置效果
+			btn06.onclick =function(){
+				var phone = document.getElementById("phone");//为其中的元素绑定节点
+				phone.childNodes[0];
+				//firstchild包括当前元素的第一个子节点（包括空白文本节点）
+				var fir = phone.firstChild;
+				 //firstelementchild 兼容性比较差 如果兼容ie8 尽量不要使用 
+			}
+			/* 
+			 * 
+			 *总结：
+			 *   tagname 范围小了一点 就是讲的一个节点的子节点 和子元素 （子节点和子元素写给标签名）
+			 *   属性：
+			 *    childnodes 子节点 元素.子节点
+			 *    childern 是子元素
+			 *    firstchild 第一个子元素
+			 *    last。。。。。。
+			 *    
+			 */
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

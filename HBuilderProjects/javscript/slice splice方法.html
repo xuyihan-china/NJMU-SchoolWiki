@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			slice方法（开始索引 不包含结束索引
+			 可以从数组中提取指定元素
+			  参数截取开始的位置 结束位置的索引 
+			  该方法不会改变原数组 而是封装到一个新数组中返回
+                那就要把arr.slice封装给一个变量 然后返回
+			  该方法可以不写第二个参数 直接写第一个参数 1表示从zhu到最后一个元素
+			  索引可以传递一个负值 1，-2 则从后往前计算 到倒数第几个
+			 */
+			/*
+			  *splice 使用splice会影响原数组 返回删除元素
+			  * 参数：开始位置的索引 第二个表示删除的数量
+			  * splice(3,0,"","","");
+			  * */
+			var arr=["sun","zhu","sha","tang","bai"];
+			arr.slice(0,2);
+			result = arr.slice(1,4);//slice 是从第一个开始 截取到第四个 不修改第四个
+			console.log(result);
+			var result2 = arr.splice(0,1,"牛魔王");//这里时返回删除的元素 后面是替换掉元素
+			//第三个参数及其以后可以传一些新的元素 这些元素会自动插入到开始索引前面
+			//1，1  如果参数不止参数的个数 ，会在后面添加这些数组
+			//一般要添加元素可以使用 arr.splice(3,0,"","","")//删除0个 在第三个元素后面添加3个元素
+			//第几个开始
+			console.log(arr);
+			
+			//splice 添加新的元素
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

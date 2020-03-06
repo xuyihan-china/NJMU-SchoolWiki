@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		
+	</head>
+	<body>
+		<button id="btn">我是szb</button>
+		<script type="text/javascript">
+			/* 把网页里的所有东西都转化为对象 纯面向对象的形式去修改网页 */
+			/* 模型：来表示对象之间的关系来获取对象 体现模块与模块之间的关系*/
+			/* 文档就是整个界面 */
+			/* 
+			 *浏览器为我们提供了文档节点，这个对象是window的属性 可以在页面中直接使用 文档节点代表的是整个网页
+			  * 
+			 */
+			var btn = document.getElementById("btn");
+			//修改按钮的文字
+			btn.innerHTML = "woshianniu";
+		</script>
+	</body>
+</html>

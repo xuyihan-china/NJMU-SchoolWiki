@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			window.onload= function(){
+				var btn01 =document.getElementById("btn01");
+				/* btn01.onclick=function(){
+					alert(1);//第一个
+				}
+				btn01.onclick=function(){
+					alert(2);//第二个
+				} */
+				/* 
+				 *使用对象.事件 = 函数形式绑定响应函数
+				 * 只能一个事件绑定一个函数 绑定了多个后边会覆盖前边的
+				 * 还有一个addEventListener() 
+				 */
+				btn01.addEventListener("click",function(){
+					alert(1);
+				},false) ;                        // 1.事件的字符串 click
+				btn01.addEventListener("click",function(){
+					alert(2);
+				},false) ;                        // 1.事件的字符串 click
+				                                      //2.回调函数
+		//可以绑定多个响应函数			   //3.是否在捕获阶段触发事件 一般是false
+		//触发按顺序执行
+			}
+			//不支持ie8以下
+			/* btn01.attachEvent(1.事件,2.function)
+			支持ie8 这个方法也可以为多个函数绑定 他是先绑定后执行
+			倒过来执行 按顺序写成一个
+			
+			兼容性问题:
+			定义一个函数,为元素绑定指定响应函数: */
+			
+			/* function bind (bind ,eventstr ,callback){
+			   addEventListener()中的this是绑定事件的对象
+			   attachEvent()中的this是window
+			   需要统一函数的this
+			} */
+			//obj 要绑定的对象
+			//eventstr 事件的字符串
+			//callback 回调函数
+			function bind (obj,eventstr,callback){
+				if(obj.addEventListener){
+					obj.addEventListener(eventstr,callback,false);
+				}else{
+					//this是由调用方式决定的
+					//callback.call(obj)
+					obj.attachEvent("on"+eventstr,function(){
+						callback.call(obj);//在匿名函数中使用回调函数
+					})
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<button id="btn01">dianwo</button>
+	</body>
+</html>

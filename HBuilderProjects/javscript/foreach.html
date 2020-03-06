@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			/*
+			  一般都是用for循环去遍历数组，js中还为我们提供了方法来遍历数组
+			  foreach() 这个方法仅支持ie8
+			  这种函数由我们创建但是不由我们调用的，称为回调函数 
+			  数组中有几个元素函数就会执行多少次，每次执行时浏览器会以实参的形式传递回来
+			  浏览器会在回调函数传递三个参数：数组里的元素 遍历到谁就是谁 第二个参数 索引 第三个参数 就是遍历的数组
+			  还是使用for循环 还要考虑ie8； 最好不用 移动端 可以用
+			*/
+			var arr=["sun","zhu","sha","tang","bai"];
+			arr.forEach(function fun(value,index,obj){
+				console.log(index));
+			console.log();			
+			});//调用5次 
+			
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
