@@ -2,9 +2,39 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title></title>
+		<title>image gallary</title>
+		<style type="text/css">
+			#placeholder{
+				position: absolute;
+				top: 200px;
+				left: 50px;
+			}
+			#discription{
+				display: block;
+				}
+			#body{
+				height: 3000px;
+			}
+			li{
+				display: inline;
+			}
+		</style>
 	</head>
 	<body>
-		
+		<h1>照片集</h1>
+		<ul>
+			<li><a href="img/顾宁.png" title="顾宁" onclick="showpic(this); return false;<!-- 取消链接的默认行为 -->">顾宁</a></li>
+			<li><a href="img/胡本慧.jpg"title="胡本慧" onclick="showpic(this); return false;">胡本慧</a></li>
+			<li><a href="img/李建青.png" title="李建青" onclick="showpic(this); return false;">李建青</a></li>
+			<li><a href="img/刘云.jpg" title="刘云" onclick="showpic(this); return false;" class="popup">刘云</a></li>
+		</ul>
+		<img src="img/placrholder.png" id="placeholder" alt="zhanweide" >
+		<script src="js/showpic.js" type="text/javascript" charset="utf-8"></script>
+		<p id="discription">选择一张人看看它长什么样</p>
 	</body>
 </html>
+<!-- 
+    getelementsbyTagName 是将元素低下的所有子元素都取出来，放在一个类数组中
+	 childnodes 返回的 节点包括几乎每一样东西
+	 
+ -->
