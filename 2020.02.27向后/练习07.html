@@ -16,9 +16,9 @@
 				/* 垂直滚动到底使表单项可用 onscroll 滚动时触发*/
 				var info = document.getElementById("info");
 				var inputs = document.getElementsByTagName("input");
-				info.onscroll = function(){
+				info.onscroll = function(){//onscroll 是一个鼠标滚动的事件
 					if(info.scrollHeight - info.scrollTop == info.clientHeight){
-						inputs[0].disabled = false;
+						inputs[0].disabled = false;//这样才能解除
 						inputs[1].disabled = false;
 				}
 				
@@ -54,7 +54,8 @@
 			please read the infomation carefully
 			please read the infomation carefully
 			please read the infomation carefully
-			please read the infomation carefullyplease read the infomation carefully
+			please read the infomation carefully
+			please read the infomation carefully
 			please read the infomation carefully
 			please read the infomation carefully
 			please read the infomation carefully
@@ -63,9 +64,9 @@
 			please read the infomation carefully
 			please read the infomation carefully
 			please read the infomation carefully</p>
-			<input type="checkbox"  disabled="disabled" />i have read and obey it
+			<input type="checkbox" disabled="disabled"  />i have read and obey it
 			<br>
-	 <input type="submit" value="注册"  disabled="disabled />
+	 <input type="submit" value="注册"   disabled="disabled" />
 	 </body>
 	 </head>
 	 

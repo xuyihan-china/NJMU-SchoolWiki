@@ -6,7 +6,7 @@
 		<script type="text/javascript">
 			window.onload=function(){
 				var img = document.getElementsByTagName("img")[0];
-				var imgArr = ["img/1.jpg","img/timg.jpg","img/3.jpg","img/4.png","img/5.jpg"]
+				var imgArr = ["img/1.jpg","img/timg.jpg","img/3.jpg","img/4.png","img/5.jpg"]//切换图片存入一个数组
 				var btn01 = document.getElementById("a");
 				var btn02 = document.getElementById("b");
 				var index=0;
@@ -16,16 +16,16 @@
 						index=imgArr.length-1;//元素的个数减去一个
 					}
 					
-					img.src =imgArr[index];
+					img.src =imgArr[index];//按照索引获取图片
 					var info = document.getElementById("info");
-					info.innerHTML = "总共"+imgArr.length+"张图片,当前显示第"+(index+1)+"张图片"
+					info.innerHTML = "总共"+imgArr.length+"张图片,当前显示第"+(index+1)+"张图片"//文字动态显示
 				}
 				btn02.onclick = function(){
 					index++;
 					if(index>4){
 						index=0;
 					}
-					
+					//防止index过大而溢出 如果 大于4 就设置为0
 					img.src =imgArr[index];//这是设置图片的方法
 					var info = document.getElementById("info");
 					info.innerHTML = "总共"+imgArr.length+"张图片,当前显示第"+(index+1)+"张图片"

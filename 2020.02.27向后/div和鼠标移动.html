@@ -13,7 +13,7 @@
 				/* 鼠标范围是在document里移动 */document.onmousemove = function(event){
 					event = event || window.event;
 					var st = document.body.scrollTop;
-					var sl = document.body.scrollLeft;//获取滚动了多少距离
+					var sl = document.body.scrollLeft;//获取滚动了多少距离//和鼠标位置无关
 					/* chrome think the brower xy is body */
 					/* firefox thinks the brower xy is html's */
 					
@@ -22,7 +22,7 @@
 					/* var left = event.pageX ;
 					var top = event.pageY; //相对于整个页面来定位 page */
 					box1.style.left = left+sl+"px";//鼠标在页面中的偏移量加上浏览器的滚动偏移量 = div的偏移量
-					box1.style.top = top+st+"px";
+					box1.style.top = top+st+"px";//等于页面量加上滚动的量 前者是相当于整个页面的
 					// pagex pagey 都不兼容ie8
 				}
 			}
