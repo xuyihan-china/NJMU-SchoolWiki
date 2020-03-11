@@ -1,0 +1,32 @@
+ <!DOCTYPE html> <!--更加严格的操控方式 xhtml区分大小写· 这是html5的操控方式类型简单同样支持html和xhtml  -->
+<!-- 浏览器通过doctype来判断浏览器工作的模式 这种方式默认的是标准模式 -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="css/typography.css">
+	<title>充实文档内容</title>
+</head>
+<body>
+	<!-- 写程序要遵循渐进增强和平稳退化 就是先写出核心内容区的部分 然后对内容区充实 
+	达到的目的是即使没有jsp也照样可以显示核心内容 标记要有良好的结构习惯
+	核心是要结构 样式 表现分离 各司其职 不要用内联样式写 
+	一个元素 竖排显示 可以用 display:line 来横排显示 横排可以display block竖排显示 
+	图片不可用的时候显示的内容  -->
+	<h1>what is document  object model</h1>
+	<p>
+		the <abbr title="world wide web consortium">w3c</abbr>defines the  <abbr title="document object model">DOM</abbr> as: <p>
+			<blockquote cite="http://www.w3.org/DOM/">
+				<p>
+                    a platform and language interface that all programmes and scripts to dynamically access and update the content,structures and style of documents
+			    </p>
+			</blockquote>
+			<p>
+				 It is an <abbr title="application programming interface">API</abbr> can be used to navigate <abbr title="HeyerText Makeup Language">Html</abbr> and <abbr title="extensiable Makeup Language">XML</abbr>
+				 <!-- 缩略语用abbr标签 上面会有文字提示 -->
+                documents 
+			</p>		
+	</p>
+	<script src="./js/display.js"></script>
+</body>
+</html>
