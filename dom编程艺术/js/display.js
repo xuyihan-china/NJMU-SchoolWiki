@@ -37,12 +37,12 @@ function displayAbbreviations(){
 }
     addLoadEvent(displayAbbreviations);  //调用函数
 
-    
+
 function displayCitations(){
     var quotes = document.getElementsByTagName("blockquote");
     for(var i=0 ;i<quotes.length; i++){
-        if(!quotes[i].getAttribute("cite")) continue;
-        var url = quotes[i].getAttribute("cite");
+        if(!quotes[i].getAttribute("cite")) continue;//判断有没有找到cite属性 因为可能不止一个属性
+        var url = quotes[i].getAttribute("cite");//获取url
         /* 获取block的最后一个元素 */
         var quotesChildren = quotes[i].getElementsByTagName("*");
         if(quotesChildren.length<1) continue;

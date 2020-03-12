@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="./js/addLoadEvent.js"></script>
+    <script>
+        function positionMessage(){
+            var elem= document.getElementById("message");
+            elem.style.position="absolute";
+            elem.style.left="50px";
+            elem.style.top ="100px";
+            setTimeout("moveMessage()",5000);
+        }
+        
+        function moveMessage(){
+            var elem = document.getElementById("message");
+            elem.style.left="400px";
+        }
+        addLoadEvent(moveMessage);
+        addLoadEvent(positionMessage);
+        //setTimeOut 是设置两个函数的间隔 （执行间隔） 把这个变量赋值给一个变量
+    </script>
+</head>
+<body>
+     <p id="message">whee!!</p>
+     
+</body>
+</html>
