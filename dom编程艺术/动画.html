@@ -9,13 +9,32 @@
             var elem= document.getElementById("message");
             elem.style.position="absolute";
             elem.style.left="50px";
-            elem.style.top ="100px";
-            setTimeout("moveMessage()",5000);
+            elem.style.top ="300px";
+            /* setTimeout("moveMessage()",5000); */
         }
         
         function moveMessage(){
             var elem = document.getElementById("message");
-            elem.style.left="400px";
+            var xpos = parseInt(elem.style.left);
+            var ypos = parseInt(elem.style.top);
+            if(xpos ==200 && ypos==200){
+                return true;
+            }
+            if(xpos <200){
+                xpos ++;
+            }
+            if(xpos >200){
+                xpos --;
+            }
+            if(ypos <100){
+                ypos ++;
+            }
+            if(ypos >100){
+                ypos --;
+            }
+            elem.style.left = xpos+"px";
+            elem.style.top = ypos + "px";
+            setTimeout("moveMessage()",10);
         }
         addLoadEvent(moveMessage);
         addLoadEvent(positionMessage);
