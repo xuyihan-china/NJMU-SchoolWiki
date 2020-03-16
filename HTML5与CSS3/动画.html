@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box1{
+            width: 800px;
+            height: 800px;
+            background-color: silver;
+            overflow: hidden;
+        }
+        .box1 div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+        .box2{
+            background-color: #bbffaa;
+            /* transition: all 2s; */
+            /* 关键帧的名称 */
+            animation-name: test;
+            /* 动画执行时间 */
+            animation-duration: 2s;
+            animation-delay: 2s;
+            animation-iteration-count: 6;
+            /* 动画执行的次数
+               infinite 无限制执行
+             */
+            animation-direction: alternate;
+            /* 动画执行方向 alternate 重复执行动画时会反向执行*/
+            animation-play-state: running;
+            /* 动画执行状态 可选值
+               running
+               动画执行
+               paused 
+               动画暂停
+             */
+             animation-fill-mode: none;
+             /* 
+               动画执行完毕 动画执行回到元素原来的位置
+              */
+        }
+        .box1:hover .box2{
+            width: 20px;
+            height: 20px;
+            transition: all 2s;
+        }
+
+        @keyframes test{
+            from{/* 动画开始位置 也可以用0%*/
+               margin-left: 0px;
+            }
+            to{/* 动画结束位置 */
+               margin-left:700px ;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        动画可以实现动态效果 属性发生变化的时候 动画自动触发动态效果
+        设置动画必须要设置关键帧 关键帧设置了动画执行的每一个步骤
+
+     -->
+    <div class="box1">
+        <div class="box2">
+
+        </div>
+    </div>
+</body>
+</html>

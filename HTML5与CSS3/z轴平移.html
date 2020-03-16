@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+            /* 设置视距 人眼距离800px 600-1200 */
+        }
+        .box1
+        {
+           width: 200px;
+           height: 200px;
+           background-color: skyblue;
+           margin: 200px auto;
+           transition: 2s ;
+        }
+        .box1:hover{
+            transform: translateZ(300px);
+            /* transform: rotateZ(180deg); */
+            /* 角度 transform deg旋转角度 */
+            transform: rotateX(45deg);
+            /* 这个要设置视距 不然看不出效果 */
+            transform: rotateY(-180deg);
+            backface-visibility: visible;
+            /* 设置背面显示 */
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">
+    <!-- z轴是调整元素和人眼之间的距离 距离越大距离越近-->
+    <!-- 默认情况下 网页不支持透视 -->
+    <!-- 需要看到效果 要设置网页的视距 -->
+    </div>
+</body>
+</html>

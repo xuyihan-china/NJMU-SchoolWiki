@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .box1{
+        width: 200px;
+        height: 200px;
+        background-color: silver;
+        margin: 0 auto;
+        margin-top: 200px;
+        transform:translateY(100px);
+        
+        /* position:absolute;
+           left: 50%;
+           transform: translateX(-50%);
+           这是先移到总共元素的50%
+           然后向左移动自己的50%
+           top：50%
+           transform：translaeX(-50%);
+         */
+    }
+    .box1:hover{
+        transform: translateY(4px);
+        box-shadow: 0 0 20px sienna;
+        transition: all 0.3s;
+    }
+    </style>
+</head>
+<body>
+    <!--
+         变形平移
+        变形不会影响页面布局 不会脱离文档流
+        transform: 用来设置页面的布局 变形的效果
+        translateX()平移 元素沿着x轴方向
+        translateY()            Y
+        translateZ()            Z
+        平移元素的时候是相对于自己经行运算
+        50% 是相对于自己说的 平移元素是相对于自身经行的
+        
+    -->
+    <div class="box1">
+
+    </div>
+</body>
+</html>
