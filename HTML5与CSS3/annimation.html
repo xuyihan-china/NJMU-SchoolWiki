@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        .box1{
+            width: 800px;
+            height: 800px;
+            background-color: silver;
+            overflow: hidden;
+        }
+        .box1 div{
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+        .box2{
+            background-color: #bbffaa;
+            transition: all 2s;
+        }
+        .box1:hover .box2{
+            width: 20px;
+            height: 20px;
+            transition: all 2s;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        过渡
+             transition 通过过度可以指定一个属性发生变化的时侯的切换方式
+             通过过度可以创建非常好的效果提升用户体验
+            transition-property: ;
+              指定要执行过度的属性 width 多个属性要用逗号隔开  所有属性 用all关键字 
+              大部分属性都支持过度属性
+              一个有效数值向另外一个有效数值进行过度
+            transition-delay: ;
+               时间的延迟 等待多少秒才开始执行过度
+            transition-timing-function: ;
+              过度的时序函数 指定过度的执行方式
+              ease：先加速 然后减速 这是默认值
+              liner：线性的 
+              ease-in ：加速运动
+              ease-out ： 减速运动
+              ease-inout ： 先加速后减速 ease就是减速的意思
+              cubic-bezier: 贝塞尔曲线 
+              steps()分步执行过度效果 没有那么流畅 闪现
+                end 在时间结束时执行过度
+                start 在时间开始的时候执行过度
+            transition-duration: ;
+              指定过渡效果的持续时间 
+              时间单位 s 和 ms 1s=1000ms
+     -->
+     
+     <div class="box1">
+         <div class="box2">
+
+         </div>
+     </div>
+</body>
+</html>

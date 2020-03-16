@@ -3,5 +3,13 @@
         {
             "path": "."
         }
-    ]
+    ],
+    "settings": {
+        "debug.chrome.useV3": true,
+        "liveServer.settings.CustomBrowser": "chrome",
+        "liveServer.settings.port": 8080,
+        "liveServer.settings.root": "..",
+        "liveServer.settings.multiRootWorkspaceName": "test"
+
+    }
 }
