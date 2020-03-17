@@ -1,0 +1,27 @@
+body{
+    background-color: #bbffaa;
+}
+@a:100px;/* 这是一个变量 直接使用变量名称 作为类名使用或者一部分值使用的时候要用@(变量的形式) */
+
+.box1{
+    width: @a;
+    height: 200px;
+    background-color: aqua;
+    .box2{
+        margin-top: 200px;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        overflow: visible;
+    }
+  }
+  /* 可以使用变量来设置
+      变量重名 会用斤的变量
+      会在申明前使用变量
+      最好变量写在一起 然后使用
+      可以用$符号引用 其他 的值 
+      @{}可以嵌套使用 在其他的括号里使用
+      less中可以直接写运算符
+      @import 将其他的样式引入到less文件中 合并less文件 创建less文件模块化文件
+   */
+  

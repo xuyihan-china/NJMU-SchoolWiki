@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 在less语法中 子元素选择器直接在前面加上 >
+         在同一个元素加上伪类的时候 要用 &:hover &表示外层的父元素
+         .p1{
+             width:;
+             height:;
+             background:;
+         }
+         .p2:extend(.p1){
+             color:red;
+         }  p2对p1经行扩展 但是p2具有p1的特性
+
+         p3对p1的样式经行引用
+         .p3{
+             .p1(); mixin 混合
+         }
+
+         .p4(){
+             可以添加一个括号 实际上就创建了一个mixin  专门用来给别人用的
+         }
+         .p5{
+             .p4(); p5 引用p4
+             的样式
+         }
+         混合函数
+         .test(@u){
+            width:@u;
+            height:100px;
+         }
+         div{
+             .test(100px); 可以传值 调用混合函数 按顺序传递
+         }
+    -->
+</body>
+</html>

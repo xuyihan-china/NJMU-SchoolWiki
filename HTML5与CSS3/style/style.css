@@ -1,0 +1,8 @@
+body {
+  width: 100px;
+  height: 100px;
+}
+body div {
+  color: red;
+  /* 这样写层级结构方便 */
+}

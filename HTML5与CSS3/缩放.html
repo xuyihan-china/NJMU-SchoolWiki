@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            perspective: 800px;
+        }
+         .box1{
+             width: 100px;
+             height: 100px;
+             background-color:blanchedalmond ;
+         }
+         .box1:hover{
+            
+             transform: scaleZ(9);/* 用来对元素进行缩放的 */
+             /* scaleX 水平的缩放
+                scaleY 垂直的缩放
+                中间的数字是写缩放的倍数 
+                一般是水平垂直的同时缩放
+              */
+            transition: 2s;/* 设置过渡效果 */
+            transform-origin: center;/* 设置缩放原点 */
+         }
+         
+       
+            
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="imgw">
+
+    </div>
+</body>
+</html>
