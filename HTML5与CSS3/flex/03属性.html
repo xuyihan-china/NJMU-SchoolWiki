@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>*{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    /* align-items 元素在辅轴如何对齐 
+       元素间的关系：
+       可选值
+       strech 默认值 将元素的长度设置为相同的值
+       flex-start 元素不会拉伸 沿着夫轴起边对其
+       flex-end 沿着横轴的终边对齐
+       center 居中对齐
+       baseline 基线对齐 
+       主轴夫轴同时居中
+       justify-content:center;
+       align-items:center;
+       在弹性元素中垂直居中
+    */
+    ul{
+        width: 800px;
+        height: 800px;
+        border: 10px red solid;
+        display: flex;
+    }
+    /* align-self 单独为元素设置 覆盖items */
+    li{
+        width: 100px;
+        
+        background-color:#bfa;
+        font-size: 50px;
+        text-align: center;
+        line-height: 100px;
+        flex-shrink: 0;
+    }
+   
+    li:nth-child(2){
+        background-color: pink;
+    }
+    li:nth-child(3){
+        background-color: orange;
+    }</style>
+    
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>
+            2
+            <div>2</div>   
+        </li>
+        <li>
+            3
+            <div>3</div>
+            <div>3</div>
+        </li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    弹性元素的样式
+    <style>
+          ul{
+              flex-grow: 设置增长系数;
+              flex-shrink: 弹性元素的缩减系数;
+              缩减系数的计算方式比较复杂 缩减多少是按照缩减系数和元素大小来计算
+              元素越大 缩减越多
+              flex-basis: 元素在主轴的基础长度 主轴横向的 该值是宽度 纵向就是高度
+              默认值是auto
+              auto表示参考元素自己的高度宽度 如果传递了具体的数值 则以该值为准
+              简写属性
+              flex 可以设置弹性元素的所有样式
+              flex 增长 缩减 基础 
+              默认值 initial 
+              可以给每个元素指定order 影响元素的顺序
+              order 1
+              order 2
+              order 3
+          }
+    </style>
+</body>
+<ul>
+    <li></li>
+</ul>
+</html>

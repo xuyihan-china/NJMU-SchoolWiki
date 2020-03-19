@@ -22,6 +22,26 @@
                侧轴：
                 主轴垂直的方向是侧轴
             */
+            /* 
+            flex-wrap: wrap-reverse;
+            设置自动换行 默认不换行
+                 nowrapper 不换行
+                 wrap 沿着夫轴自动换行
+                 wrap reverse 沿着辅轴反方向换行
+                 flex-flow wrap 和 direction 的简写属性
+
+             */
+             
+             /* 
+             justify-content:flex-start ;
+             主轴的元素怎么排列
+            flex-start 沿着辅轴排列
+            flex-end 沿着主轴排列
+            center 沿着中间排列
+            space-around 空白分布到元素两侧
+            space-evenly 空白分布到元素的单侧
+            space-between 空白分布到元素间
+              */
         }
         li{
             width: 100px;
@@ -51,23 +71,11 @@
     </style>
 </head>
 <body>
-    <!-- 
-    flex 弹性盒 伸缩盒
-        -是css中又一种布局手段 它主要用来代替浮动来完成页面布局
-        可以使元素有弹性 可以根据页面的大小而改变
-        弹性容器：
-        要使用弹性容器必须要设置一个元素作为弹性容器
-        我们通过display来设置弹性容器
-        display flex
-        display inline-flex 设置行内弹性容器
-        弹性元素的子元素是弹性元素 弹性项
-        一个元素可以是弹性容器或者弹性元素
-        flex grow 是按照父元素的空间按比例分配给元素
-     -->
+   
      <ul>
-         <li>1</li>
-         <li>2</li>
-         <li>3</li>
-     </ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
 </body>
 </html>
