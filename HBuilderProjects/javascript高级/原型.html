@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //只要是引用类型都存在__proto__属性
+        //引用类型包括 对象 数组 函数（）
+        //什么是引用类型 ?
+        //不是把数据直接放在变量中，而是将数据放在堆内存中 保存的是地址
+        //一个构造函数 在构造函数中定义属性 在原型中定义方法 原型的最典型的应用
+        //1.定义一个普通对象
+        //var obj={};
+        //console.log(obj);
+
+        //如何通过对象找他的构造函数？
+        //__proto__ 可以找到原型对象
+        //可以通过constructor 找到原型对象
+        //上述代码相当于
+        //var obj = new Object();
+        // 相当于使用Object 函数实例化了一个对象 和var obj={};
+        var arr =[];
+        
+        //上述代码 相当于 var arr = new Array();
+        console.log(arr.__proto__.constructor);
+
+        //函数类型 不仅有__proto__ 还有prototype
+        function Foo(){
+              
+        }    
+        console.log(typeof Foo);
+        //查看Foo的内部结构
+        //结论 因为Foo属于引用类型 因此存在__proto__ 因为是函数类型
+        //因此还存在还存在prototype 属性 函数的prototype和对象的__proto__指向同一个对象
+        //原型的作用就是为了解决方法共享的问题
+        //console.dir 打印函数的内部结构 
+        //__proto__是指实例化的对象指向构造出的函数person的原型对象
+        //构造函数实例化的对象的指向原型的堆内存地址相同 都指向他的原型
+        //原型对象的construct 属性指向构造函数
+        function student(){
+
+        }
+        student.prototype.sayhi = function(){
+
+        }
+        var stu1 = new student();
+        console.log(stu1.__proto__==student.prototype)//true
+        
+        </script>
+</body>
+</html>
