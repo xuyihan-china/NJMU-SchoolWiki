@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        window.onload=function(){
+            var count =document.getElementById("count");
+            /* for(i=0;i<10;i++){
+                count.innerHTML =i; */
+                /* 希望每间隔一段时间执行一次 可以定时调用
+                   setInterval() 将一个函数每隔一段时间执行一次
+                   2.每次调用间隔的时间                
+                 */
+            /* 返回值 返回一个number 类型的数据
+               这个数字 用来作为定时器的唯一标识
+               clearInterval() 可以用来关闭一个定时器
+             */
+            var num =1;
+            var timer =setInterval(function(){
+                count.innerHTML = num++;
+                if(num==11){
+                    clearInterval(timer);
+                }
+
+            },100);
+            
+        }
+    </script>
+</head>
+<body>
+    <!-- 
+        定时调用
+        JS执行速度非常快 
+     -->
+     <h1 id="count"></h1>
+</body>
+</html>

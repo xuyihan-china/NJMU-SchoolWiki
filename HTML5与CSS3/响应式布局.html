@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @media all{
+            /* 媒体类型
+               all print screen speech 
+               all 所有设备
+               print 只有大印的时候会显示颜色
+               speech 屏幕阅读器
+               可以使用逗号来连接多个媒体类型 它们之间就是或 的关系
+               only screen 表示只有屏幕才会应用 only的使用才会兼容老版本的浏览器
+             */
+             body{
+                 background-color: #bfa;
+             }
+        }
+    </style>
+</head>
+<body>
+    一个网页适应所有网页
+    响应布局的关键就是媒体查询 可以为不同设备不同状态分别设置样式
+    使用媒体查询 
+    媒体特性：
+    width height 视口的高度宽度 width 是让视口达到500px时生效@media (width:500px;)
+    更加好的方式 min-width 视口的最小宽度 max-width 最大的宽度 @media(min-width:500px)只要视口比500大就生效
+    样式切换的分界点 称其为断点 网页会在这个点的地方发生变化
+    一般比较常用的断点 小于768 max-width 768 超小屏幕
+                      大于768 min-width 768 小屏幕
+                      大于992 <min-width>  992</min-width>
+                      大于1200 min-width 大屏幕
+    区间 (min-width:500px),(max-width:700px){
+        逗号是或者的意思 就是表示一个区间 这是或 的表示 
+        表示区间的话 是下面
+        (min-width:500px)and(max-width:700px)
+        完整版
+        @media only screen and (min-width:500px)and(max-width:700px)
+    }
+</body>
+</html>

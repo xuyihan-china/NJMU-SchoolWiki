@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var obj ='{"name":"sun","age":18,"gender":"nan"}';
+        console.log(obj);
+        /* 将对象传第给服务器 只有js中的对象只有自己认识 其他语言不认识 */
+        /* 将对象转变为字符串 */
+        /* JSON是一个特殊格式的字符串 这个字符串可以被任意语言识别 并且转化为任意语言的对象 */
+        /* JSON 用来数据交互 javascript object notation JS对象表示法 */
+        /* JSON和
+        JS对象的格式一样 只不过JSON字符串的属性名必须加双引号 其他和JS语法一样 */
+       /*  JSON 分类 
+        1. 对象{} 属性名加上双引号
+        2. 数组[] 加上单引号
+        JSON 中允许的 值
+        1.字符串
+        2.数值
+        3.布尔值
+        4.null
+        5 对象
+        6 数组
+        将json中的对象转换为JS中的对象
+        JS中提供了JSON类就叫JSON 
+        可以帮助我们将一个JSON对象转化为JS对象，也可以将一个JS对象转化为JS'o
+        
+         */
+         var json ='{"name":"sun","age":18,"gender":"nan"}'
+         var o = JSON.parse(json);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
