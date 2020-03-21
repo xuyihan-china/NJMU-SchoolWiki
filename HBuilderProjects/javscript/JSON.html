@@ -30,6 +30,26 @@
          */
          var json ='{"name":"sun","age":18,"gender":"nan"}'
          var o = JSON.parse(json);
+         var obj3 ={name:"zhu",age:28,gender:"nan"};//将这个对象转换为json
+         //js对象转json
+         JSON.stringify(obj3)//会返回一个json字符串
+         var str =JSON.stringify(obj3) //将js转化为JSON
+         /* JSON对象在IE7 及以下不支持
+            所以在这些浏览器要做处理
+          */
+          /*eval()可以用来执行一个字符串形式的JS代码，并将js代码返回 */
+          var str2 = "alert('hello')";
+          eval(str);//false
+          //如果执行的时候含有大括号 {}，他会将{}当作代码块
+          //如果不希望将其当作代码块解析，需要在字符串前后加上一个()
+          正确写法
+          var obj = eval("("+str+")");在含有{}的代码块的时候要这么处理
+          开发中尽量不要使用 首先性能比较差 然后还有安全隐患
+          如果要兼容ie7 及以下 要引入一个外部的js文件
+          
+          
+
+
     </script>
 </head>
 <body>
