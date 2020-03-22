@@ -12,5 +12,37 @@
          面向对象 易维护 更加灵活 
          继承 多态 封装 特点
     -->
+    <!-- 
+        ES6 中的类和对象 面向对象 的思维特点 抽取对象共用的属性和行为分装成一个类(模板)
+        对类进行实例化 获取类的对象
+        类 class 实例化对象
+        创建类
+     -->
+     <script>
+         class Star{
+             constructor(uname){
+                this.uname =uname;
+             }
+        }
+         var ldh = new Star('ldt');
+         console.log(ldh.uname);
+         class Pop{
+             constructor(page){
+                 this.page = page;
+             }
+         }
+         var book = new Pop(45);
+         console.log(book.page);
+         class magic{
+             constructor(age){
+                 this.age = age;
+             }
+         }
+         var zhubajie = new magic(35);
+         console.log(zhubajie.age);
+     </script>
+    
+     
+
 </body>
 </html>
