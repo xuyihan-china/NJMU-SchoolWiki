@@ -21,7 +21,7 @@
         var btn = document.querySelector('button');
         var div = document.querySelector('div');
         btn.onclick = function() {
-            var str = input.value.trim();
+            var str = input.value.trim();//先去除空格再拿过来比较
             if (str === '') {
                 alert('请输入内容');
             } else {

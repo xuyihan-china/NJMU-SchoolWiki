@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* foreach */
+        var arr =[1,2,3];
+        var sum=0;
+        arr.forEach(function(value,index,array){
+            console.log('每个数组元素'+value);
+            console.log('suoyin'+index);
+            console.log('shuzu'+array);
+            sum+=value;
+        })//foreach 方法会将下标 数组的值存入 不需要用for循环
+        console.log(sum)
+    </script>
+</body>
+</html>

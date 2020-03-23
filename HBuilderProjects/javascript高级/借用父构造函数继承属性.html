@@ -14,7 +14,15 @@
         function Son(uname,age){
             Father.call(this,uname,age);//子构造函数调用父构早函数的方法
         }
+        
         var son = new Son("ldh",123);
+        Son.prototype = new Father();//new Father 一个问到father实例化对象里面可以访问到Father中的内容
+        //但是和father 的 原型不同 内存地址不同 这样可以访中的方法
+
+        // 但是覆盖之后 里面的constructor 指向了 father
+        //如果修改了就要指回来
+        Son.prototype.constructor = Son;
+
         console.log(son);
     </script>
 </body>
