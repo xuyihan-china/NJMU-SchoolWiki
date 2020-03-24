@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // bind function will not exe instantly 2. it will return a new function
+    //which has changed this 
+        /* var o= {
+            name:'andy';
+        }
+        function fn(a,b){
+            console.log(this);
+            console.log(a+b);
+        }
+        var f = fn.bind(o,1,2); */
+        //如果有的函数不需要立即调用又想改变this指向此时使用bind函数
+        //我们有一个按钮 当我们点击了之后 就禁用这个按钮 3秒中之后就开启这个按钮
+        window.onload=function(){ 
+            var btn = document.querySelector('button');
+            btn.onclick = function(){
+            this.disabled=true;
+            setTimeout(function(){
+            this.disabled=false;
+            }.bind(this),3000);
+        }}
+    
+    </script>
+      <button>点击</button>
+      
+</body>
+</html>
