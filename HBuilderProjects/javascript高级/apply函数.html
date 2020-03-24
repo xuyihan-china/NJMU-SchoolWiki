@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        apply
+        也是调用函数 第二个了可以改变this指向
+        但是参数必须是数组
+        var o ={
+            name:'andy'
+        }
+        function fn (arr){
+            console.log(this);
+            console.log(arr);
+        }
+        fn.apply(o,['pink']);//维数组
+        第二个参数是数组
+        可以用apply 对数组进行操作
+        Math.max();
+        借用apply 借助属性内置对象求最大值
+        var arr =[ 1,66,99,4];
+        var max =Math.max.apply(Math,arr);
+        把this重新指向Math对象
+        var min= Math.min.apply(Math,arr);
+        
+//不要传递this指向
+    </script>
+</body>
+</html>

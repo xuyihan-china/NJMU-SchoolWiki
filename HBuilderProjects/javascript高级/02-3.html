@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Father{
+            constructor(money,cars ,house ,company){
+                this.money = money;
+                this.cars=cars;
+                this.house = house;
+                this.company = company;
+            }
+        }
+        class son extends Father{
+            constructor(money,cars ,house ,company){
+                Father.call(money,cars ,house ,company);//在子类中调用父类方法
+            }
+        
+        }
+        son.prototype= new Father;
+        Son.prototype.constructor = Son;
+        var arr =[12,66,4,88];
+        var newarr =arr.filter(function(value,index,array){
+            return value>=20;
+        })
+        console.log(newarr);//直接返回一个新数组
+    </script>
+</body>
+</html>

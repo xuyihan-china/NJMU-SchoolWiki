@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Ab(){
+
+        }
+        var arr =[1,2,9]
+        var xyh = new Ab(arr);
+        Ab.prototype.sum= function(array){
+            var sum =0;
+            array.forEach(function(value){
+                sum+=value;
+            }) ;
+            console.log(sum); 
+        }
+        console.log(xyh.sum(arr));
+    </script>
+</body>
+</html>

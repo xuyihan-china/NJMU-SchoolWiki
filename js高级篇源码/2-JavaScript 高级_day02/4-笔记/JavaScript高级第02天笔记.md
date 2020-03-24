@@ -283,7 +283,6 @@ Father.prototype.money = function() {
   // 这个是子构造函数专门的方法
   Son.prototype.exam = function() {
     console.log('孩子要考试');
-
   }
   var son = new Son('刘德华', 18, 100);
   console.log(son);
