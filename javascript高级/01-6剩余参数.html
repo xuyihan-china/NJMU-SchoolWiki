@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const sum =(...args)=>{
+        let total =0;
+        args.forEach(item => {
+            total += item;
+        })
+        return total;
+    }
+    var a =sum (10,20);
+    var b =sum(10,20,30);
+    console.log(a);
+    console.log(b);
+    let ary1 =['a','b','c'];
+    let [first,...second]= ary1;
+    console.log(first);
+    console.log(...second);
+    </script>
+    
+</body>
+</html>
