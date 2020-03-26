@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //let不存在变量提升
+        //let 变量申明的变量不存在变量提升
+        console.log(a);
+        let a =9;
+        //暂时性死区特性
+        var tmp =123;
+        if(true){
+            tmp = 'abc';
+            let tmp;
+        }
+        console.log(tmp);
+        if(true){
+            console.log(num);//会报变量没有定义的错 一旦在块级作用域中使用了let 就会给这个块级作用域绑定
+            //不受外界干扰
+            let num =20;
+        }
+    </script>
+</body>
+</html>
