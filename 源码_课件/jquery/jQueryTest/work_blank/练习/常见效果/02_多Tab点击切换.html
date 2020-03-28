@@ -63,6 +63,15 @@
     50元包月详情：<br/>&nbsp;每月无限量随心打
   </div>
 </div>
-
+<script src="./jquery-1.10.1.js"></script>
+<script>
+  var $contents =$('#container>div');
+  $('#tab>li').click(function(){//隐式遍历
+     //链式调用 读写合一 隐式调用
+    $contents.css('display','none');
+    var index = $(this).index();
+    $contents[index].style.display='block'
+  })
+</script>
 </body>
 </html>

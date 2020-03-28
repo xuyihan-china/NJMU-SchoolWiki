@@ -38,6 +38,12 @@
    2. 显示选择爱好 的个数
    3. 显示选择的城市名称
    */
+  $(':input:disabled').css('background','red');
+  console.log($(':checkbox:checked').length);
+  $(':submit').click(function(){
+    var city =$('select>option:selected').html();
+    alert(city);
+  })
 </script>
 </body>
 </html>
