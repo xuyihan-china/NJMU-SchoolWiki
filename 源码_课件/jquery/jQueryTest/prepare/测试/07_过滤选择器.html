@@ -30,17 +30,23 @@
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-  /*
-   需求:
-   1. 选择第一个div
-   2. 选择最后一个class为box的元素
-   3. 选择所有class属性不为box的div
-   4. 选择第二个和第三个li元素
-   5. 选择内容为BBBBB的li
-   6. 选择隐藏的li
-   7. 选择有title属性的li元素
-   8. 选择所有属性title为hello的li元素
-   */
+  
+  //  1. 选择第一个div
+  $('div:first')
+  //  2. 选择最后一个class为box的元素
+  $('.box:last')
+  //  3. 选择所有class属性不为box的div
+  $('div:not(.box)')
+  //  4. 选择第二个和第三个li元素
+  $('div:gt(0):lt(2)')
+  //  5. 选择内容为BBBBB的li
+  $('li:contains(BBBBBBBB)')
+  //  6. 选择隐藏的li
+  $('li:hidden')
+  //  7. 选择有title属性的li元素
+  $('li[title=hell0]')
+  //  8. 选择所有属性title为hello的li元素
+   
   $(function () {
 //1. 选择第一个div
     //$('div:first').css('background', 'red')
@@ -60,6 +66,7 @@
 //8. 选择所有属性title为hello的li元素
     //$('li[title=hello]').css('background', 'red')
   })
+
 </script>
 </body>
 

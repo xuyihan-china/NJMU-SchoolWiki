@@ -31,10 +31,10 @@
 <script type="text/javascript">
   /*
    需求:
-   1. 选中ul下所有的的span
-   2. 选中ul下所有的子元素span
-   3. 选中class为box的下一个li
-   4. 选中ul下的class为box的元素后面的所有兄弟元素
+   1. 选中ul下所有的的span $('ul span')
+   2. 选中ul下所有的子元素span $('ul >span')
+   3. 选中class为box的下一个li $(.box + li)
+   4. 选中ul下的class为box的元素后面的所有兄弟元素 $(.box ~ siblings)
    */
   $(function () {
 //1. 选中ul下所有的的span
@@ -42,9 +42,9 @@
 //2. 选中ul下所有的子元素span
     //$('ul>span').css('background', 'red')
 //3. 选中class为box的下一个li
-    // $('.box+li').css('background', 'red')
+    $('.box+li').css('background', 'red')
 //4. 选中ul下的class为box的元素后面的所有兄弟元素
-    $('ul .box~*').css('background', 'red')
+    //$('ul .box~*').css('background', 'red')
   })
 </script>
 </body>

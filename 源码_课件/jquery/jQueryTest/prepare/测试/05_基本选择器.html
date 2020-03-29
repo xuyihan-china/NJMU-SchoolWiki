@@ -35,14 +35,17 @@
 -->
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
 <script type="text/javascript">
-  /*
-   需求:
-   1. 选择id为div1的元素
-   2. 选择所有的div元素
-   3. 选择所有class属性为box的元素
-   4. 选择所有的div和span元素
-   5. 选择所有class属性为box的div元素
-   */
+  
+  //  1. 选择id为div1的元素
+  $('#div1').css()
+  //  2. 选择所有的div元素
+  $('div')
+  //  3. 选择所有class属性为box的元素
+  $('.box')
+  //  4. 选择所有的div和span元素
+  $('div,span')
+  //  5. 选择所有class属性为box的div元素
+   $('div.box')
   $(function () {
 // 1. 选择id为div1的元素
     // $('#div1').css('background', 'red')
