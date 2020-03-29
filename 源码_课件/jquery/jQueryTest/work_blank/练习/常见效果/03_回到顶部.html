@@ -22,7 +22,21 @@
 <body style="height: 2000px;">
 
 <div id="to_top">返回顶部</div>
+<script src="./jquery-1.10.1.js"></script>
+<script>
+  // $('#to_top').click(function(){
+  //   $('html,body').scrollTop(0);
+  // })
+  var $page =$('html,body');
+  var distance =$('html,body').scrollTop();
+  var time =500;
+  var intervalTime =50;
+  var itemDistance = distance/(time/intervalTime);
+  var interval  = setInterval(function(){
+  
+  },intervalTime);
 
+</script>
 </body>
 
 </html>

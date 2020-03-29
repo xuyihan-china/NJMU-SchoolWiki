@@ -37,14 +37,17 @@
 -->
 <script src="js/jquery-1.10.1.js" type="text/javascript"></script>
 <script type="text/javascript">
-  /*
-   需求:
-   1. ul标签的第2个span子标签
-   2. ul标签的第2个span后代标签
-   3. ul标签的父标签
-   4. id为cc的li标签的前面的所有li标签
-   5. id为cc的li标签的所有兄弟li标签
-   */
+
+  //  1. ul标签的第2个span子标签
+  var $ul = $('ul');
+  //  2. ul标签的第2个span后代标签
+  $ul.children('span:eq(1)').css('background','red');
+  //  3. ul标签的父标签
+  $ul.parent().css('background','yellow');
+  //  4. id为cc的li标签的前面的所有li标签
+  $('#cc').prevAll().css('background','red');
+  //  5. id为cc的li标签的所有兄弟li标签
+  $('#cc').nextAll().css('background','orange');
 
 </script>
 </body>
