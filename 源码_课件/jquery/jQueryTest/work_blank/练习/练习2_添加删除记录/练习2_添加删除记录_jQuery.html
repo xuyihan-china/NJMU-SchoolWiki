@@ -68,6 +68,37 @@
     </tr>
   </table>
 </div>
-
+<script src="../常见效果/jquery-1.10.1.js"></script>
+<script>
+  /* 
+    1.添加
+    2.删除
+   */
+   $('#addEmpButton').click(function(){
+     //收集输入的数据
+     var $empName = $('#empName');
+     var $email = $('#email');
+     var $salary = $('#salary');
+     //插入
+     var empName =$empName.val();
+     var email =$email.val();
+     var salary =$salary.val();
+  //    <tr>
+  //   <td>Bob</td>
+  //   <td>bob@tom.com</td>
+  //   <td>10000</td>
+  //   <td><a href="deleteEmp?id=003">Delete</a></td>
+  //   </tr>
+  $('<tr> </tr>')
+  .append('<td>'+empName+'</td>')
+  .append('<td>'+email+'</td>')
+  .append('<td>'+salary+'</td>')
+  .append('<td><a href="deleteEmp?id="'+Date.now()+'>Delete</a></td>')
+  .appendTo('#employeeTable')
+  $empName.val('')
+  $email.val('')
+  $salary.val('')
+   })
+</script>
 </body>
 </html>

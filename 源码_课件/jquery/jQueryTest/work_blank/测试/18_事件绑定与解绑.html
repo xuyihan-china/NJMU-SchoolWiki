@@ -68,16 +68,48 @@
 -->
 <script src="js/jquery-1.10.1.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript">
-  /*
-   需求：
-   1. 给.out绑定点击监听(用两种方法绑定)
-   2. 给.inner绑定鼠标移入和移出的事件监听(用3种方法绑定)
-   3. 点击btn1解除.inner上的所有事件监听
-   4. 点击btn2解除.inner上的mouseover事件
-   5. 点击btn3得到事件坐标
-   6. 点击.inner区域, 外部点击监听不响应
-   7. 点击链接, 如果当前时间是偶数不跳转
-   */
+
+  //  1. 给.out绑定点击监听(用两种方法绑定)
+  $('.out').click(function(){
+    
+  })
+  $('.out').on('click',function(){
+
+  })
+  //  2. 给.inner绑定鼠标移入和移出的事件监听(用3种方法绑定)
+  // $('.inner').mouseenter(function(){
+  //       console.log('进入')
+  // })
+  // $('.inner').mouseleave(function(){
+  //   console.log('出去')
+  // })
+  // $('.inner').on('mouseenter',function(){
+  //   console.log('jingqu');
+  // })
+  $('.inner').hover(function(){
+    console.log('出去')
+  },function(){
+    console.log('去')
+  })
+  //  3. 点击btn1解除.inner上的所有事件监听
+  $('#btn2').click(function(){
+    $('.inner').off('mouseleave')
+  })
+  $('#btn1').click(function(){
+    $('.inner').off('')
+  })
+  //  4. 点击btn2解除.inner上的mouseover事件
+  //  5. 点击btn3得到事件坐标
+  $('#btn3').click(function(event){
+    console.log(event.offsetX,event.offsetY);
+    console.log(event.clientX,event.clientY);
+    console.log(event.pageX,event.pageY);
+    
+  })
+  //  6. 点击.inner区域, 外部点击监听不响应
+  //  7. 点击链接, 如果当前时间是偶数不跳转
+
+
 </script>
 </body>
 </html>
