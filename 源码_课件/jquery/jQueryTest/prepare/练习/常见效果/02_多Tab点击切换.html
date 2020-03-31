@@ -66,15 +66,84 @@
 </div>
 
 <script>
-  $(function () {
-    var index = 0
-    var $contents = $('#container>div')
-    $("#tab>li").click(function () {
+  // $(function () {
+  //   var index = 0
+  //   var $contents = $('#container>div')
+  //   $("#tab>li").click(function () {
+  //       var clickIndex = $(this).index()
+  //     if (clickIndex != index) {
+  //       $contents[index].style.display = 'none'
+  //       $contents[clickIndex].style.display = 'block'
+  //       index = clickIndex
+  //     }
+  //   })
+  // })
+  // $(function(){
+  //   var index =0;
+  //   var $contents = $('#container>div')
+  //   $('#tab>li').click(function(){
+  //     var clickIndex =$(this).index();
+  //     if(clickIndex != index){
+  //       $contents[index].style.display = 'none'
+  //       $contents[clickIndex].style.display = 'block'
+  //       index = clickIndex
+  //     }
+  //   })
+  // })
+  // $(function(){
+  //   var index =0 ;
+  //   var $contents = $('#container>div')
+  //   $('#tab>li').click(function(){
+  //     var clickIndex = $(this).index()
+  //     if(clickIndex != index){
+  //       $contents[index].style.display ='none'
+  //       $contents[clickIndex].style.display ='block'
+  //       index = clickIndex
+  //     }
+  //   }) 
+  // })
+  $(function(){
+    var index =0;
+    var $contents = $('#container>div');
+    $('#tab>li').click(function(){
       var clickIndex = $(this).index()
-      if (clickIndex != index) {
-        $contents[index].style.display = 'none'
+      if(clickIndex != index){
+        $contents[index].style.display='none'
         $contents[clickIndex].style.display = 'block'
         index = clickIndex
+
+      }
+    })
+  })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  $(function(){
+    var index =0;
+    var $contents = $('#container>div');
+    $('#tab>li').click(function(){
+      var clickIndex = $(this).index();
+      if(clickIndex != index){
+        $contents[index].style.display='none';
+        $contents[clickIndex].style.display = 'block'
+        index = clickIndex; 
       }
     })
   })

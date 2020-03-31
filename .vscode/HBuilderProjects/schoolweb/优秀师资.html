@@ -7,6 +7,24 @@
 		<title>优秀师资</title>
 		<link rel="stylesheet" type="text/css" href="css/resrt.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/style.css"/>
+		<script src="./jquery-1.10.1.js"></script>
+		<script>
+			$(function () {
+           	var index = 0;
+           	var $contents = $('.tanb>div');
+			   $(".min>div").click(function () {
+			var btnText =$(this).html();
+        	var clickIndex = $(this).index()
+      		if (clickIndex != index) {
+       		 $contents[index].style.display = 'none'
+       		 $contents[clickIndex].style.display = 'block'
+			  index = clickIndex;
+			  $('#p').empty();
+			  $('#p').append(btnText);			
+			}
+		})
+	})
+	    </script>
 	</head>
 	<body>
 		<div class="img">
@@ -104,36 +122,39 @@
 			</ul> 
 		</div>
 		</nav>
-		  <div class="left clearfix"><!-- 左侧导航栏 -->
+		<div class="left clearfix"><!-- 左侧导航栏 -->
 		  <div class="max">
 			  <p>师资队伍</p>
 		  </div>
-		    <div class="min">
+		  <div class="min">
 			    <div class="box1">优秀师资</div>
 			    <div class="box2">教授一览</div>
 			    <div class="box3">兼职教师</div>
 		  </div>
 		</div>
+		
 		<div class="right clearfix">
 			<div class="head">
-				<p>优秀师资</p>
+				<p id="p">优秀师资</p>
 			</div>
 			<div class="word">
 				<p>当前位置：首页 | 学院概况 | 党政领导</p>
 			</div>
-		    <div class="introduction">
+			<div class="tanb">
+			  <div class="tab1">
+		    	<div class="introduction">
 		    	<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;生物医学工程与信息学院凝聚了生物医学材料与技术、医疗器械与装备、生物信息学和医学信息学领域的领军人才。目前有专任教师56名，以中青年教师为主，涵盖医学、工学、生物学、数学、信息学、计算机和物理学等专业背景；另有来自附属医院、大型企业的互聘教授和产业教授数十名。</p>
-		    </div>
-			<div class="people">
-			 <div class="teacher1">
-				<div class="pic">
-				  <img src="img/李建青.png" width="147px" height="200px">
-				    <div class="info">
-					  <p>李建青 &nbsp;&nbsp;博士</p><br>
-					  <p>Jianqing Li, Ph.D</p><br>
-					  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南京医科大学教授、博士生导师，南京医科大学临床医学工程重点实验室主任，江苏省远程测控技术重点实验室副主任，江苏省重点（培育）学科生物医学工程学科带头人，江苏省333工程中青年学术带头人，南京医科大学副校长。</span>
+		    	</div>
+				<div class="people">
+			 	<div class="teacher1">
+					<div class="pic">
+				  	<img src="img/李建青.png" width="147px" height="200px">
+				    	<div class="info">
+					  	<p>李建青 &nbsp;&nbsp;博士</p><br>
+					  	<p>Jianqing Li, Ph.D</p><br>
+					  	<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;南京医科大学教授、博士生导师，南京医科大学临床医学工程重点实验室主任，江苏省远程测控技术重点实验室副主任，江苏省重点（培育）学科生物医学工程学科带头人，江苏省333工程中青年学术带头人，南京医科大学副校长。</span>
 				    </div>
-				  </div>
+				</div>
 				</div>
 			<div class="teacher2">
 					<div class="pic">
@@ -176,7 +197,7 @@
 					    </div>
 					</div> 
 			</div>
-			<div class="teacher6">
+			    <div class="teacher6">
 					<div class="pic">
 					  <img src="img/胡本慧.jpg" width="147px" height="200px">
 					    <div class="info">
@@ -185,9 +206,17 @@
 						  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;胡本慧，男，教授，博士生导师。于南京大学匡亚明学院获得理学学士学位，于中科院长春应化所获硕士学位，博士毕业于新加坡南洋理工大学，曾在新加坡CREATE研究中心和美国斯坦福大学从事博士后研究。2018年12月起任南京医科大学生物医学工程与信息学院教授，学术带头人。2019年入选‘江苏特聘教授’。</span>
 					    </div>
 					</div> 
-			    </div>
-			</div>
+			    </div><!-- div的结尾 -->
+			</div><!-- class people 的结尾 -->
+		</div><!-- tab1 的结尾 -->
+		<div class="tab2">
+            <p>aaaaa</p>
 		</div>
+		<div class="tab3">
+            <p>好想看见你</p>
+		</div>
+		</div><!-- 大tab栏的结尾 -->
+		</div><!--  right clearfix的结尾-->
 	    <div class="footer">
 			<img src="img/foot.png" width="1000px">
 		</div>

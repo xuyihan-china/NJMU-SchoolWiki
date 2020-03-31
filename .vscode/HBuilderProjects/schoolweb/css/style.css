@@ -49,11 +49,11 @@
           {
           	color: white;
           }
-           nav .level>li:hover
+         nav .level>li:hover
           {
           	 /* background:white; */
           	 color: #10346A;
-          } /* 色块底色 */
+          } /* 色块底色 */ 
           nav .two
           {
           	display: none; 
@@ -72,19 +72,22 @@
 			background-color: white;
           }
           /* nav .level li a{
-          	color: white;/* 标题栏里的字的颜色 */
+          	color: white;
           } */
           nav .level li:hover{
           	color: #10346a;/* 划过a时的颜色 */
           } 
-           nav .two li:hover
+         /*   nav .two li:hover
            {
           	 background: #10346a;
-          } /* 二集菜单的背景颜色 */ 
+          } */ /* 二集菜单的背景颜色 */ 
           nav .two li:hover{
-          	background: lightskyblue;
+			  color: white;
+          	background: #10346a;
           }
-			
+		 /*  nav .two a:hover{
+			  color: white;
+		  } */
 		  /*******************************************************/
 		  /*******************************************************/
 		  .left{
@@ -140,6 +143,11 @@
 			  padding-top: 10px;
 			  padding-bottom: 10px;
 		  }
+		  .box1:hover{
+			color: white;
+			background-color: #10346A;
+			cursor: pointer;
+}
 		  .min .box3{
 			  color: #10346A;
 			  font-size: 19px;
@@ -151,11 +159,13 @@
 		  }
 		  .box2:hover{
 		  			 color: white;
-		  			 background-color: #10346A;
+					   background-color: #10346A;
+					   cursor: pointer;
 		  }
 		  .box3:hover{
 		  			  color: white;
-		  			  background-color: #10346A;
+						background-color: #10346A;
+						cursor: pointer;
 		  }
 		  .right{
 			  float: left;
@@ -238,7 +248,8 @@
 			  .teacher2 .info span
 			           {  
 			  			  font: 19px/25px black;
-			  			  }
+							}
+			    
 	/***************************************************************************/
 			  			.teacher3{
 			  						  border-bottom: 2px solid #e2e2e2;
@@ -342,5 +353,11 @@
 						.footer{
 							position: absolute;
 							top: 1850px;
-							left: 140px;
+							left: 250px;
+						}
+						.tab2{
+                          display: none;
+						}
+						.tab3{
+							display: none;
 						}
