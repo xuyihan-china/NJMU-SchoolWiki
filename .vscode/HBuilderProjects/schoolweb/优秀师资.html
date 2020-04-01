@@ -7,23 +7,11 @@
 		<title>优秀师资</title>
 		<link rel="stylesheet" type="text/css" href="css/resrt.css"/>
 		<link rel="stylesheet" type="text/css" href="./css/style.css"/>
-		<script src="./jquery-1.10.1.js"></script>
+		<link rel="stylesheet" href="./css/tab2.css">
+		<script src="js/jquery-1.10.1.js"></script>
+		<script src="./js/schoolweb.js"></script>
 		<script>
-			$(function () {
-           	var index = 0;
-           	var $contents = $('.tanb>div');
-			   $(".min>div").click(function () {
-			var btnText =$(this).html();
-        	var clickIndex = $(this).index()
-      		if (clickIndex != index) {
-       		 $contents[index].style.display = 'none'
-       		 $contents[clickIndex].style.display = 'block'
-			  index = clickIndex;
-			  $('#p').empty();
-			  $('#p').append(btnText);			
-			}
-		})
-	})
+			
 	    </script>
 	</head>
 	<body>
@@ -129,7 +117,7 @@
 		  <div class="min">
 			    <div class="box1">优秀师资</div>
 			    <div class="box2">教授一览</div>
-			    <div class="box3">兼职教师</div>
+			    <div class="box3">学科介绍</div>
 		  </div>
 		</div>
 		
@@ -208,17 +196,56 @@
 					</div> 
 			    </div><!-- div的结尾 -->
 			</div><!-- class people 的结尾 -->
+			<div class="footer1">
+				<img src="img/foot.png" width="1000px">
+			</div>
 		</div><!-- tab1 的结尾 -->
 		<div class="tab2">
-            <p>aaaaa</p>
+			<table id="data">
+				<thead>
+				<tr>
+				  <th>所在学系</th>
+				  <th>教授</th>
+				  <th>副教授</th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+				  <td id="title">生物医学工程系</td>
+				  <td>吴小玲、胡本慧</td>
+				  <td>段磊、刘宾</td>
+				</tr>
+				<tr >
+				  <td id="title">生物信息学系 </td>
+				  <td>汪强虎 </td>
+				  <td>吕飒丽、王铖</td>
+				</tr>
+				<tr>
+				  <td id="title">医学信息学系</td>
+				  <td>刘云</td>
+				  <td></td>
+				</tr>
+				<tr >
+				  <td id="title">智能计算与数学系</td>
+				  <td></td>
+				  <td>罗建平 屠小明 韩新焕 郁芸 吴静</td>
+				</tr>
+				<tr>
+				  <td id="title">医学与生物物理系</td>
+				  <td></td>
+				  <td>吴晓波</td>
+				</tr>
+				</tbody>
+			  </table>
+			  <div class="footer2">
+				<img src="img/foot.png" width="1000px">
+			</div>
 		</div>
 		<div class="tab3">
             <p>好想看见你</p>
 		</div>
 		</div><!-- 大tab栏的结尾 -->
 		</div><!--  right clearfix的结尾-->
-	    <div class="footer">
-			<img src="img/foot.png" width="1000px">
-		</div>
+	    
 	</body>
 </html>

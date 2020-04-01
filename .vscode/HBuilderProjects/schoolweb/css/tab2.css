@@ -1,0 +1,42 @@
+
+  .tab2{
+      padding-top: 60px;
+      text-align: center;
+  }
+  #title{
+      font-weight: bold;
+  }
+  #data, td, th {
+    padding-top: 25px;
+    border: 1px solid #aaaaaa;
+  }
+  th{
+      height: 35px;
+      font-size: 20px;
+      font-weight: bold;
+  }
+  td {
+    height: 50px;
+    font-size: 17px;
+  }
+
+  #data thead {
+    background-color: #10346A;
+    color: #ffffff;
+  }
+  
+  .odd {
+    background-color: #ccccff;
+  }
+  #data th{
+      width: 280px;
+  }
+  tr:hover{
+      background-color: steelblue;
+      color: white;
+  }
+  .footer2{
+    position: absolute;
+    top: 580px;
+    left: -230px;
+}

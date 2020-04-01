@@ -31,17 +31,16 @@
     }
 
     #data, td, th {
-      border-collapse: collapse;
       border: 1px solid #aaaaaa;
     }
 
     th, td {
-      height: 28px;
+      height: 48px;
     }
 
     #data thead {
       background-color: #333399;
-      color: #ffffff;
+      color: white;
     }
 
     .odd {
@@ -90,12 +89,6 @@
     <td>2014-01-27</td>
     <td><a href="javascript:void(0)">删除</a></td>
   </tr>
-  <tr>
-    <td>Allen</td>
-    <td>$3700</td>
-    <td>2011-12-05</td>
-    <td><a href="javascript:void(0)">删除</a></td>
-  </tr>
   </tbody>
 </table>
 
@@ -103,7 +96,7 @@
 <script>
   // $("#data>tbody>tr:odd").addClass("odd")
   //$("#data>tbody>tr:odd").attr('class', 'odd')
-  $("#data>tbody>tr:odd").attr('class','odd')
+  $("tr:odd").attr('class','odd')
 </script>
 </body>
 </html>

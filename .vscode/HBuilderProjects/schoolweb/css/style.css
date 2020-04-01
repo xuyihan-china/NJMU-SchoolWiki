@@ -112,7 +112,7 @@
 			  font-size: 23px;
 		  }
 		  .max:hover{
-			  background-color: skyblue;
+			  background-color: #10346a;
 		  }
 		  .min{
 			  
@@ -132,8 +132,8 @@
 			  padding-top: 10px;
 			  padding-bottom: 10px;
 			  margin-top: 4px;
-			  
-		  }
+			  background:none;
+			}
 		  .min .box1{
 			  color: white;
 			  background-color: #10346A;
@@ -141,7 +141,7 @@
 			  width: 215px;
 			  height: 20px;
 			  padding-top: 10px;
-			  padding-bottom: 12px;
+			  padding-bottom: 10px;
 		  }
 		  .box1:hover{
 			color: white;
@@ -156,6 +156,7 @@
 			   padding-top: 10px;
 			   padding-bottom: 10px;
 			   margin-top: 4px;
+			   background:none;
 		  }
 		  .box2:hover{
 		  			 color: white;
@@ -186,9 +187,15 @@
 			  height:10px ;
 			  display: inline-block;
 		  }
+		  .head p{
+			  text-align: center;
+			  font-size: 18px;
+			  /* font-weight: bold; */
+			  
+		  }
 		  .word p{
 			  position: absolute;
-			  top: 23px;
+			  top: 21px;
 			  left:540px;
 			  float: right;
 			  font-size: 13px;
@@ -350,14 +357,17 @@
 							font-size: 20px;
 							color: #2359bc;
 							}
-						.footer{
+						.footer1{
 							position: absolute;
-							top: 1850px;
-							left: 250px;
+							top: 1700px; 
+							left: -240px;
 						}
 						.tab2{
                           display: none;
 						}
 						.tab3{
 							display: none;
+						}
+						.tab2 td tr{
+							border: olive 1px solid;
 						}
