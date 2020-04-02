@@ -27,6 +27,7 @@
   //  1. 点击'全选': 选中所有爱好
   $(function(){
     var $items=$(':checkbox[name=items]')
+    var $checkedAllBox =$('#checkedAllBox')
   })
   //  2. 点击'全不选': 所有爱好都不勾选
   //  3. 点击'反选': 改变所有爱好的勾选状态
@@ -39,10 +40,14 @@
     var $checkedAllBox = $('#checkedAllBox')
 
     // 1. 点击'全选': 选中所有爱好
-    $('#checkedAllBtn').click(function () {
-      $Items.prop('checked', true)
-      $checkedAllBox.prop('checked', true)
+    $('checkedAllBtn').click(function(){
+      $items.prop('checked',true)
+      $checkedAllBox.prop('checked',true)
     })
+    // $('#checkedAllBtn').click(function () {
+    //   $Items.prop('checked', true)
+    //   $checkedAllBox.prop('checked', true)
+    // })
 
     // 2. 点击'全不选': 所有爱好都不勾选
     $('#checkedNoBtn').click(function () {
@@ -69,9 +74,14 @@
     })
 
     // 6. 点击'提交': 提示所有勾选的爱好
-    $('#sendBtn').click(function () {
-      $Items.filter(':checked').each(function () {
-        alert(this.value);
+    // $('#sendBtn').click(function () {
+    //   $Items.filter(':checked').each(function () {
+    //     alert(this.value);
+    //   })
+    // })
+    $('#sendBtn').click(function(){
+      $Items.filter(':checked').each(function(){
+        alert(this.value)
       })
     })
   })
