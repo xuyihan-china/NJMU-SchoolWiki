@@ -1,0 +1,44 @@
+#pb{
+    font-size: 21px;
+    line-height: 25px;
+}
+.tab3p{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
+#tab3pic1{
+    padding: 15px 5px 0px;
+    width: 750px;
+}
+#pb2{
+    font-size: 21px;
+    line-height: 30px;
+}
+#pb3{
+    font-size: 21px;
+    line-height: 30px;
+}
+#chao{
+    color:red;
+    font-style:italic;
+    font-size: 18px;
+}
+#chao:hover{
+    color: rgb(16, 52, 106);
+}
+.footer3{
+    margin-top: 25px;
+    position: absolute;
+    margin-left: -130px;
+}
+.allall{
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    margin: 0 auto;
+}
+html{
+    margin: 0 auto;
+}
