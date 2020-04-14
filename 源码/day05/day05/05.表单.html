@@ -10,19 +10,20 @@
 			使用form标签来创建一个表单
 				form中有一个必须的属性叫做action
 				action需要一个服务器的地址，当我们提交表单时，填写的内容将会提交到action指向的地址
-			
+			表单就是一个input选项 文本自己选择为 type password text
+			首先要在head添加input选项
 		-->
 		
 		<form action="target.html">
-			
+			xyh<input type="text" value="xyh" name="xyh的name">
 			<!-- 在form中可以创建一个表单项，用户可以通过表单项来填写信息 -->
 			<!-- 
 				文本框
 				- 使用input标签来创建一个文本框
 				- 它需要一个type属性是text
-				- 如果希望表单中的内容最终发送到服务器，还必须要给表单项添加一个name属性
+				-   如果希望表单中的内容最终发送到服务器，还必须要给表单项添加一个name属性
 					该属性将会作为用户填写内容名字，在服务器中可以根据这个名字来获取用户填写内容
-					
+					填写名值对形式
 				- 默认情况下，用户添加的内容将会以查询字符串的形式发送给服务器，
 					所谓的查询字符串就是url地址?后边的内容
 				- username=sunwukong&password=123123

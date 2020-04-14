@@ -12,14 +12,14 @@
 				/*设置一个边框*/
 				/*border: 1px solid black;*/
 				/*border-spacing可以用来设置表格边框之间的距离*/
-				border-spacing: 100px;
+				border-collapse: collapse;
 				
 				/*
 				 * border-collapse可以用来设置表格的边框的合并
 				 * 	如果将值设置collapse，则table和td的边框将会自动合并为一个
 				 * 	当设置了边框合并以后，border-spacing将自动失效
 				 */
-				border-collapse: collapse;
+				/* border-collapse: collapse; */
 			}
 			
 			td,th{
@@ -43,6 +43,10 @@
 				我们在创建一个表格时，如果没有使用thead tbody tfoot这些标签时，
 					浏览器会自动在页面中添加tbody，并且将所有的tr都放到tbody中
 					所以实际上tr并不是table子元素，而是tbody的子元素
+					thead
+				tr th
+				tr td
+				tr tf
 			-->
 			<tr>
 				<!--在html中还为我们提供了一个th标签，专门用来表示表头的单元格-->
