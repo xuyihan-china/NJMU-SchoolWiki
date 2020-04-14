@@ -17,7 +17,7 @@
 ###媒体属性
 	width			   （可加max min前缀）
 	height			   （可加max min前缀）
-	device-width	   （可加max min前缀）
+	device-width	   （可加max min前缀）device-width
 	device-pixel-ratio（可加max min前缀，需要加webkit前缀）
 	orientation   portrait竖屏
 				  landscape横屏
@@ -29,6 +29,7 @@
 	   								规则；
 	   								规则
 	   			}
+				@media only screen and (min-width:800px)
 	   			@media  screen and (min-width:800px ){
 	   								规则；
 	   								规则

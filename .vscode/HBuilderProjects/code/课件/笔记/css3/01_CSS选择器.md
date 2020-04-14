@@ -20,7 +20,7 @@
 					也可称为直接后代选择器,此类选择器只能匹配到直接后代，不能匹配到深层次的后代元素
 		/*相邻兄弟选择器*/	#wrap #first + .inner {color: #f00;}
 					它只会匹配紧跟着的兄弟元素
-		/*通用兄弟选择器*/	#wrap #first ~ div { border: 1px solid;}
+		/*通用兄弟选择器*/	#wrap #first ~ div { border: 1px solid;} first 下面所有div
 					它会匹配所有的兄弟元素(不需要紧跟)
 		/*选择器分组*/		h1,h2,h3{color: pink;}  
 					此处的逗号我们称之为结合符
