@@ -1,0 +1,9 @@
+let a=123;
+let b =456;
+let c ='limits'
+exports.a=a;//exports 就是默认导出的对象
+exports.b=b;
+exports.c=c;
+module.exports.c=c;
+module.exports={};/* 多个设置属性 */
+module.exports= function(){}
