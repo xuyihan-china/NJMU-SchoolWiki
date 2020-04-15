@@ -13,7 +13,8 @@
 			 * 		1.以函数的形式调用时，this永远都是window
 			 * 		2.以方法的形式调用时，this就是调用方法的那个对象
 			 */
-			
+			函数形式调用window
+			方法 调用方法的对象
 			function fun(){
 				//console.log("a = "+a+", b = "+b);
 				console.log(this.name);
@@ -32,16 +33,24 @@
 				sayName:fun
 			};
 			
-			//console.log(obj.sayName == fun);
-			var name = "全局的name属性";
-			//obj.sayName();
-			//以函数形式调用，this是window
-			//fun();
+
+        
 			
-			//以方法的形式调用，this是调用方法的对象
-			//obj.sayName();
+            fun();
+			console.log(obj.sayName == fun);
+			var name = "全局的name属性";
+			obj.sayName();
+			
+			fun();
+			
+			
+			obj.sayName();
 			obj2.sayName();
 			
+
+			(function(){
+				console.log("xyh");
+			})();
 		</script>
 	</head>
 	<body>
