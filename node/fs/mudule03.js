@@ -20,4 +20,10 @@ arguments 一共传递了5个参数
             当前文件的完整路径
       dirname
          dirname 模块文件夹的完整路径
+      npm remove 删除一个模块
+      npm version  查看所有模块版本 
+      npm search 包名 搜索包
+      npm install 当前目录安装 的包 --save 加到依赖中去
+      npm install -g 全局安装 一般都是工具
+      npm install 下载当前项目所依赖的包
 */
