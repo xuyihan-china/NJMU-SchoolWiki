@@ -18,9 +18,9 @@ var fs = require("fs");
    position 一般不穿 是起始的位置
    utf-8 是enco顶
 */
-var fd =fs.openSync("hello.txt","w");
+var fd =fs.openSync("hello.txt","a");
 /*打开文件 返回值 这个方法会返回一个文件描述符作为结果 我们可以通过这个描述符来对文件经行各种操作 */
-fs.writeSync(fd,"have a nice day");
+fs.writeSync(fd,"play games");
 /* 保存关闭文件 */
 fs.closeSync(fd);
 console.log(fd);

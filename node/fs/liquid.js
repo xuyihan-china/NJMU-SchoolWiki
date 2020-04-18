@@ -7,12 +7,12 @@ var ws = fs.createWriteStream("hello3.txt")/* pipe   */
 ws.once("open",function(){
     console.log("打开了");
 })
-ws.write("xuuxuu");
-ws.write("yiyiyi");
-/* 关闭文件可以用open和close来绑定事件 */
 ws.once("close",function(){
     console.log("关闭了");
 })
+ws.write("xuuxuu");
+ws.write("yiyiyi");
+/* 关闭文件可以用open和close来绑定事件 */
 ws.end();
 
 /* on 事件字符串 回调函数 可以为对象绑定一个字符串 */
