@@ -16,15 +16,27 @@
 //    console.log(error.message);//可以选择看stack 或者 message
 // }
 //console.log('下面还可以执行');
+// function something(){
+//     if(Date.now()%2===1){
+//         console.log('奇数');
+//     }else{
+//         throw new Error('这是自己可以定义显示的error内容');
+//     }
+// }
+// try{
+//     something();
+// }catch(error){
+//    console.log(error.message);
+// }
 function something(){
     if(Date.now()%2===1){
         console.log('奇数');
     }else{
-        throw new Error('这是自己可以定义显示的error内容');
+        throw new Error('@?@');
     }
 }
 try{
-    something();
+    something()
 }catch(error){
-   console.log(error.message);
+    console.log(error.message);
 }

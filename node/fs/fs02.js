@@ -11,7 +11,7 @@ var fs = require("fs");
     }
 });
 console.log("这个先执行"); */
-fs.open("hello3.txt","w",function(err,fd){
+fs.open("hello3.txt",{flag:"w+"},function(err,fd){
     //fd 是文件描述 err是错误 在open中要写入读写权限
     if(!err){
         fs.write(fd,"hello 4.18",function(err){
