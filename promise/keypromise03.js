@@ -7,7 +7,7 @@ new Promise =((resolve,reject)=>{
         // return Promise.reject(4); 失败了
         // return Promise.resolve(5); 成功了
         //throw 5 失败了
-
+        return Promise.reject(4);
     },
     reason =>{
 
@@ -27,7 +27,7 @@ new Promise =((resolve,reject)=>{
         返回的为非promise的任意值 promise变为resolved value为返回的值
         返回的 是一个新promise 这个promise就是新promise的结果
     简单：
-        return 执行返回对象 不然就是undefined
+         return 执行返回对象 不然就是undefined
         .then的函数由谁来执行就是看promise的执行结果来看
         .then返回的promise对象由函数的执行结果，return的东西来决定
 */

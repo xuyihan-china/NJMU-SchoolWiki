@@ -15,7 +15,7 @@ new Promise((resolve,reject)=>{
     reason =>{
         
     }
-).then(
+).then(//相当于promise.resolve(3)
     value=>{
         return new Promise((resolve,reject)=>{//再链式调用里 要包再promise里
             setTimeout(() => {
