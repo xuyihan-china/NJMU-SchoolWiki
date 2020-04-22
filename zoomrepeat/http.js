@@ -8,7 +8,8 @@ server.on('request',function(request,response){
     //Request 请求对象  获取客户端的一些请求消息
     //Response 响应对象 发送响应消息
     console.log("收到请求"+request.url);
-    response.write('hrl');
+    response.setHeader('Content-Type','text/plain;charset=utf-8');
+    response.write('hrl睡觉');
     response.end();//反馈结束
     //由于服务器还非常弱 无论是什么请求只可以响应 hello nodejs URL 统一资源定位符 
     //根据不同地址 响应不同内容
