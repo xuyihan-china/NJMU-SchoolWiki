@@ -12,6 +12,7 @@ server.on('request',function(req,res){
                 res.end(data)
             }
         })
+        //Content type 来告知浏览器数据内容是什么类型
     }else if(url === '/ab2.jpg'){//这个不是文件路径 这个是标识 可以改为任意字符
         fs.readFile('./resource/ab2.jpg',function(err,data){
             if(err){
