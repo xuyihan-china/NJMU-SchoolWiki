@@ -50,7 +50,8 @@ http
   .createServer(function (req, res) { // 简写方式，该函数会直接被注册为 server 的 request 请求事件处理函数
     // 使用 url.parse 方法将路径解析为一个方便操作的对象，第二个参数为 true 表示直接将查询字符串转为一个对象（通过 query 属性来访问）
     var parseObj = url.parse(req.url, true)
-
+    //parse 转化为一个对象 url query 是？之后提交的内容
+    //JSON stringFy
     // 单独获取不包含查询字符串的路径部分（该路径不包含 ? 之后的内容）
     var pathname = parseObj.pathname
 
@@ -96,6 +97,7 @@ http
       //    2. 将当前时间日期添加到数据对象中，然后存储到数组中
       //    3. 让用户重定向跳转到首页 /
       //       当用户重新请求 / 的时候，我数组中的数据已经发生变化了，所以用户看到的页面也就变了
+       // pathname 是问好前面的内容 是在文件路径中用的
       var comment = parseObj.query
       comment.dateTime = '2017-11-2 17:11:22'
       comments.unshift(comment)

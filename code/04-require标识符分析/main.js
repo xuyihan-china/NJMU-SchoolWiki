@@ -53,3 +53,6 @@
 //    一个项目有且仅有一个 node_modules 而且是存放到项目的根目录
 
 require('a')
+//--save 保存 dependence文件 json文件 是 包的说明书
+//包描述文件 产品说明书
+//npm init 自动初始化 文件
