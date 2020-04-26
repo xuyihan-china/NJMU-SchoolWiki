@@ -12,7 +12,7 @@ var fs = require('fs')
 var url = require('url')
 var template = require('art-template')
 
-var comments = [
+var comments = [//var 申明变量以后用 给模板引擎用 art template
   {
     name: '张三',
     message: '今天天气不错！',
@@ -39,7 +39,9 @@ var comments = [
     dateTime: '2015-10-16'
   }
 ]
-
+//var urlObj = url.parse(req.url,true)
+//urlObj.parse
+//urlObj.pathname 查询字符串
 // /pinglun?name=的撒的撒&message=的撒的撒的撒
 // 对于这种表单提交的请求路径，由于其中具有用户动态填写的内容
 // 所以你不可能通过去判断完整的 url 路径来处理这个请求
@@ -73,7 +75,7 @@ http
         }
         res.end(data)
       })
-    } else if (pathname.indexOf('/public/') === 0) {
+    } else if (pathname.indexOf('/public/') === 0) {//查找public为 1 的第一个元素
       // /public/css/main.css
       // /public/js/main.js
       // /public/lib/jquery.js
@@ -98,6 +100,7 @@ http
       //    3. 让用户重定向跳转到首页 /
       //       当用户重新请求 / 的时候，我数组中的数据已经发生变化了，所以用户看到的页面也就变了
       var comment = parseObj.query
+      console.log(typeof comment);
       comment.dateTime = '2017-11-2 17:11:22'
       comments.unshift(comment)
       // 服务端这个时候已经把数据存储好了，接下来就是让用户重新请求 / 首页，就可以看到最新的留言内容了
@@ -110,7 +113,7 @@ http
       // 如果客户端发现收到服务器的响应的状态码是 302 就会自动去响应头中找 Location ，然后对该地址发起新的请求
       // 所以你就能看到客户端自动跳转了
       res.statusCode = 302 //302 和 301  302 每一次都还会请求a 浏览器不记忆 301 永久重定向浏览器记住 直接跳转 不看状态码
-      res.setHeader('Location', '/')
+      res.setHeader('Location', '/')//设置跳转
       res.end()
     } else {
       // 其它的都处理成 404 找不到
