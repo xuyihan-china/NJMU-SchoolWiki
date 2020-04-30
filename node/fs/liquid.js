@@ -17,3 +17,14 @@ ws.end();
 
 /* on 事件字符串 回调函数 可以为对象绑定一个字符串 */
 /* once 事件字符串 可以为对象绑定一个一次性事件 触发一次以后失效 */
+
+var fs = require('fs');
+var ws = fs.createWriteStream('hel');
+ws.once('open',function(){
+
+})
+ws.once('close',function(){
+
+})
+ws.write('wo n b');
+ws.end();//标识结束流文件

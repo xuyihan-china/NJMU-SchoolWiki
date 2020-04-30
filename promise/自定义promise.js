@@ -17,7 +17,6 @@
                     callbacks.onResolved(value)
                 });
             }, );
-            
         }
     }
     function reject(){
