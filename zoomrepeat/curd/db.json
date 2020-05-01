@@ -1,0 +1,10 @@
+{
+    "students":[
+        {"id":1,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
+        {"id":2,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
+        {"id":3,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
+        {"id":4,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
+        {"id":5,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
+        {"id":6,"name":"张四","gender":0,"age":18,"hobbies":"eat"}
+    ]
+}

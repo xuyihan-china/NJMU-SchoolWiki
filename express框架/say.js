@@ -12,10 +12,19 @@ app.get('',function(res,req){
     res.render('404.html',{
         title:'admin system'
         })
-    res.send('/page')
+    res.send('/page',function(){
+
+    })
+    res.redirect()
 })
+//当以post请求post的时候 执行指定的处理函数
+//req.query 只可以拿到 post请求
+app.post('/post',)
+app.use(bodyParser,urlencoded{{extended:false}})
+app.use(bodyParser.json())
 app.get('/post',function(res,req){
     res.send('post page')
+    var comment = req.body;
 })
 app.listen('3000',function(){
     console.log('running');
