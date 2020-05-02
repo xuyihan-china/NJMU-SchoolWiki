@@ -1,10 +1,1 @@
-{
-    "students":[
-        {"id":1,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
-        {"id":2,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
-        {"id":3,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
-        {"id":4,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
-        {"id":5,"name":"张三","gender":0,"age":18,"hobbies":"eat"},
-        {"id":6,"name":"张四","gender":0,"age":18,"hobbies":"eat"}
-    ]
-}
+{"students":[{"name":"许逸涵","gender":"0","age":"21","hobbies":"篮球","id":7},{"name":"plmm","gender":"1","age":"44","hobbies":"keep","id":8},{"name":"hg","gender":"0","age":"21","hobbies":"fg","id":9},{"name":"飞洒的","gender":"0","age":"11","hobbies":"2","id":10}]}
