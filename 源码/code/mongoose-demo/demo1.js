@@ -4,7 +4,17 @@ var mongoose = require('mongoose');
 mongoose.connect('mongodb://localhost/test', { useMongoClient: true });
 
 mongoose.Promise = global.Promise;
-
+// 连接数据库 mongoose.connect
+//文档模型 var xxxScheme = new Schema({
+  name:{
+    type:String,
+    require:'true'
+  },
+  age:{
+    type:Number,
+    require:'true'
+  }
+//})
 // 创建一个模型
 // 就是在设计数据库
 // MongoDB 是动态的，非常灵活，只需要在代码中设计你的数据库就可以了

@@ -32,7 +32,7 @@ var userSchema = new Schema({
 //   
 //    返回值：模型构造函数
 var User = mongoose.model('User', userSchema)
-
+// var                     数据库名称  模型对象
 
 // 4. 当我们有了模型构造函数之后，就可以使用这个构造函数对 users 集合中的数据为所欲为了（增删改查）
 // **********************
@@ -109,7 +109,7 @@ var User = mongoose.model('User', userSchema)
 //   }
 // })
 // **********************
-// #endregion /删除数据
+// #end region /删除数据
 // **********************
 
 
