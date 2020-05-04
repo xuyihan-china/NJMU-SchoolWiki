@@ -13,7 +13,6 @@ var app = express()
 app.use('/public/', express.static('./public/'))
 app.use('/static/', express.static('./static/'))
 app.use('/node_modules/', express.static('./node_modules/'))
-
 // 模板引擎，在 Express 也是一个 API 的事儿
 
 // 得到路径
