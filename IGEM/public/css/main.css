@@ -1,5 +1,7 @@
 #pic2{
-    width: 100%;;
+    display: block;
+    width: 70%;
+    margin: 0 auto;
 }
 #pic3{
     padding-top: 40px;

@@ -15,6 +15,9 @@ require('./b')
 //     throw err
 //   }
 //   console.log(data)
+// res.render(index.html,{
+  title:'llll'
+})
 // })
 
 // console.log(__dirname + '/a.txt')

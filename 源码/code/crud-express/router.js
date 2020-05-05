@@ -10,16 +10,12 @@
 
 var fs = require('fs')
 var Student = require('./student')
-
 // Express 提供了一种更好的方式
 // 专门用来包装路由的
 var express = require('express')
-
 // 1. 创建一个路由容器
 var router = express.Router()
-
 // 2. 把路由都挂载到 router 路由容器中
-
 /*
  * 渲染学生列表页面
  */

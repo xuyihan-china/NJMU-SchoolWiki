@@ -12,7 +12,7 @@
 
 var express = require('express')
 var router = require('./router')
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser')//这是body parser 专门用于post请求
 
 var app = express()
 
