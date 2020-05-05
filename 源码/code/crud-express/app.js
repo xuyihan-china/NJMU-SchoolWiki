@@ -30,7 +30,7 @@ app.use(bodyParser.json())
 // 把路由容器挂载到 app 服务中
 app.use(router)
 
-app.listen(3000, function () {
+app.listen('3000', function () {
   console.log('running 3000...')
 })
 
