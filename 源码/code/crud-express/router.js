@@ -103,7 +103,6 @@ router.get('/students/delete', function (req, res) {
   // 1. 获取要删除的 id
   // 2. 根据 id 执行删除操作
   // 3. 根据操作结果发送响应数据
-
   Student.deleteById(req.query.id, function (err) {
     if (err) {
       return res.status(500).send('Server error.')
@@ -111,7 +110,6 @@ router.get('/students/delete', function (req, res) {
     res.redirect('/students')
   })
 })
-
 // 3. 把 router 导出
 module.exports = router
 
