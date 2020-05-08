@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>当前的数字{{index}}</h2>
+        <button @click="increase">++++</button><!-- v-on:click="counter++" -->
+        <button @click="decrease">----</button><!-- v-on:click="counter--" -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:'#app',
+            data:{
+                index:0
+            },
+            methods:{
+                increase(){
+                    this.index++
+                },
+                decrease(){
+                    this.index--
+                }
+            }
+            
+        })
+    </script>
+</body>
+</html>
