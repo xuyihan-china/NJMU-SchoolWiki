@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>{{message}},{{message}}</h2>
+        <h2>{{firstName+" "+lastName}}</h2>
+        <h2>{{counter*2}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊',
+                firstName:'Kobe',
+                lastName:'bryant',
+                counter:'100'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+    <!-- 
+        {{}} 就是Mustache 将data文本数据插入到html中 胡须语法
+        总结：
+        1.{{直接使用}}
+        2.{{+“”+}} 拼个串
+        3.{{counter*2}} 高表达式
+     -->
+</body>
+</html>

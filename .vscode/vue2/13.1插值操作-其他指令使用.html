@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        需求：当message改变的时候DOM 元素不改变 v-once
+        其他指令是写在 html标签中的 
+        h2 v-once
+     -->
+    <div id="app">
+        <h2>{{message}}</h2>
+        <h2 v-once>{{message}}</h2><!-- 写在v-once中的数据在改变html后不会再改变 -->
+        <!-- v-for ="后面跟上表达式 item in message" -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>

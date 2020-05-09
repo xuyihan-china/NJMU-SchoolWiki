@@ -15,5 +15,21 @@
         data 类型 function 组件中data必须是函数 vue实例对应的数据对象
         methods function的集合 定义方法的
      -->
+     <h1 id="x">{{content}}</h1>
+     <button @click="add(1,2)">dd</button>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#x',
+            data:{
+                content:'xuh'
+            },
+            methods:{
+                add(a,b){
+                    return a+b;
+                }
+            }
+        })
+    </script>
 </body>
 </html>

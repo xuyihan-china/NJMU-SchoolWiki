@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app" v-cloak>
+        {{message}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* 在解析vue之前，div有一个属性v-cloak 因为后面要异步回调 所以这样比较合理
+           在解析vue之后，div没有了这个属性v-cloak
+        */
+        setTimeout(() => {
+            const app = new Vue({
+                el:'#app',
+                data:{
+                    message:'hello'
+                }
+            })
+        }, 1000);
+    </script>
+</body>
+</html>

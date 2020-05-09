@@ -4,3 +4,6 @@
     debug release 版本 正常版本 release版
     vue源码干了好多事情 new VUE（）
     没一系列的事情会告诉你vue做到哪一步了.
+        beforecreate 初始化 --> created 实现数据代理 ---> 在内存中编译模板 ---> beforemounted --> 挂载到el中 ---> mounted 可以完成ajax和异步操作
+        --->update 持续更新数据 -->destory
+        
