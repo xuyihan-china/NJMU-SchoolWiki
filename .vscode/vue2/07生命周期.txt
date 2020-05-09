@@ -3,4 +3,4 @@
     vue有自己的生命周期
     debug release 版本 正常版本 release版
     vue源码干了好多事情 new VUE（）
-    没一系列的事情会告诉你vue做到哪一步了
+    没一系列的事情会告诉你vue做到哪一步了.
