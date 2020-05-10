@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- 
+    v-bind 是绑定到属性中的 src 
+    用于绑定某些动态的属性 a href
+    img src 这些图片是服务器动态决定的
+ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <img v-bind:src="imgURL" alt="">
+        <a v-bind:href="url">百度一下</a>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊',
+                imgURL:'./logo.png',
+                url:'http://www.baidu.com'//这里是服务的请求数据 根据要求绑定到这里
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>
