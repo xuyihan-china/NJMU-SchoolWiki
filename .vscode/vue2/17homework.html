@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .active{
+            color:red;
+        }
+    </style>
+</head>
+    
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="(item,index) in movies" :class="{active:index===currentIndex}" @click="changred(index)">{{index}}</li>
+        </ul>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:'#app',
+            data:{
+                movies:['海王','海尔兄弟','火影忍者','进击的巨人'],
+                currentIndex:0
+            },
+            methods:{
+                changred(index){
+                    this.currentIndex= index
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+<!-- 
+    犯的错误：
+    没有用到的变量不要写 否则无法解析
+    index的值可以通过传递参数来继承
+    currentIndex=0 currentIndex : 0
+    :class="{active:xxxxx}" 通过对象的形式
+    不要加上; 这是vue 不是js
+ -->
