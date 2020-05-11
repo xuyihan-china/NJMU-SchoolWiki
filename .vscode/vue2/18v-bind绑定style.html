@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2 :style="{fontSize:'40px'}">{{message}}</h2>
+        <!-- 需要加上单引号 否则会把40px当作data中的变量来识别 这是对象语法 -->
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+    <!-- 
+        数组语法：
+            data{
+                baseStyle：{bac:'red'}
+            }
+     -->
+</body>
+</html>

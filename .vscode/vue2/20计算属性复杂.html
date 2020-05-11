@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <h2>总价格:{{totalPrice}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                books:[
+                    {id:110,name:'unix',price:119},
+                    {id:111,name:'unix',price:119},
+                    {id:112,name:'unix',price:119},
+                    {id:113,name:'unix',price:119},
+                ]
+            },
+            computed:{
+                totalPrice:function(){
+                    for(let i=0 ;i<this.books.length;i++){
+                        result += this.books[i].price
+                    }
+                    return result
+                }
+            },
+            methods:{
+
+            }
+        })
+        /* 计算属性有缓存 性能更加高 */
+    </script>
+</body>
+</html>
