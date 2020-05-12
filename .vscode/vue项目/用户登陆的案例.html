@@ -4,26 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <!-- 满足条件渲染 不满足条件的标签不渲染 -->
 </head>
 <body>
     <div id="app">
-        <h2 v-if="isShow">
-            <div>abc</div>
-            <div>abc</div>
-            <div>abc</div>
-            <div>abc</div>
-            <div>abc</div>
-            {{message}}
-        </h2>
+        <span v-if="isUser">
+            <label for="username">用户密码</label>
+            <input type="text" id="UserName">
+        </span>
+        <span v-else>
+            <label for="username">用户邮箱</label>
+            <input type="text" id="UserName">
+        </span>
+        <button @click ="isUser=!isUser">切换类型</button><!-- click 可以是值可以是表达式 -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
         var app = new Vue({
             el:'#app',
             data:{
-                message:'你好啊',
-                isShow:false
+                isUser:true
             },
             methods:{
 

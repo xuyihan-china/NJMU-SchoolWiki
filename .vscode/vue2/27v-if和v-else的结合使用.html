@@ -16,6 +16,7 @@
             <div>abc</div>
             {{message}}
         </h2>
+        <h2 v-else>当v-if为false的时候显示我</h2>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -23,7 +24,7 @@
             el:'#app',
             data:{
                 message:'你好啊',
-                isShow:false
+                isShow:true
             },
             methods:{
 
