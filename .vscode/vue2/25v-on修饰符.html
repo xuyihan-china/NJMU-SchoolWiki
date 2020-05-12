@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <div @click="divclick">
+            <button @click.stop="btnclick"><!-- 修饰符.stop 阻止事件冒泡 -->
+                按钮
+            </button>
+        </div>
+        <form action="h">
+            <input type="submit" value="提交" @click.prevent="submitClick">
+        </form>
+        <!-- 监听键盘键帽的点击 -->
+        <input type="text" @keyup="keyup()">
+        <!-- 只监听enter的键帽点击 -->
+        <input type="text" @keyup.enter="keyup()">
+
+        <button @click.once="btn2click()">点击一次</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+                divclick(){
+                    console.log('divclick')
+                },
+                btnclick(){
+                    console.log('btnclick')
+                },
+                submitClick(){
+                    console.log("okk")
+                },
+                keyup(){
+                    console.log('keyup')
+                },
+                btn2click(){
+                    console.log('这句话只会说一次')
+                }
+            }
+        })
+    </script>
+</body>
+</html>

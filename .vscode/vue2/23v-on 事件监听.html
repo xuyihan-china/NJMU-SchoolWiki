@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body><!-- v-on: === @ -->
+    <!-- 在事件监听的时候，没有参数传递可以不添加（）
+        如果方法本身有一个参数，那么会将原生事件的event参数传递进去
+        如果需要同时传入某个参数，同时需要event的时候，可以通过$event传入事件
+    -->
+    <div id="app">
+        <h2>当前计数:{{counter}}</h2>
+        <button @click="increase">增加</button>
+        <button @click="decrement">减少</button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el:'#app',
+            data:{
+                counter:0
+            },
+            methods:{
+                increase(){
+                    this.counter++
+                },
+                decrement(){
+                    this.counter--
+                }
+            }
+        })
+    </script>
+</body>
+</html>

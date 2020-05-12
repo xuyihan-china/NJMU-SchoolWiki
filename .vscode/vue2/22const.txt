@@ -1,0 +1,7 @@
+es6语法
+    1.const let 存在块级作用域
+    2.const let 不存在变量提升 var存在变量提升
+    3.const let 存在变量死区
+    4.const let 不可以存在重复的变量名字
+    5.const 不可以改变变量的值
+    6.var 一个变量 相当于 window.一个变量 会污染全局变量
