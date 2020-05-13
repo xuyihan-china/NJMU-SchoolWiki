@@ -13,7 +13,7 @@
         </span>
         <span v-else>
             <label for="username">用户邮箱</label>
-            <input type="text" id="UserName">
+            <input type="text" id="UserName" key="abc"><!-- key是复用的关键词 key相同重复使用 不同不共同使用 -->
         </span>
         <button @click ="isUser=!isUser">切换类型</button><!-- click 可以是值可以是表达式 -->
     </div>

@@ -1,0 +1,5 @@
+过滤器：filters :{
+
+}
+这是app vue中的内容
+可以给button 绑定 :disabled属性 加上布尔值来控制 
