@@ -3,3 +3,16 @@
 }
 这是app vue中的内容
 可以给button 绑定 :disabled属性 加上布尔值来控制 
+reduce函数
+    普通的for循环
+    for(let i in this.books){
+
+    }
+函数式编程 申明式编程 命令式编程
+const nums = [10,23,443,43,44]
+let newnums =[]
+for(let n of nums){
+    if(n<100){
+        newnums.push(n)
+    }
+}
