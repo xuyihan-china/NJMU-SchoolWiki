@@ -35,4 +35,4 @@ reduce 语法
     }).reduce(function(prevalue,n){
         return prevalue+n
     },0) //prevalue 之前是0 
-    函数式编程
+    函数式编程 不是js特有 函数内部会过滤掉这次的n

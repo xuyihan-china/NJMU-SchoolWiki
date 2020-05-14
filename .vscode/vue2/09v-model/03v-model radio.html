@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <label for="">
+            <input type="radio" name="sex" id="male" value="男" v-model="sex">男
+        </label>
+        <label for="">
+            <input type="radio" name="sex" id="female" value="女" v-model="sex">女
+        </label>
+        <!-- 相同的name 是互斥的 -->
+        <!-- value 是提交到服务器的值 -->
+        <!-- 此时把name删去也是互斥的 -->
+        <!-- 用户默认选择值：sex:男 -->
+        <h2>您选择的性别是：{{sex}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊',
+                sex:'男'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+    <!-- 
+        input 标签的 value 属性的作用是由 input 标签的 type 属性的值决定的
+
+
+当 type 的取值为 button、reset、submit 中的其中一个时，此时 value 属性的值表示的是按钮上显示的文本
+
+
+当 type 的取值为 text、password、hidden 中的其中一个时，此时 value 属性的值表示的是输入框中显示的初始值，此初始值可以更改，并且在提交表单时，value 属性的值会发送给服务器（既是初始值，也是提交给服务器的值）
+
+
+当 type 的取值为 checkbox、radio 中的其中一个时，此时 value 属性的值表示的是提交给服务器的值
+
+
+当 type 的取值为 image 时，点击它提交表单后，会将用户的点击位置相对于图像左上角的 x 坐标和 y 坐标提交给服务器
+————————————————
+版权声明：本文为CSDN博主「WinstonLau」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/WinstonLau/article/details/88537552
+     -->
+</body>
+</html>
