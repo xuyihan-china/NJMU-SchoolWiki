@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <!-- 修饰符 lazy -->
+        <!-- 希望延迟展示双向绑定 -->
+        <!-- 当敲下回车在进行绑定 -->
+        <input type="text" v-model.lazy="message">
+        <!-- v-model 双向绑定 -->
+        <!-- 修饰符number -->
+        <h2>{{message}}</h2>
+
+        <input type="number" v-model.number="message">
+        <!-- 如果希望类型是number的话，那么加上.number会转化为number类型 ,否则是string -->
+
+        <!-- trim 剥除两边的空格 -->
+        <input type="text" v-model.trim="name">
+        <h2>{{name}}</h2>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊',
+                name:''
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <cpn>
+        <h2>我是标题</h2>
+        <p>我是内容</p>
+        <p>hhhhhh</p>
+    </cpn> -->
+    <div id="app">
+        <!-- 需求 会多次使用下面这段代码-->
+        
+        <mucpn></mucpn>
+        <mucpn></mucpn>
+        <mucpn></mucpn>
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* 创建组件构造器对象 */
+        const cpnC = Vue.extend({
+            template:`
+                <div>
+                    <h2>我是标题</h2>
+                    <p>我是内容</p>
+                    <p>hhhhhh</p>
+                </div>
+            `
+        })
+        /* 注册组件 */
+        Vue.component('mucpn',cpnC)
+        /* 选择组件的使用方式 mucpn 第二个参数传入上面的参数 cpnC*/
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>
