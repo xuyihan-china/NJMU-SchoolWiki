@@ -4,41 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- 全局组件意味着可以在多个vue实例下面使用 -->
 </head>
 <body>
     <div id="app">
-        <!-- 需求 会多次使用下面这段代码-->
-        
-        <mucpn></mucpn>
-        <mucpn></mucpn>
-        <mucpn></mucpn>
-        
+        {{message}}
+        <cpn></cpn>
+        <cpn></cpn>
+
+    </div>
+    <div id="app2">
+        <cpn></cpn>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
-        /* 创建组件构造器对象 */
         const cpnC = Vue.extend({
-            template:`
+            template:
+            `
                 <div>
                     <h2>我是标题</h2>
                     <p>我是内容</p>
-                    <p>hhhhhh</p>
-                </div>
-                `
-            /* 模板字符串可以支持换行 */
-        })
-        /* 注册组件 */
-        Vue.component('mucpn',cpnC)
-        /* 选择组件的使用方式 mucpn 第二个参数传入上面的参数 cpnC*/
-        const cpnC = Vue.extend({
-            template:`
-                <div>
-                    <h2></h2>
-                    <p></p>
-                    <p></p>
                 </div>
             `
         })
+        Vue.component('cpn',cpnC)
         var app = new Vue({
             el:'#app',
             data:{
@@ -46,6 +35,14 @@
             },
             methods:{
 
+            }
+        })
+        var app2 = new Vue({
+            el:"app2",
+            component:{
+                //第一个参数 cpn组件的标签名
+                //第二个参数注册组件的名字
+                cpn:cpnC
             }
         })
     </script>
