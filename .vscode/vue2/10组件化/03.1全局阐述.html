@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* 
+            注册父组件 父组件挂载到root Vue对象中
+            创建子组件 (const child = Vue.extend({})) ，将子组件挂到父组件中
+        */
+        Vue.component('tip',Vue.extend({
+            template:'',
+            component:'子组件挂载的名字 然后在上面的template中可以展示子组件' 
+        }))
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            },
+            /* 将父组件挂载到root中 */
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 
+        所以父组件和子组件的定义方式
+            在父组件的template中,运用了子组件,所以就形成了层级结构
+            子组件的component是在vue中的 我们也可以在实例选项中注册局部组件，这样组件只能在这个实例中使用：
+            就是子组件vue挂载的那个标签
+            子组件添加到父组件，父组件的component中
+            父组件挂载到更目录 vue的实例当中
+     -->
+    <div id="app">
+        <cpn2></cpn2>>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* 创建第一个组件 */
+        const cpnC1 = Vue.extend({
+            template: `
+             <div>i am title</div>
+             <h2> i am xyh</h2>
+            `
+        })
+        /* 
+        创建第二个组件 
+        cpn2是父组件 cpn1 是子组件
+        */
+        const cpnC2 = Vue.extend({
+            template: `
+             <div>i am title</div>
+             <h2> i am xyh</h2>
+             <cpn1></cpn1>
+            `
+            ,/* 模板套模板 */
+            /* 在第二个组件的创建中 加上第一个组件 */
+            components:{
+                cpn1:cpnC1
+            }
+        })
+        /* Vue.component(cpn,'cpn1') */
+        /* 创建局部组件 */
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            components:{
+                cpn2:cpnC2
+            }
+        })
+    </script>
+    <!-- 
+        组件构造器2 放在了 组件构造器1里注册
+        组件构造器1 放在了 vue里注册
+     -->
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* 全局组件注册的语法糖 */
+        /* 
+            父组件定义在哪里？
+        
+        */
+        /* 创建组件的构造器 */
+        // const cpnC1 =Vue.extend({
+        //     template:`
+        //     `
+        // })
+        // Vue.component('cpn',cpnC1);
+        Vue.component('cpn',Vue.extend({
+            template:''
+        }))
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            },
+            component:{
+                'cpn2':{
+                    template:''
+                }
+                /* 局部组建的语法糖 */
+            }
+        })
+    </script>
+</body>
+</html>

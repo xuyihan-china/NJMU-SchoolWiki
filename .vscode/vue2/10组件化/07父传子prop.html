@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <cpn  v-bind:cmovies="movies"></cpn>
+    </div>
+    <!-- 这里是设计组件 -->
+    <!-- 在template中直接用 在 div中绑定 -->
+    <template id="cpn">
+        <div >
+            <ul>
+                <li v-for="item in cmovies">{{item}}</li>
+            </ul>
+            <h2>{{cmovies}}</h2>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* 父传子：props  这就是子*/
+        const cpn ={
+            template:'#cpn',
+            data(){
+                return{}
+            },
+            props:['cmovies']
+            // props:Array, 必须是数组类型 框定类型
+            // cmovies : Array
+            // cmessage: String
+            //提供默认值
+            //type:String ,
+            //    default:'aaaa'
+            //    required:xxxx 布尔值 传递的时候必需要传 true 这个属性是必须传的值
+            // cmessage:{
+            //     type:Array,
+            //     required:true,
+            //     default:'aaa'
+            // }
+        }
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊',
+                movies:['海外','的风景','将发生']
+                /* 注意要传递的是movies这个属性 */
+            },
+            methods:{
+
+            },
+            components:{
+                cpn//这里是字面量增强写法 说明cpn是挂载在根目录上的
+            }
+        })
+    </script>
+</body>
+<!-- 
+    在开发中 往往有一些数据确实需要从上层传递到下层
+    这个时候，子组件不会单独发请求，而是将大组件发送给小组件
+    vue官方提到用prop向子组件传递数据
+    通过事件向父组件发送消息 
+    父传子 props
+    子传父 $emit
+    Vue实例可以看作是根组件 cpn1 挂载到根组件上去
+ -->
+</html>

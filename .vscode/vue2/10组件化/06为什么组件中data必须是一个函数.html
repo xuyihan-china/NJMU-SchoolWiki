@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <cpn></cpn>
+        <cpn></cpn>>
+    </div>
+    <template id="cpn">
+        <!-- <cpn></cpn> -->
+        <div>
+            <h2>当前计数：{{counter}}</h2>
+            <button @click="increment">+</button>
+            <button @click="decrement">-</button>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        
+        Vue.component('cpn',{
+            template:'#cpn',
+            data(){
+                return {
+                    counter:0
+                }
+            },
+            methods:{
+                increment(){
+                    this.counter++
+                },
+                decrement(){
+                    this.counter--
+                }
+            }
+        })
+        /* 组件有自己的空间,有自己的methods */
+        /* 如果有两个cpn 那么cpn会自己调用自己的函数 不会公用一个data */
+        /* 否则其他data会被修改 */
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            }
+        })
+    </script>
+</body>
+</html>

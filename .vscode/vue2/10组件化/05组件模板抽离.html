@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <cpn></cpn>
+        <cpn></cpn>
+    </div>
+    <!-- 组件内部不可以直接使用mustache语法 -->
+    <!-- 通过script标签 必须是类型 text/x-template -->
+    <!-- <script text="text/x-template" id="cpn">
+        <div>
+            <h2>hello world</h2>
+        </div>
+    </script> -->
+    <template id="cpn">
+        <div>
+            <h2>hello xyhhhh</h2>
+            <h2>{{title}}</h2>
+            <h6>{{message}}</h6>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        /* {{}} 中的语法要在data里面写 */
+        /* 但是data中的数据应该是一个函数不应该是一个对象 */
+        Vue.component('cpn',{
+            template:'#cpn',
+            /* data 函数的形式 然后返回一个对象 对象内部保存属性 */
+            data(){
+                return {
+                    title:'abccc',
+                    message:'touch'
+                }
+            }
+        })
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            }
+        })
+    </script>
+</body>
+</html>
+<!-- 
+    写到现在：
+        创建vue对象 -> 对象中有 el 挂载 data 主要组件的data值 methods 方法
+        computed 计算属性 保存内部的值  component 定义 子组件
+        子组件挂载到父组件的方法 在父组件的template中,运用了子组件,所以就形成了层级结构
+        components:{
+                cpn1:cpnC1
+            }
+        而且这个属于局部组件
+        组件中 的语法糖 Vue.components('你起的标签名',{
+            component: ,
+            template:  '#'   ->指向<template></template>
+        })
+        最后说说作用域的问题
+           就是局部组件和全局组件
+           全局组件就是root root是根 Vue.extend 中的就是全局组件
+           挂载到component中 是局部组件
+ -->
+ <!-- 
+     为什么组件中data必须是一个函数
+        组件中的data为什么必须是函数
+        
+  -->

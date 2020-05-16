@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 父组件模板 -->
+    <div id="app">
+        <!-- @ -> 就是v-on 除了可以监听默认事件 还可以监听子组件发过来的事件 -->
+        <cpn @item-click="cpnclick"></cpn>
+    </div>
+    <!-- 子传递父 自定义事件 $emit -->
+    <!-- 子组件模板 -->
+    <template id="cpn">
+        <div>
+            <button v-for="item in catagories" @click ="btnClick(item)">{{item.name}}</button>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const cpn ={
+            template:"#cpn",
+            data(){
+                return{
+                    catagories:[
+                        {id:'aaa',name:'hot recommend'},
+                        {id:'20',name:'manu'},
+                        {id:'34',name:'kive'},
+                        {id:'8',name:'kobe'},
+                    ]
+                }
+            },
+            methods:{
+                btnClick(item){
+                    this.$emit('item-click',item)
+                    //事件名称叫itemClick 
+                    //item是同时传递过去的参数 父组件要接受这个参数 并且监听 监听后写方法
+                }
+            }
+        }
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+                cpnclick(){
+                    console.log('cpnclick');
+                }
+            },
+            components:{
+                cpn
+            }
+        })
+    </script>
+</body>
+</html>
