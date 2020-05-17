@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 这是vue实例的模板 -->
+    <div id="app">
+        <cpn :number1=num1 :number2=num2 @num1change="num1change" @num2change="num2change"></cpn><!-- 这里的number1 是模板中的number1 模板：数据 -->
+    </div>
+    <template id="cpn">
+        <!-- 
+            需求 input输入框一旦改变
+            以前的v-model都是绑定到data里面 但是现在绑定到props里面
+            一定要通过父组件经行修改 父组件传过来什么值 里面就保存什么值
+            现在不仅父组件改变这个值 子组件也在改变 最后会数值混乱
+            就是现在要找一个中介 这个中介就是指component的data() this.xxx=xxxx初始化 这样不会修改父组件里面的值
+            需求2：
+            现在要把父组件里的值进行修改 dnumber1 然后通过emit事件来传递
+            需求3：
+            data的数据永远是下面的100倍
+         --> 
+        <div>
+            <h3>props:{{number1}}</h3>
+            <h3>data:{{dnumber1}}</h3> 
+             <input type="text"  :value="dnumber1" @input ="num1Input()">
+             <!-- @input是实时查询 没输入一个字符都会触发 @是v-on的缩写 用来监听事件 -->
+             <!-- 相当于 v-model的作用 :value="dnumber1" @input ="num1Input()" -->
+            <h3>props:{{number2}}</h3>
+            <h3>data:{{dnumber2}}</h3>
+            <!--  <h3>{{dnumber2}}</h3> -->
+            <input type="text" :value="dnumber2" @input ="num2Input()">
+            <!--  只改变data里的数据 ，只绑定子组件的data数据 ，不改变父组件的值-->
+            <!-- 这里只是dnumber绑定 而不是 绑定number  所以不会改变number的值-->
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                num1:1,
+                num2:0
+            },
+            methods:{
+                num1change(value){
+                    this.num1 = value.parseInt()
+                },
+                /* 修改值 num1change 会传入 this.dnumber 作为value */
+                /* 这里的value类型 是String类型 */
+                /* parseFloat()是转化为浮点数 */
+                num2change(value){
+                    this.num2 = value.parseInt()
+                }
+            },
+            components:{
+                cpn :{
+                    template:'#cpn',
+                    props:{
+                        number1:Number,
+                        number2:Number
+                    }/* 这是类型 prop 的类型*/
+                },
+                data(){
+                    return{
+                        dnumber1:this.number1,
+                        dnumber2:this.number2
+                    }
+                },
+                //在组建 中要返回一个对象 先要初始化一下number1 number2
+                methods:{
+                    num1Input(event){
+                        this.dnumber1 = event.target.value
+                        /* 让dnumber1 永久储存到那个 dnumber1 的值 */
+                        this.$emit('num1change',this.dnumber1)
+                        /* 同时修改dnumber2的值 */
+                        this.dnumber2 = this.dnumber1*100
+                    },
+                    num2Input(event){
+                        this.dnumber2 = event.target.value
+                        /* 让dnumber2 永久储存到那个 dnumber2 的值 */
+                        this.$emit('num1change',this.dnumber2)
+                        /*子组件向父组件传递一个数据,然后传出去一个值  */
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

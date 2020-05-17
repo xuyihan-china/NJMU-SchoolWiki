@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <cpn></cpn>>
+        <button @btnclick>按钮</button>
+    </div>
+    <template>
+        <div>i am a child</div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+                btnclick(){
+                    console.log(this.$childern)
+                }
+            },
+            components:{
+                cpn :{
+                    template:'#cpn',
+                    methods:{
+                        showMessage(){
+                            console.log('showmessage')
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
