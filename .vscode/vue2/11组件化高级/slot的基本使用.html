@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <cpn><button>案例</button></cpn>
+        <!-- 在这里写的就是插条里替换掉的内容 -->
+        <cpn></cpn>
+        <cpn></cpn>
+        <cpn><button>4</button></cpn>
+    </div>
+    <template id="cpn">
+        <cpn>
+            <h2>我是组件</h2>
+            <h2>我是组件,hahaha</h2>
+            <slot><p>这是插条默认值</p></slot>
+        <!-- 插条可以显示也可以不显示 根据 -->
+            <!-- 插槽就是封装好的 -->
+        </cpn>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            },
+            components:{
+                cpn:{
+                    template:'#cpn'
+                }
+            }
+        })
+    </script>
+</body>
+</html>

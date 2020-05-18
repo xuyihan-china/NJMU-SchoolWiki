@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- 所有的子组件的时候用this.$children -->
+    <!-- ref是一个空对象 默认是一个空对象 -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +10,12 @@
 <body>
     <div id="app">
         {{message}}
-        <cpn></cpn>>
-        <button @btnclick>按钮</button>
+        <cpn></cpn>
+        <cpn></cpn>
+        <cpn ref="aaa"></cpn>
+        <button @click="btnclick">按钮</button>
     </div>
-    <template>
+    <template id="cpn">
         <div>i am a child</div>
     </template>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -23,7 +27,9 @@
             },
             methods:{
                 btnclick(){
-                    console.log(this.$childern)
+                    // console.log(this.$children)
+                    // this.$children[0].showMessage()
+                    console.log(this.$refs.aaa.name)
                 }
             },
             components:{
@@ -32,6 +38,11 @@
                     methods:{
                         showMessage(){
                             console.log('showmessage')
+                        }
+                    },
+                    data(){
+                        return {
+                            name:'我是子组件的name'
                         }
                     }
                 }
