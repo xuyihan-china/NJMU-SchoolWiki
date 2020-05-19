@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        <cpn v-show="isShow"></cpn>
+        <!-- 竟然是用的vue的data里的数据 -->
+        <!-- 这里的变量作用域是在vue实例中的 -->
+        <!-- 父组件模板的所有东西会在父级作用域中编译，子组件模板的所有东西会在子级作用域中编译 -->
+        <!-- 整个组件是在父组件中出现的，使用的属性就是父组件的属性 -->
+        <!-- isShow是Vue实例中的属性，而不是子组件的属性 -->
+    </div>
+    <template id="cpn">
+        <div>
+            <h2>我是子组件</h2>
+            <p>我是内容 hhh</p>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                isShow:true
+            },
+            methods:{
+
+            },
+            components:{
+                cpn:{
+                    template:'#cpn'
+                },
+                data(){
+                    return{
+                        isShow:false
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

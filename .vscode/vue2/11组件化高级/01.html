@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<!-- 
+    需求：在父组件中修改组件(template)中的值,就需要一层一层的向上传递值
+    首先要在data里返回的：
+        return 一个对象
+
+    其次在要传出的对象的slot中 通过:data 传递出你要传递出去的值
+       :data="language" 
+    最后 在父元素中 通过slot-scope 得到对象的名字  对象的名字就可以进行操作了
+ -->
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <cpnl></cpnl>
+    </div>
+    <template id="cpnl">
+        <div>
+            <ul>
+                <li v-for="items in language">{{items}}</li>
+            </ul>
+        </div>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        let app = new Vue({
+            el:'#app',
+            data:{
+                message:'helloworld',
+            },
+            methods:{
+                
+            },
+            components:{
+                cpnl:{
+                    template:'#cpn'
+                },
+                data(){
+                        return{
+                            language:['java','c','javascript','c++','c#','python','Go']
+                        }
+                    }
+            }
+        })
+    </script>
+</body>
+</html>

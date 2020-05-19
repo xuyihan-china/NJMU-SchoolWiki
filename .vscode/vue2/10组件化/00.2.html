@@ -7,16 +7,15 @@
 </head>
 <body>
     <div id="app">
-        <cpn><span >这里只会替换没有名字的</span></cpn>
-        <!-- 在父组件里的是 默认替换样式 会改变没有name属性 的标签 -->
+        {{message}}
+        <cpn :xyhinfo="info"></cpn>
     </div>
     <template id="cpn">
         <div>
-            <!-- 具名插槽可以个性化组件 不被替换 -->
-            <slot name="left"><span>左</span></slot>
-            <slot name="center"><span>中</span></slot>
-            <slot name="right"><span>右</span></slot>
-            <slot></slot>
+            <h4>happy a day</h4>
+            <ul>
+                <li v-for="item in xyhinfo">{{item}}</li>
+            </ul>
         </div>
     </template>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -24,7 +23,8 @@
         var app = new Vue({
             el:'#app',
             data:{
-                message:'你好啊'
+                message:'你好啊',
+                info:['181','name','see','zwl']
             },
             methods:{
 
@@ -32,8 +32,10 @@
             components:{
                 cpn:{
                     template:'#cpn',
+                    props:['xyhinfo']
                 }
             }
+
         })
     </script>
 </body>

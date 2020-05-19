@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 父组件替换插槽的标签,但是内容是由子组件来提供的 -->
+    <!-- 子组件中包括数据 -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        {{message}}
+        <!-- 目的 是获取子组件的language-->
+        <!-- 父组件对子组件展示的东西不满意 就自己展示 -->
+        <cpn>
+
+        </cpn>
+
+        <cpn>
+            <div slot-scope="slot">
+                <div v-for ="item in slot.data">###{{item}}</div>
+            </div>
+            <!-- 这个写法是固定的 是为了拿到里面的slot slot是自己写的名字 -->
+        </cpn>
+
+        <cpn>
+
+        </cpn>
+    </div>
+    <template id="cpn">
+        <!-- 这里的内容是在子组件中的 因为template在子组件中 -->
+    <slot :data="language">
+        <div>
+            <ul>
+                <li v-for='item in language'>{{item}}</li>
+            </ul>
+        </div>
+    </slot>
+    </template>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'你好啊'
+            },
+            methods:{
+
+            },
+            components:{
+                cpn:{
+                    template:'#cpn',
+                    data(){
+                        return{
+                            language:['java','c','javascript','c++','c#','python','Go']
+                        }
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>
+<!-- 
+    需求：在父组件中修改组件(template)中的值,就需要一层一层的向上传递值
+    首先要在data里返回的：
+        return 一个对象
+
+    其次在要传出的对象的slot中 通过:data 传递出你要传递出去的值
+       :data="language" 
+    最后 在父元素中 通过slot-scope 得到对象的名字  对象的名字就可以进行操作了
+
+ -->
