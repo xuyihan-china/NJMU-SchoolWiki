@@ -7,7 +7,7 @@
 </head>
 <body>
     <div id="app">
-        <cpn><span >这里只会替换没有名字的</span></cpn>
+        <cpn><!-- <span >这里只会替换没有名字的</span> --></cpn>
         <!-- 在父组件里的是 默认替换样式 会改变没有name属性 的标签 -->
     </div>
     <template id="cpn">
@@ -16,7 +16,7 @@
             <slot name="left"><span>左</span></slot>
             <slot name="center"><span>中</span></slot>
             <slot name="right"><span>右</span></slot>
-            <slot></slot>
+            <slot>大</slot>
         </div>
     </template>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
