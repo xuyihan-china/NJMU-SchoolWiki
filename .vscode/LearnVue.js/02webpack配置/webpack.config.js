@@ -6,4 +6,8 @@ module.exports={
         filename:'bundle.js',
         /* 映射webpack和npm run build 一步打包 */
     },
+    devserver:{
+        contentBase:'./dist/',
+        inline:true
+    }
 }
