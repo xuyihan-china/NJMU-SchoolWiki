@@ -1,8 +1,15 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
-import xyh from '@/components/xyh'
-import user from '@/components/user'
+// import HelloWorld from '@/components/HelloWorld'
+// import xyh from '@/components/xyh'
+// import user from '@/components/user'
+//实现路由懒加载 一个懒加载一个js文件
+const  HelloWorld = ()=> import('@/components/HelloWorld')
+const xyh = ()=> import('@/components/xyh')
+const  user = ()=> import('@/components/user')
+const  homenews = ()=> import('@/components/homenews')
+const  homemessage = ()=> import('@/components/homemessage')
+const profile = ()=> import('@/components/profile')
 Vue.use(Router)
 /* 只要是插件就要 安装插件 vue.use */
 export default new Router({
@@ -10,7 +17,22 @@ export default new Router({
     {
       path: '/h',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      /* 配置子组件用children */
+      children:[
+        {
+          path:'news',/* 子路由不用加/ */
+          component:homenews
+        },
+        {
+          path:'message',
+          component:homemessage
+        },
+        {
+          path:'',
+          redirect:'message'
+        }
+      ]
     },
     {
       path:'/',
@@ -24,8 +46,14 @@ export default new Router({
     },
     {
       path:'/user/:xuyiha',/* 这里要加上冒号  */
+      /* 其实这是一个变量 */
       component:user,
       name:'user'
+    },
+    {
+      path:'/profile',
+      component:profile,
+      name:'profile'
     }
     
   ],

@@ -5,7 +5,10 @@
     </slot>
     <router-link to="/">首页</router-link>
     <router-link to="/h" tag="button" replace>hello world</router-link >
-    <router-link :to="'/user/'+userid" tag="button" replace>查看用户名</router-link>
+    <button @click="profileclick">ann1</button>
+    <button @click="userclick">ann2</button>
+    <!-- <router-link :to="'/user/'+userid" tag="button" replace>查看用户名</router-link>
+    <router-link :to="{path:'/profile',query:{name:'coderwhy',age:18,height:199}}" >档案</router-link> -->
     <!-- 动态路由  userid 先传入 routerlink 许逸涵 然后 传给组件 -->
     <!-- <router-link to="/h" tag="li">给我去</router-link > -->
     <!--   <button @click="indexclick">首页</button>
@@ -20,6 +23,7 @@
     <h2>我是app组件</h2>
     <router-view/>
     <!-- router view 是占位的东西 就是组件等一会展示再哪个位置 -->
+    <!-- 这是决定最外层的东西 如果是children -->
   </div>
 </template>
 
@@ -43,6 +47,19 @@ export default {
         console.log('homeclick')
         this.$router.push('/h')
         /* push => push state */
+    },
+    profileclick(){
+      this.$router.push('/user/'+this.userid)
+    },
+    userclick(){
+      this.$router.push({
+        path:'/profile',
+        query:{
+          name:'kobe',
+          age:19,
+          height:197
+        }
+      })
     }
   }
 }

@@ -1,5 +1,14 @@
 <template>
   <div class="hello">
+    <router-link to="/h/message">首页</router-link>
+    <router-link to="/h/news">新闻</router-link>
+    
+    <router-view>
+
+    </router-view>
+    <!-- 
+      子组件挂载到父组件中
+     -->
     <h1>{{ msg }}</h1>
     <h2>Essential Links</h2>
     <ul>
