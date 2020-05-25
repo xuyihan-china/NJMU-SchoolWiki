@@ -12,7 +12,8 @@
 <script>
 export default {
     name:'homemessage'
-}
+  }
+
 </script>
 
 <style>

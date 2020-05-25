@@ -99,6 +99,12 @@ export default {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
+  },
+  mounted(){
+    /* template被挂载的时候 */
+  },
+  updated(){
+    /* 界面被更新的时候 */
   }
 }
 </script>
