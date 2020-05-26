@@ -21,7 +21,10 @@
     <!-- 但是可以其别名 属性 active-class="active" 使用的时候就用active -->
     <!-- 如果想统一修改 在 router = new 里加上 linkActiveClass:'active'-->
     <h2>我是app组件</h2>
-    <router-view/>
+    <keep-alive exclude="user">
+    <router-view>
+    </router-view>
+    </keep-alive>
     <!-- router view 是占位的东西 就是组件等一会展示再哪个位置 -->
     <!-- 这是决定最外层的东西 如果是children -->
   </div>

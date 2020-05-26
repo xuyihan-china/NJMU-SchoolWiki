@@ -97,14 +97,40 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
     }
+  },
+  /* 
+    整理思路 ：
+    1.为了可以记录选中的消息还是新闻 在activated 中调用 
+    2.离开前保存到path中
+    3.activated和unactivated这两个函数 只有组件用了keepalive才是有效果的
+    其他时候无效的 使用<keep-alive>
+    如果在 keep alive标签中 如果需要频繁创建和销毁 那么可以使用include 和exclude
+    include 匹配的组件 正则表达式会被保存
+  */
+  created(){
+    console.log('hellowworld create')
   },
   mounted(){
     /* template被挂载的时候 */
   },
   updated(){
     /* 界面被更新的时候 */
+  },
+  destroyed(){
+    console.log('hellowworld destroyed')
+  },
+  activated(){
+    this.$router.push(this.path)
+    console.log('activated')
+  },
+  deactivated(){
+    console.log('deactivated')
+  },
+  beforeRouteLeave(to,from,next){
+    this.path=this.$route.path
+    next()
   }
 }
 </script>

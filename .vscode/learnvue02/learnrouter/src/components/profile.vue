@@ -9,7 +9,7 @@
 
 <script>
 export default {
-    name:'profile'
+    name:'profile'//name就是keep alive exclude中用
 }
 </script>
 
