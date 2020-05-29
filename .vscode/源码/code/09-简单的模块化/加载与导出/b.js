@@ -1,9 +1,9 @@
 var foo = 'bbb'
 
 // console.log(exports)
-
+//单个成员就是这么调用的！！！！
 exports.foo = 'hello'
-
+exports.xyh = 'xyh'
 exports.add = function (x, y) {
   return x + y
 }

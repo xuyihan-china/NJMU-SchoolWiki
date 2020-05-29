@@ -1,7 +1,14 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-21 13:29:11
+ * @LastEditTime: 2020-05-29 20:43:04
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\源码\code\aa\00-代码无分号问题.js
+ */ 
 function say() {
   console.log('hello world')
 }
-
 // TypeError: say(...) is not a function
 say()
 
