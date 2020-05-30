@@ -1,6 +1,13 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-21 13:29:11
+ * @LastEditTime: 2020-05-29 20:58:11
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\源码\code\aa\01-封装异步API.js
+ */ 
 // function fn(callback) {
 //   // var callback = function (data) { console.log(data) }
-
 //   // setTimeout(function () {
 //   //   var data = 'hello'
 //   //   return data

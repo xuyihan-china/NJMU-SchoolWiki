@@ -1,10 +1,15 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-21 13:29:21
+ * @LastEditTime: 2020-05-29 21:18:23
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\源码\code\feedback-express\app.js
+ */ 
 var express = require('express')
 var bodyParser = require('body-parser')
-
 var app = express()
-
 app.use('/public/', express.static('./public/'))
-
 // 配置使用 art-template 模板引擎
 // 第一个参数，表示，当渲染以 .art 结尾的文件的时候，使用 art-template 模板引擎
 // express-art-template 是专门用来在 Express 中把 art-template 整合到 Express 中
