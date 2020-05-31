@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-04-21 13:29:11
+ * @LastEditTime: 2020-05-30 10:27:32
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\源码\code\aa\02-读取文件.js
+ */ 
 // 浏览器中的 JavaScript 是没有文件操作的能力的
 // 但是 Node 中的 JavaScript 具有文件操作的能力
 
@@ -36,4 +44,11 @@ fs.readFile('./data/a.txt', function (error, data) {
   } else {
     console.log(data.toString())
   }
+  fs.readFile('./data/b.txt',function(err,data){
+    if(err){
+      console.log('something went wrong')
+    }else{
+      console.log(data.toString())
+    }
+  })
 })
