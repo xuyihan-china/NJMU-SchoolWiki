@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-13 17:30:03
+ * @LastEditTime: 2020-05-31 16:37:04
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\vue2\08filter,map,reduce\index.md
+--> 
 let newNums = nums.filter(function(n){
     return n
 })
@@ -34,5 +42,5 @@ reduce 语法
         return n*2
     }).reduce(function(prevalue,n){
         return prevalue+n
-    },0) //prevalue 之前是0 
+    },0) 
     函数式编程 不是js特有 函数内部会过滤掉这次的n
