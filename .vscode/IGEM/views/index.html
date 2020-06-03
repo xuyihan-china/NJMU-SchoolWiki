@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-04 10:21:13
- * @LastEditTime: 2020-06-01 10:39:22
+ * @LastEditTime: 2020-06-02 16:41:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \test\.vscode\IGEM\views\index.html
@@ -13,74 +13,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NMU</title>
+    
 </head>
-<link rel="stylesheet" href="/public/css/bootstrap.min.css">
-<link rel="stylesheet" href="/public/css/main.css">
-<body>
-    <nav class=" navbar navbar-default navbar-static-top ">
-        <div class="container-fluid">
-          <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-            <nav class="navbar navbar-default">
-              <div class="container-fluid">
-                <div class="navbar-header">
-                  <a class="navbar-brand" href="#">
-                    <p style="width: 100%;">NanJin</p>
-                  </a>
-                </div>
-              </div>
-            </nav>
-          </div>
-      
-          <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Research1 <span class="sr-only">(current)</span></a></li>
-              <li><a href="#">Research2</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">下拉栏 <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">One more separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-            <form class="navbar-form navbar-left">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search">
-              </div>
-            </form>
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="#">Link</a></li>
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                  <li><a href="#">Action</a></li>
-                  <li><a href="#">Another action</a></li>
-                  <li><a href="#">Something else here</a></li>
-                  <li role="separator" class="divider"></li>
-                  <li><a href="#">Separated link</a></li>
-                </ul>
-              </li>
-            </ul>
-          </div><!-- /.navbar-collapse -->
-        </div><!-- /.container-fluid -->
-      </nav>      
-    <img src="/public/img/图片2.png" alt=""  id="pic2" s>
-    <img src="/public/img/图片3.png" alt="" id="pic3">
-        <script src="/public/js/jquery.min.js"></script>
-        <script src="/public/js/bootstrap.min.js"></script><!-- 这里相当于让浏览器发出请求来访问 -->
+<link rel="stylesheet" href="../public/css/bootstrap.min.css">
+<link rel="stylesheet" href="../public/css/main.css">
+<style>
+ #nav-font{
+    font-size: 18px;
+  }
+  .navbar .nav > li .dropdown-menu {
+      margin: 0;
+  }
 
+   .navbar .nav > li:hover .dropdown-menu {
+     display: block;
+
+  }
+</style>
+<body>
+  <h5>南医大，冲鸭！！！</h5>
+ 
+  <nav class="navbar  navbar-fixed-top  navbar-inverse " role="navigation" style="opacity: 0.85;margin-top:28px ;">
+    <div class="container-fluid " >
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand " href="#" id="nav-font">NJMU</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav" >
+          <!-- home -->
+          <li><a href="#" id="nav-font"><span class=""></span> HOME</a></li>
+          <!-- 下拉栏 team -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">TEAM <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" id="nav-font">Team</a></li>
+              <li><a href="#" id="nav-font">Attributions</a></li>
+              <li><a href="#" id="nav-font">Collaborations</a></li>  
+              <li><a href="#" id="nav-font">Inclusion</a></li>
+            </ul>
+          </li>
+          <!-- 下拉栏 awards -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">AWARDS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" id="nav-font">Education</a></li>
+              <li><a href="#" id="nav-font">Entrepreneurship</a></li>
+              <li><a href="#" id="nav-font">Hardware</a></li>  
+              <li><a href="#" id="nav-font">Measurement</a></li>
+              <li><a href="#" id="nav-font">Model</a></li>
+              <li><a href="#" id="nav-font">Plant</a></li>
+              <li><a href="#" id="nav-font">Software</a></li>
+              <li><a href="#" id="nav-font">Sustainable</a></li>
+            </ul>
+          </li>
+          <li id="nav-font"><a href="#">HUMAN PRACTICES</a></li>
+          <li id="nav-font"><a href="#">SAFETY</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">PROJECT <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" id="nav-font">Contribution</a></li>
+              <li><a href="#" id="nav-font">Description</a></li>
+              <li><a href="#" id="nav-font">Design</a></li>  
+              <li><a href="#" id="nav-font">Engineering</a></li>
+              <li><a href="#" id="nav-font">Experiments</a></li>
+              <li><a href="#" id="nav-font">Notebook</a></li>
+              <li><a href="#" id="nav-font">Partnership</a></li>
+              <li><a href="#" id="nav-font">Proof Of Concept</a></li>
+              <li><a href="#" id="nav-font">Results</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">PARTS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#" id="nav-font">Part Collection</a></li>
+              <li><a href="#" id="nav-font">Parts</a></li>
+              <li><a href="#" id="nav-font">Improve</a></li>  
+            </ul>
+          </li>
+        </ul><!-- 大栏的结束标志 -->
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>      
+    <img src="../public/img/图片2.png" alt=""  id="pic2" style="padding-top:46px;">
+    <img src="../public/img/图片3.png" alt="" id="pic3">
+        <script src="../public/js/jquery.min.js"></script>
+        <script src="../public/js/bootstrap.min.js"></script><!-- 这里相当于让浏览器发出请求来访问 -->
 </body>
 
 </html>
