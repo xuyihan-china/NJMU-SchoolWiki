@@ -1,0 +1,38 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-04 22:00:36
+ * @LastEditTime: 2020-06-04 22:38:34
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\canvas\01初始canvas.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border:3px solid yellowgreen;
+        }
+    </style>
+</head>
+<body>
+    <canvas width="600px" height="400px">
+        
+    </canvas>
+    <script>
+        var myCanvas = document.querySelector('canvas')
+        /* 绘制工具箱 */
+        var ctx = myCanvas.getContext('2d');
+        /* 移动画笔 */
+        ctx.moveTo(100,100)
+        ctx.lineTo(200,100)
+        ctx.stroke()
+        ctx.moveTo(100,200)
+        ctx.lineTo(200,200) 
+        ctx.stroke()       
+    </script>
+</body>
+</html>
