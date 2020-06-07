@@ -1,0 +1,65 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-06-07 17:42:48
+ * @LastEditTime: 2020-06-07 18:10:03
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\花里胡哨\sb.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 3000px;
+        }
+        #img1{
+            margin: 0 auto;
+            display: block;
+            padding-top: 170px;
+            animation-name: move;
+            animation-duration: 10s;
+        }
+        #img2{
+            margin: 0 auto;
+            display: block;
+            position: absolute;
+            animation-name: lefttoright;
+            animation-duration: 1s;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+        }
+        #container{
+            margin: 0 auto;
+            text-align: center;
+        }
+        @keyframes  move {
+            from{
+                opacity: 0;
+            }to{
+                opacity: 1;
+            }
+        }
+        @keyframes lefttoright {
+            from{
+                left: 0;
+            }to{
+                right:500px
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div >
+            <img src="./02.jpg" alt="" width="100px" height="150px" id="img2">
+        </div>
+        <div>
+            <img src="./01.jpg" alt="" width="150px" height="150px" id="img1">
+        </div>
+    </div>
+</body>
+</html>
