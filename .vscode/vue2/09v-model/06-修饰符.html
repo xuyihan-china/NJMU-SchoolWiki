@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-14 22:40:38
+ * @LastEditTime: 2020-06-10 21:40:14
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\vue2\09v-model\06-修饰符.html
+--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,8 +24,7 @@
         <h2>{{message}}</h2>
 
         <input type="number" v-model.number="message">
-        <!-- 如果希望类型是number的话，那么加上.number会转化为number类型 ,否则是string -->
-
+        <!-- 如果希望类型是number的话，那么加上.number会转化为number类型 ,否则是string - 
         <!-- trim 剥除两边的空格 -->
         <input type="text" v-model.trim="name">
         <h2>{{name}}</h2>

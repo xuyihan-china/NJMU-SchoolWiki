@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-21 16:07:27
+ * @LastEditTime: 2020-06-09 22:02:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\learnvue02\runtimecompiler\src\main.js
+ */ 
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
