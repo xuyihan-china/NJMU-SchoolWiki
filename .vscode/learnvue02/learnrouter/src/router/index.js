@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-22 19:25:30
- * @LastEditTime: 2020-06-12 00:02:28
+ * @LastEditTime: 2020-06-12 00:04:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \test\.vscode\learnvue02\learnrouter\src\router\index.js
