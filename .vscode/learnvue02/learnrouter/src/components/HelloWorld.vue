@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <router-link to="/h/message">首页</router-link>
+    <router-link to="/h/message" >首页</router-link>
     <router-link to="/h/news">新闻</router-link>
     
     <router-view>

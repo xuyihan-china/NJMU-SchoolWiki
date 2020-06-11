@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-22 19:25:30
- * @LastEditTime: 2020-06-10 22:12:27
+ * @LastEditTime: 2020-06-12 00:02:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \test\.vscode\learnvue02\learnrouter\src\router\index.js
@@ -75,6 +75,7 @@ const router= new Router({
   ],
   mode:'history'
   /* 写上了mode之后 就会变成html5的模式 */
+  /* 不然就是hash */
 })
 //前置钩子hook guard
 router.beforeEach((to,from,next)=>{
