@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-22 19:25:30
+ * @LastEditTime: 2020-06-10 22:12:27
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\learnvue02\learnrouter\src\router\index.js
+ */ 
 import Vue from 'vue'
 import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
@@ -10,6 +18,7 @@ const  user = ()=> import('@/components/user')
 const  homenews = ()=> import('@/components/homenews')
 const  homemessage = ()=> import('@/components/homemessage')
 const profile = ()=> import('@/components/profile')
+/* 最后是在router中挂载的 所有的组件 */
 Vue.use(Router)
 /* 只要是插件就要 安装插件 vue.use */
 const router= new Router({
