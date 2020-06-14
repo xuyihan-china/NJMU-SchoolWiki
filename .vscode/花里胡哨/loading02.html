@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-06 21:37:43
- * @LastEditTime: 2020-06-07 21:24:51
+ * @LastEditTime: 2020-06-14 22:21:00
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \test\.vscode\花里胡哨\loading02.html
@@ -27,7 +27,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            z-index: 999999;
+            z-index: 100;
         }
 
         #loader {
@@ -148,7 +148,7 @@
             top: 0;
             width: 51%;
             height: 100%;
-            background: #1abc9c;
+            background:black;
             /* Old browsers */
             z-index: 1000;
             -webkit-transform: translateX(0);
@@ -242,10 +242,15 @@
 
 <body>
     <div id="loader-wrapper">
+        
         <div id="loader"></div>
+        <img src="./baba.jpg" alt="" style="width: 100%;height: 100%; z-index: 1000;">
         <div class="loader-section section-left"></div>
         <div class="loader-section section-right"></div>
-        <div class="load_title"><br>正在加载NJMU-China的wiki</br></div>
+        <div class="load_title">
+            <h2 style="color:whitesmoke;">Can you hear the sound of Silence ?</h2>
+            <br>NJMU-China's Web page is loading, please wait... </br>
+        </div>
     </div>
     <h2>sdf</h2>
     <h2>dsfafjslkafsl</h2>
@@ -253,8 +258,11 @@
     <script type="text/javascript">
         
             window.onload = function(){
-                document.getElementsByTagName('body')[0].className+='loaded'; 
-                document.getElementById('load_title').remove();                                              
+                setTimeout(() => {
+                    document.getElementsByTagName('body')[0].className+='loaded'; 
+                    document.getElementById('load_title').remove();
+                }, 2000);
+                                                              
         }
             
         
