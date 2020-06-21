@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-01 13:30:22
+ * @LastEditTime: 2020-06-22 01:06:30
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \.vscode\zoomrepeat\curd\router.js
+ */ 
 var fs = require('fs');
 var Student = require('./student-fs');
 var express = require('express');
@@ -55,7 +63,7 @@ router.get('/students/delete', function (req, res) {
           return res.status(500).send('Server error.')
         }
         res.redirect('/students')
-        //要跳转的界面 
+        //要跳转的界 
     })
 })
 //把router导出
