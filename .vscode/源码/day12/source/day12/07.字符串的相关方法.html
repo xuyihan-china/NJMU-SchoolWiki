@@ -6,7 +6,9 @@
 		<script type="text/javascript">
 			//创建一个字符串
 			var str = "Hello Atguigu";
-			
+			var str22=str.split("i");
+			console.log(str22);
+			console.log(str22[0].charAt[1])
 			/*
 			 * 在底层字符串是以字符数组的形式保存的
 			 * ["H","e","l"]
@@ -47,7 +49,7 @@
 			 * 	- 作用和+一样
 			 */
 			result = str.concat("你好","再见");
-			
+			console.log(result)
 			/*
 			 * indexof()
 			 * 	- 该方法可以检索一个字符串中是否含有指定内容
@@ -61,7 +63,9 @@
 			 * 		而lastIndexOf是从后往前找
 			 * 	- 也可以指定开始查找的位置
 			 */
-			
+			if(result.indexOf('Hele')){
+				console.log("zhaodaole");
+			}
 			str = "hello hatguigu";
 			
 			result = str.indexOf("h",1);
@@ -106,8 +110,8 @@
 			
 			str = "abcdefg";
 			
-			result = str.substr(3,2);
-			
+			result = str.substr(3,3);
+			console.log(result)
 			/*
 			 * split()
 			 * 	- 可以将一个字符串拆分为一个数组
@@ -117,7 +121,7 @@
 			str = "abcbcdefghij";
 			
 			result = str.split("d");
-			
+			console.log(result)
 			/*
 			 * 如果传递一个空串作为参数，则会将每个字符都拆分为数组中的一个元素
 			 */
@@ -144,7 +148,7 @@
 			 */
 			result = str.toLowerCase();
 			
-			//console.log(result);
+			console.log(result);
 			
 			
 		</script>

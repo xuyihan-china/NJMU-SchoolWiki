@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-03-21 16:10:08
+ * @LastEditTime: 2020-06-23 18:38:45
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit 
+ * @FilePath: \.vscode\源码\day12\source\day12\09.正则表达式.html
+--> 
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,13 +23,16 @@
 			//var reg = new RegExp("a","i");
 			
 			var reg = /a/i;
+			var reg2 = /vue[js]|angu|a/
+			console.log(typeof reg);
+			console.log(reg2.test("vue"));
+			//console.log(reg.test("
+			var reg3 = /^ab$/
 			
-			//console.log(typeof reg);
-			//console.log(reg.test("abc"));
 			
 			//创建一个正则表达式，检查一个字符串中是否有a或b
 			/*
-			 * 使用 | 表示或者的意思
+			 * 使用 | 表示或者的意思 
 			 */
 			reg = /a|b|c/;
 			
