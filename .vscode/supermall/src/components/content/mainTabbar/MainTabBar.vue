@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:17:25
- * @LastEditTime: 2020-06-24 23:35:01
+ * @LastEditTime: 2020-06-25 15:04:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\content\mainTabbar\MainTabBar.vue
@@ -26,8 +26,8 @@
     <!-- 父组件 的 传入 props 收入子组件 -->
     <!-- 子组件中定义 -->
     <tab-bar-item path="/profile" activeColor="deepPink">
-      <img slot="item-icon" src="../../assets/img/tabbar/profile.svg" alt="">
-      <img slot="item-icon-active" src="../../assets/img/tabbar/profile_active.svg" alt="">
+      <img slot="item-icon" src="~assets/img/tabbar/profile.svg" alt="">
+      <img slot="item-icon-active" src="~assets/img/tabbar/profile_active.svg" alt="">
       <div slot="item-text">我的</div>
     </tab-bar-item>
   </tab-bar>
