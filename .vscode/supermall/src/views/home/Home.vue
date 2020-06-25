@@ -1,54 +1,137 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-25 22:20:25
+ * @LastEditTime: 2020-06-25 23:32:54
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
 --> 
 <template>
   <div id="home" class="home-nav">
-      <nav-bar id="yyc"><div slot="center">京东少年家</div></nav-bar>
-      <home-swiper :banners="banners" ></home-swiper>
-      <!-- home 大组件中 保留最少的标签值 -->
-      <recommend-view :recommends="recommends"></recommend-view>
-      <feature-view></feature-view>
+    <nav-bar id="yyc">
+      <div slot="center">京东少年家</div>
+    </nav-bar>
+    <home-swiper :banners="banners"></home-swiper>
+    <!-- home 大组件中 保留最少的标签值 -->
+    <recommend-view :recommends="recommends"></recommend-view>
+    <feature-view></feature-view>
+    <tab-control :title="['流行','新款','精选']"></tab-control>
+    <ul>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+      <li>================================</li>
+    </ul>
   </div>
 </template>
 
 <script>
-  import NavBar from 'components/common/navbar/NavBar'
-  import {getHomeMultidata} from 'network/home'
-  import HomeSwiper from 'views/home/childComps/homeSwiper'
-  import RecommendView from 'views/home/childComps/RecommendView'
-  import featureView from 'views/home/childComps/featureView'
-  export default {
-    name: "Home",
-    components:{
-      NavBar,
-      HomeSwiper,
-      RecommendView,
-      featureView
-    },
-    data(){
-      return{
-        banners:[],
-        recommends:[]
-      }
-    },
-    created(){
-      //请求多个数据
-      getHomeMultidata().then(res=>{
-        this.banners = res.data.banner.list
-        this.recommends = res.data.recommend.list
-      })
-    }
+import HomeSwiper from "views/home/childComps/homeSwiper";
+import RecommendView from "views/home/childComps/RecommendView";
+import featureView from "views/home/childComps/featureView";
+
+import NavBar from "components/common/navbar/NavBar";
+import TabControl from "components/content/tabControl/TabControl";
+
+import { getHomeMultidata } from "network/home";
+export default {
+  name: "Home",
+  components: {
+    NavBar,
+    HomeSwiper,
+    RecommendView,
+    featureView,
+    TabControl
+  },
+  data() {
+    return {
+      banners: [],
+      recommends: []
+    };
+  },
+  created() {
+    //请求多个数据
+    getHomeMultidata().then(res => {
+      this.banners = res.data.banner.list;
+      this.recommends = res.data.recommend.list;
+    });
   }
+};
 </script>
 
 <style scoped>
-  #yyc{
-    background-color: rgb(226, 49, 49);
-    color: white;
-  }
+
+#yyc {
+  background-color: rgb(226, 49, 49);
+  color: white;
+}
+.tab-control{
+  position:sticky;
+  top: 44px;
+}
 </style>
