@@ -1,24 +1,34 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-25 17:11:03
+ * @LastEditTime: 2020-06-25 22:20:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
 --> 
 <template>
   <div id="home" class="home-nav">
-      <nav-bar><div slot="center">购物街</div></nav-bar>
+      <nav-bar id="yyc"><div slot="center">京东少年家</div></nav-bar>
+      <home-swiper :banners="banners" ></home-swiper>
+      <!-- home 大组件中 保留最少的标签值 -->
+      <recommend-view :recommends="recommends"></recommend-view>
+      <feature-view></feature-view>
   </div>
 </template>
 
 <script>
   import NavBar from 'components/common/navbar/NavBar'
   import {getHomeMultidata} from 'network/home'
+  import HomeSwiper from 'views/home/childComps/homeSwiper'
+  import RecommendView from 'views/home/childComps/RecommendView'
+  import featureView from 'views/home/childComps/featureView'
   export default {
     name: "Home",
     components:{
-      NavBar
+      NavBar,
+      HomeSwiper,
+      RecommendView,
+      featureView
     },
     data(){
       return{
@@ -29,7 +39,7 @@
     created(){
       //请求多个数据
       getHomeMultidata().then(res=>{
-        this.banners = res.data.banner
+        this.banners = res.data.banner.list
         this.recommends = res.data.recommend.list
       })
     }
@@ -37,8 +47,8 @@
 </script>
 
 <style scoped>
-  .home-nav{
-    background-color: var(--color-tint);
+  #yyc{
+    background-color: rgb(226, 49, 49);
     color: white;
   }
 </style>
