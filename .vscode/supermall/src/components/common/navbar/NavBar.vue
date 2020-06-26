@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-25 15:23:59
- * @LastEditTime: 2020-06-25 23:33:10
+ * @LastEditTime: 2020-06-26 14:14:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\common\navbar\NavBar.vue
@@ -25,7 +25,6 @@ export default {
 
 <style>
     .nav-bar{
-        
         display: flex;
         height: 44px;
         line-height: 44px;/* 文字居中排列 然后 撑起来flex布局 */

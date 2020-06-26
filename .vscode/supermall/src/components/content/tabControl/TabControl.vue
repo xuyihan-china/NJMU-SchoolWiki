@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-25 22:34:47
- * @LastEditTime: 2020-06-25 23:15:38
+ * @LastEditTime: 2020-06-26 17:53:48
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\content\tabControl\TabControl.vue
@@ -34,6 +34,7 @@ export default {
     methods:{
       itemclick(index){
         this.currentindex = index
+        this.$emit('tabClick',index)
       }
     }
 }
