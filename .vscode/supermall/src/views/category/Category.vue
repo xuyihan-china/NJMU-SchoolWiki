@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-26 21:28:49
+ * @LastEditTime: 2020-06-27 11:42:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\category\Category.vue
@@ -115,19 +115,19 @@
 </template>
 
 <script>
-  import BSroll from 'better-scroll'
+ import BScroll from 'better-scroll'
   export default {
     name: "Category",
     created(){
       //这个时候组件创建完成但是 template还没有渲染 挂载
     },
     mounted(){
-      this.srcoll = new BSroll('.wrapper',{
+      this.scroll = new BScroll('.wrapper',{
       //probeType 2 不可以惯性滚动 3 可以监听惯性滚动
           probeType:3,
           pullUpload:true
       })
-      this.srcoll.on('scroll',(position)=>{
+      this.scroll.on('srcoll',(position)=>{
         console.log(position)
       })
       this.scroll.on('pullingUp',()=>{

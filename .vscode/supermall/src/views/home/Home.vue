@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-26 21:50:54
+ * @LastEditTime: 2020-06-27 12:39:53
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
@@ -13,7 +13,7 @@
     </nav-bar>
     <!--< div class="wrapper">
       <div class="content"> -->
-        <scroll class="content"><!-- 要滚动的内容 -->
+        <scroll class="content"><!-- 要滚动的内容 --> 
         <home-swiper :banners="banners" id="home-swiper"></home-swiper>
         <!-- home 大组件中 保留最少的标签值 -->
         <recommend-view :recommends="recommends"></recommend-view>
@@ -23,6 +23,7 @@
         </scroll>
       <!-- </div>
     </div> -->
+    <back-top/ @click.native="backClick"><!-- 如果监听组建的点击要加上native -->
   </div>
 </template>
 
@@ -37,6 +38,7 @@ import GoodsList from "components/content/goods/GoodsList";
 //网络请求数据
 import { getHomeMultidata, getHomeGoods } from "network/home";
 import Scroll from "components/common/scroll/Scroll"
+import BackTop from "components/content/backTop/BackTop";
 export default {
   name: "Home",
   components: {
@@ -46,7 +48,8 @@ export default {
     featureView,
     TabControl,
     GoodsList,
-    Scroll
+    Scroll,
+    BackTop
   },
   computed: {
     showGoods() {
@@ -107,8 +110,14 @@ export default {
   }
 };
 </script>
-
+/* 作用域在组件内 */
 <style scoped>
+#home{
+  position: relative;
+  height: 100vh;
+  /* 只有这里设计了 height 100 vh 父元素才有高度给子元素定位  */
+  /* 否则子类没有办法定位到里面 */
+}
 #yyc {
   position: fixed;
   right: 0;
@@ -121,11 +130,20 @@ export default {
 .tab-control {
   position: sticky;
   top: 44px;
+  z-index: 9;
 }
 #home-swiper {
   padding-top: 44px;
 }
 #tac {
-  z-index: 100;
+  z-index: 9;
 }
+.content{
+    position: absolute;
+    top: 0px;
+    bottom: 49px;
+    left: 0;
+    right: 0;
+}
+
 </style>
