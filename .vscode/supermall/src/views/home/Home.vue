@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-27 12:39:53
+ * @LastEditTime: 2020-06-27 14:47:33
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
@@ -13,7 +13,7 @@
     </nav-bar>
     <!--< div class="wrapper">
       <div class="content"> -->
-        <scroll class="content"><!-- 要滚动的内容 --> 
+        <scroll class="content" ref="scroll" :probe-type="3" @scroll="contentScroll" :pull-up-load="true" @pullingUp="loadMore" ><!-- 要滚动的内容 --> 
         <home-swiper :banners="banners" id="home-swiper"></home-swiper>
         <!-- home 大组件中 保留最少的标签值 -->
         <recommend-view :recommends="recommends"></recommend-view>
@@ -23,7 +23,7 @@
         </scroll>
       <!-- </div>
     </div> -->
-    <back-top/ @click.native="backClick"><!-- 如果监听组建的点击要加上native -->
+    <back-top @click.native="backClick" v-show="isShowBackTop"/><!-- 如果监听组建的点击要加上native -->
   </div>
 </template>
 
@@ -65,7 +65,8 @@ export default {
         new: { page: 0, list: [] },
         sell: { page: 0, list: [] }
       },
-      currentType: "pop"
+      currentType: "pop",
+      isShowBackTop:false
     };
   },
   created() {
@@ -106,6 +107,19 @@ export default {
         this.goods[type].list.push(...res.data.list);
         this.goods[type].page += 1;
       });
+    },
+    backClick(){
+      this.$refs.scroll.scrollTo(0,0,2000)
+    },
+    contentScroll(position){
+      if(-position.y>1000){
+        this.isShowBackTop = true
+      }else{
+        this.isShowBackTop= false
+      }
+    },
+    loadMore(){
+      console.log("chuiafdaskjl")
     }
   }
 };
