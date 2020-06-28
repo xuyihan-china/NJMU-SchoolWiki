@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-27 14:47:33
+ * @LastEditTime: 2020-06-28 15:18:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
@@ -66,7 +66,8 @@ export default {
         sell: { page: 0, list: [] }
       },
       currentType: "pop",
-      isShowBackTop:false
+      isShowBackTop:false,
+      tabOffsetTop:0
     };
   },
   created() {
@@ -106,6 +107,10 @@ export default {
         //console.log(res.data.list);
         this.goods[type].list.push(...res.data.list);
         this.goods[type].page += 1;
+        //完成上拉加载更多 不然只会加载一次
+        this.$refs.scroll.finishPullUp()
+        //重新计算高度
+        this.$refs.scroll.scroll.refresh()
       });
     },
     backClick(){
@@ -119,8 +124,9 @@ export default {
       }
     },
     loadMore(){
-      console.log("chuiafdaskjl")
+      this.getHomeGoods(this.currentType)
     }
+    
   }
 };
 </script>
@@ -142,9 +148,9 @@ export default {
   z-index: 9;
 }
 .tab-control {
-  position: sticky;
+  /* position: sticky;
   top: 44px;
-  z-index: 9;
+  z-index: 9; */
 }
 #home-swiper {
   padding-top: 44px;

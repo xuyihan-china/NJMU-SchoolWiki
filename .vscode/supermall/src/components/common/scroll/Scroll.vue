@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-26 21:48:09
- * @LastEditTime: 2020-06-27 14:52:29
+ * @LastEditTime: 2020-06-28 14:54:26
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\common\scroll\Scroll.vue
@@ -56,13 +56,18 @@ export default {
             //console.log("hauil")
         })
         //监听上拉事件
+        if(this.pullUpLoad){
         this.scroll.on('pullingUp',()=>{
             this.$emit('pullingUp')
         })
+        }
     },
     methods:{
         scrollTo(x,y,time){
             this.scroll.scrollTo(x,y,time)
+        },
+        finishPullUp(){
+            this.scroll.finishPullUp()
         }
     }
 }
