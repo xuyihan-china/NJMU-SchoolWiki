@@ -1,24 +1,26 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-28 15:18:17
+ * @LastEditTime: 2020-06-28 20:03:02
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
 --> 
 <template>
-  <div id="home" class="home-nav">
+  <div id="home" class="home-navs">
     <nav-bar id="yyc">
       <div slot="center">京东少年家</div>
     </nav-bar>
     <!--< div class="wrapper">
       <div class="content"> -->
         <scroll class="content" ref="scroll" :probe-type="3" @scroll="contentScroll" :pull-up-load="true" @pullingUp="loadMore" ><!-- 要滚动的内容 --> 
-        <home-swiper :banners="banners" id="home-swiper"></home-swiper>
+        <home-swiper :banners="banners" id="home-swiper" @swiperLoaded="swiperLoaded"></home-swiper>
         <!-- home 大组件中 保留最少的标签值 -->
         <recommend-view :recommends="recommends"></recommend-view>
         <feature-view></feature-view>
-        <tab-control :title="['流行','新款','精选']" id="tac" @tabClick="tabClick"></tab-control>
+        <tab-control :title="['流行','新款','精选']"
+                      id="tac" @tabClick="tabClick"
+                      ref="tabControl" ></tab-control>
         <goods-list :goods="showGoods"></goods-list>
         </scroll>
       <!-- </div>
@@ -67,7 +69,9 @@ export default {
       },
       currentType: "pop",
       isShowBackTop:false,
-      tabOffsetTop:0
+      tabOffsetTop:0,
+      isTabFixed:false,
+      saveY:0
     };
   },
   created() {
@@ -78,6 +82,26 @@ export default {
     this.getHomeGoods("new");
     this.getHomeGoods("sell");
   },
+  mounted(){
+    //组件都有属性 el 用于获取组件的元素
+    //this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop
+  },
+ /*  activated(){//进入组件激活
+    this.saveY = this.$refs.scroll.positionY
+    this.$refs.scroll.scrollTo(0,-this.saveY,0)
+    //this.$refs.scroll.refresh
+  },
+  deactivated(){//不进入失效
+    this.saveY = this.$refs.scroll.positionY
+  } */
+    activated() {
+      this.$refs.scroll.scrollTo(0, this.saveY,0)
+      /*this.$refs.scroll.refresh()  */
+    },
+    deactivated() {
+       this.saveY = this.$refs.scroll.scroll.y
+    }
+  ,
   methods: {
     //自己的方法 事件监听相关的方法
     tabClick(index) {
@@ -122,11 +146,14 @@ export default {
       }else{
         this.isShowBackTop= false
       }
+      this.isTabFixed = (-position.y) > this.tabOffsetTop
     },
     loadMore(){
       this.getHomeGoods(this.currentType)
+    },
+    swiperLoaded(){
+      this.tabOffsetTop = this.$refs.tabControl.$el.offsetTop
     }
-    
   }
 };
 </script>
@@ -164,6 +191,7 @@ export default {
     bottom: 49px;
     left: 0;
     right: 0;
+    overflow: hidden;
 }
 
 </style>

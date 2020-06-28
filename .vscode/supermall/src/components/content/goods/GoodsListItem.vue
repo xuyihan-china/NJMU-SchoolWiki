@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-26 16:26:34
- * @LastEditTime: 2020-06-26 17:20:27
+ * @LastEditTime: 2020-06-28 20:30:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\content\goods\GoodsListItem.vue
@@ -39,11 +39,11 @@
         // 1.获取iid
         const iid = this.goodsItem.iid;
         // 2.跳转到详情页面
-        this.$router.push({path: '/detail', query: {iid}})
+        this.$router.push('/detail/'+this.goodsItem.iid)
       },
 	    imgLoad() {
-		    this.$bus.$emit('imgLoad')
-	    }
+		    //this.$bus.$emit('imgLoad')
+      }
     }
   }
 </script>
