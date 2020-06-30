@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-28 20:03:02
+ * @LastEditTime: 2020-06-29 15:44:51
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
@@ -95,11 +95,17 @@ export default {
     this.saveY = this.$refs.scroll.positionY
   } */
     activated() {
-      this.$refs.scroll.scrollTo(0, this.saveY,0)
-      /*this.$refs.scroll.refresh()  */
+      console.log("active TY"+this.saveY)
+      //this.$refs.scroll.scrollTo(150, this.saveY,0)
+      //keep alive 的 属性 activated deactivated
+      this.$refs.scroll.refresh() //ok 一定要先刷新 然后再 scrollto 否则无法其效果
+      this.$refs.scroll.scrollTo(250, this.saveY,0)
     },
     deactivated() {
+      //console.log(this.saveY)
        this.saveY = this.$refs.scroll.scroll.y
+       //console.log(this.saveY)
+       //console.log(this.$refs.scroll.scroll.y)
     }
   ,
   methods: {

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-26 21:48:09
- * @LastEditTime: 2020-06-28 20:31:41
+ * @LastEditTime: 2020-06-29 14:23:11
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\common\scroll\Scroll.vue
@@ -57,8 +57,8 @@ export default {
         })
         //监听上拉事件
         if(this.pullUpLoad){
-        this.scroll.on('pullingUp',()=>{
-            this.$emit('pullingUp')
+            this.scroll.on('pullingUp',()=>{
+                this.$emit('pullingUp')
         })
         }
     },
