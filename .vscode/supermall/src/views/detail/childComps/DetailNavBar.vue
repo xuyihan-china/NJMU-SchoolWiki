@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-29 14:39:25
- * @LastEditTime: 2020-06-29 22:13:51
+ * @LastEditTime: 2020-07-01 21:19:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\detail\childComps\DetailNavBar.vue
@@ -16,7 +16,7 @@
                    @click="itemClick(index)">
                   {{item}}
               </div>
-          </div>
+         5 </div>
           <img slot="left" class="back" @click="backClick" src="~assets/img/common/back.svg" alt="">
       </nav-bar>
   </div>

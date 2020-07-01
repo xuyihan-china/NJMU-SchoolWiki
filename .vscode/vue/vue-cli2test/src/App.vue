@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-05-21 13:15:48
+ * @LastEditTime: 2020-07-01 22:23:32
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \.vscode\vue\vue-cli2test\src\App.vue
+--> 
 <template>
   <div id="app">
     <img src="./assets/logo.png">
@@ -23,6 +31,6 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 62px;
 }
 </style>
