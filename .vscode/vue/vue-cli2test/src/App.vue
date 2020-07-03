@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-21 13:15:48
- * @LastEditTime: 2020-07-02 22:32:29
+ * @LastEditTime: 2020-07-03 17:04:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\vue\vue-cli2test\src\App.vue
@@ -9,7 +9,7 @@
 <template>
   <div id="app">
    
-    <HelloWorld/>
+    
   </div>
 </template>
 
