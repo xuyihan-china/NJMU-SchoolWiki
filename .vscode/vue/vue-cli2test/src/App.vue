@@ -1,10 +1,10 @@
 <!--
  * @Author: your name
  * @Date: 2020-05-21 13:15:48
- * @LastEditTime: 2020-07-03 17:04:07
+ * @LastEditTime: 2020-07-05 20:47:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
- * @FilePath: \.vscode\vue\vue-cli2test\src\App.vue
+ * : \.vscode\vue\vue-cli2test\src\App.vue
 --> 
 <template>
   <div id="app">
