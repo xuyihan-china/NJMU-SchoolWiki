@@ -1,9 +1,8 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-06-27 14:53:01
+ * @LastEditTime: 2020-07-10 18:32:46
  * @LastEditors: Please set LastEditors
- * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\category\Category.vue
 --> 
 <template>
