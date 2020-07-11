@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-27 12:24:20
- * @LastEditTime: 2020-06-27 12:33:18
+ * @LastEditTime: 2020-07-11 11:47:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\content\backTop\BackTop.vue

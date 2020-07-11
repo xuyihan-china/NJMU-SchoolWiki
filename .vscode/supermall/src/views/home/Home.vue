@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-07-09 17:38:01
+ * @LastEditTime: 2020-07-11 11:48:57
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
@@ -146,7 +146,7 @@ export default {
       });
     },
     backClick(){
-      this.$refs.scroll.scrollTo(0,0,2000)
+      this.$refs.scroll.scrollTo(0,0,1000)
     },
     contentScroll(position){
       if(-position.y>1000){
