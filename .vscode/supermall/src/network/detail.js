@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-06-25 16:38:32
+ * @LastEditTime: 2020-07-11 14:55:10
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \.vscode\src\network\detail.js
+ */ 
 import {request} from "./request";
 
 export function getDetail(iid) {
