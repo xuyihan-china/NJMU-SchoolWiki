@@ -1,14 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-26 16:26:34
- * @LastEditTime: 2020-06-28 20:30:07
+ * @LastEditTime: 2020-07-13 19:09:03
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\content\goods\GoodsListItem.vue
 --> 
 <template>
   <div class="goods-item" @click="itemClick">
-    <img :src="goodsItem.show.img" alt="">
+    <img :src="	showImage" alt="">
     <!-- @load="imgLoad" v-lazy="showImage" :key="showImage"f -->
     <div class="goods-info">
       <p>{{goodsItem.title}}</p>

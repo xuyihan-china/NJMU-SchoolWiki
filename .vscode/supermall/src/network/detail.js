@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-06-25 16:38:32
- * @LastEditTime: 2020-07-11 14:55:10
+ * @LastEditTime: 2020-07-13 16:10:50
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\src\network\detail.js
@@ -40,6 +40,12 @@ export class Shop {
     this.score = shopInfo.score;
     this.goodsCount = shopInfo.cGoods
   }
+}
+
+export function getRecommend() {
+	return request({
+		url: '/recommend'
+	})
 }
 
 
