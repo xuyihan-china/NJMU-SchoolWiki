@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-28 19:07:29
- * @LastEditTime: 2020-07-13 22:20:17
+ * @LastEditTime: 2020-07-13 23:08:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\detail\Detail.vue
@@ -62,7 +62,8 @@ export default {
       commentInfo: {},
       goodsList: [],
       themeTops: [],
-      currentIndex: 0
+      currentIndex: 0,
+      getThemeTopY :{}
     };
   },
   created() {
@@ -90,7 +91,7 @@ export default {
       if (data.rate.cRate !== 0) {
         this.commentInfo = data.rate.list[0];
       }
-      this.$nextTick(() => {
+      this.getThemeTopY= debounce(()=>{
         this.themeTops = [];
         this.themeTops.push(0);
         this.themeTops.push(-this.$refs.param.$el.offsetTop);
@@ -98,7 +99,16 @@ export default {
         this.themeTops.push(-this.$refs.recommend.$el.offsetTop);
         this.themeTops.push(Number.MAX_VALUE);
         console.log(this.themeTops);
-      });
+      },100)
+     /*  this.$nextTick(() => {
+        this.themeTops = [];
+        this.themeTops.push(0);
+        this.themeTops.push(-this.$refs.param.$el.offsetTop);
+        this.themeTops.push(-this.$refs.comment.$el.offsetTop);
+        this.themeTops.push(-this.$refs.recommend.$el.offsetTop);
+        this.themeTops.push(Number.MAX_VALUE);
+        console.log(this.themeTops);
+      }); */
     });
     getRecommend().then(res => {
       console.log(res);
