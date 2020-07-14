@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-07-14 13:43:49
- * @LastEditTime: 2020-07-14 13:47:44
+ * @LastEditTime: 2020-07-14 21:01:46
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\store\index.js
@@ -18,3 +18,4 @@ const store = new Vuex.Store({
     }
 })
 export default store
+/* 学完了 */
