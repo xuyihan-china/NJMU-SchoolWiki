@@ -1,5 +1,5 @@
 @import "./nomalize.css";
-
+/* 这是定义全局css变量的方法 :root --color*/
 :root {
   --color-text: #666;
   --color-high-text: #ff5777;

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-25 15:23:59
- * @LastEditTime: 2020-06-26 14:14:51
+ * @LastEditTime: 2020-07-19 23:50:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\components\common\navbar\NavBar.vue
@@ -9,7 +9,8 @@
 <template>
     <div id="home">
     <div class="nav-bar">
-        <!-- 给外面的布局，不要直接给slot 布局 slot会被直接覆盖掉 -->
+        <!-- 给外面的布局，不要直接给slot 布局 slot会被直接覆盖掉 布局就是写css样式 slot -->
+        <!-- slot 调用方式  具名插槽 name=""  插入 slot ="name " -->
         <div class="left"><slot name="left"></slot></div>
         <div class="center"><slot name="center"></slot></div>
         <div class="right"><slot name="right"></slot></div>
@@ -36,8 +37,8 @@ export default {
         
     }
     /* 中间一大块 然后 左右flex布局 */
+    /* 父元素flex 布局 子元素设置display flex */
     .center{
         flex: 1;
-        
     }
 </style>

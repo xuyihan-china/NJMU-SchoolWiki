@@ -1,11 +1,14 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-24 23:33:02
- * @LastEditTime: 2020-07-11 11:48:57
+ * @LastEditTime: 2020-07-20 00:03:49
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \.vscode\supermall\src\views\home\Home.vue
 --> 
+/* 
+  home 是 大页面 大页面发送网络请求 然后通过父子组件通信 传入子组件
+ */
 <template>
   <div id="home" class="home-navs">
     <nav-bar id="yyc">
@@ -13,11 +16,13 @@
     </nav-bar>
     <!--< div class="wrapper">
       <div class="content"> -->
+        <!-- @scroll 是 emit 出来的？ -->
         <scroll class="content" ref="scroll" :probe-type="3" @scroll="contentScroll" :pull-up-load="true" @pullingUp="loadMore" ><!-- 要滚动的内容 --> 
         <home-swiper :banners="banners" id="home-swiper" @swiperLoaded="swiperLoaded"></home-swiper>
         <!-- home 大组件中 保留最少的标签值 -->
         <recommend-view :recommends="recommends"></recommend-view>
         <feature-view></feature-view>
+        <!-- feature view 就是一张图片 -->
         <tab-control :title="['流行','新款','精选']"
                       id="tac" @tabClick="tabClick"
                       ref="tabControl" ></tab-control>
@@ -59,6 +64,7 @@ export default {
     }
   },
   data() {
+    //data的初始值
     return {
       banners: [],
       recommends: [],
@@ -112,6 +118,7 @@ export default {
   ,
   methods: {
     //自己的方法 事件监听相关的方法
+    //子组件中 this.$emit('tabClick',index) 同时传入 index 在父组件中进行判断
     tabClick(index) {
       switch (index) {
         case 0:
@@ -125,7 +132,7 @@ export default {
           break;
       }
     },
-    //网络请求
+    //网络请求 在methods 中写 为自己的data传递值
     getHomeMultidata() {
       getHomeMultidata().then(res => {
         this.banners = res.data.banner.list;

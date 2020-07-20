@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-06-07 21:31:52
- * @LastEditTime: 2020-06-07 21:44:35
+ * @LastEditTime: 2020-07-17 14:11:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \test\.vscode\花里胡哨\打字机.html
@@ -21,31 +21,28 @@
 
         @keyframes blink-caret {
             50% {
-                border-color:white;
+                border-color: rgb(73, 153, 53);
             }
         }
 
         h1 {
             font: bold 198% Consolas, Monaco, monospace;
             border-right: .1em solid;
-            width: 16.5em;
-            /* fallback */
-            /* width: 30ch; # of chars */
+            width: 39ch;
             margin: 2em 1em;
             white-space: nowrap;
             overflow: hidden;
-            animation: typing 3s steps(16, end),
-                /* # of steps = # of chars */
-               /*  animation: typing 20s steps(30, end), */
-                /*英文速度*/
-            blink-caret .5s step-end infinite alternate;
-
+            /* animation: typing 3s steps(16, end), */
+            /* # of steps = # of chars */
+            animation: typing 5s steps(39, end),
+                /* steps 就是总字数 */
+                blink-caret .4s step-end infinite alternate;
         }
     </style>
 </head>
 
 <body>
-    <h1> 一个小小前端工程师的博客一步一步， 一个字一个字的打出来，哦蕾蕾~</h1>
+    <h1>The sound of silence made by NJMU-China</h1>
 </body>
 
 </html>
