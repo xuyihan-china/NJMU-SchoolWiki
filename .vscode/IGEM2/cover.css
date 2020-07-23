@@ -1,0 +1,10 @@
+<html>
+<style>
+	#home_logo, #sideMenu { display:none; }
+	#sideMenu, #top_title, .patrollink  {display:none;}
+	#content { margin-left:0px; margin-top:-7px; padding:0px; width:100%;line-height:1;}
+	body {background-color: transparent; }
+	#bodyContent h1, #bodyContent h2, #bodyContent h3, #bodyContent h4, #bodyContent h5 { margin-bottom: 0px; }
+	.judges-will-not-evaluate { border: 4px solid #e4dede; padding: 2% !important; width: 92%!important;}
+</style>
+</html>

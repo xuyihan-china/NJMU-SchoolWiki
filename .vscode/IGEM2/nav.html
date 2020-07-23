@@ -1,0 +1,129 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-22 20:58:55
+ * @LastEditTime: 2020-07-23 14:39:04
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \.vscode\IGEM2\nav.html
+--> 
+<html>
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+<style>
+  html{
+    perspective: 800px;
+  }
+  body{
+    height: 2000px;
+  }
+ #nav-font{
+    font-size: 1.5em;
+  }
+  .navbar .nav > li .dropdown-menu {
+      margin: 0;
+  }
+   .navbar .nav > li:hover .dropdown-menu {
+     display: block;
+  }
+   .navbar-right >li{
+     padding-left: 35px;
+  }
+  .navbar-right >li:hover .dropdown-menu a:hover{
+    
+    color:rgb(21, 194, 171) ;
+    /* transform: translateZ(15px); */
+    border-radius: 30px;
+    transform: scale(1.2);
+  }
+  
+  ul .dropdown-menu {
+    background: rgb(80, 79, 79);
+  }
+  ul .dropdown-menu >li a{
+    color: white;
+  }
+  /* ul .dropdown-menu >li a:hover{
+    color: white;
+  } */
+  .dropdown-menu>li>a:hover{
+    transition: all 0.5s;
+    background-color: rgb(37, 37, 37) !important;
+    color: white;
+  }
+  .navbar-fixed-top{
+    margin-top: 12px;
+    
+  }
+</style>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top"  >
+    <div class="container-fluid " >
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand " href="http://www.njmu.edu.cn/" id="nav-font">NJMU</a>
+      </div>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right" >
+          <!-- home -->
+          <li><a href="https://2020.igem.org/Team:NJMU-China" id="nav-font"><span class=""></span> HOME</a></li>
+          <!-- 下拉栏 team -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">TEAM <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Team" id="nav-font">Team</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Attributions" id="nav-font">Attributions</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Collaborations" id="nav-font">Collaborations</a></li>  
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Inclusion" id="nav-font">Inclusion</a></li>
+            </ul>
+          </li>
+          <!-- 下拉栏 awards -->
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">AWARDS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Education" id="nav-font">Education</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Entrepreneurship" id="nav-font">Entrepreneurship</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Hardware" id="nav-font">Hardware</a></li>  
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Measurement" id="nav-font">Measurement</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Model" id="nav-font">Model</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Plant" id="nav-font">Plant</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Software" id="nav-font">Software</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Sustainable" id="nav-font">Sustainable</a></li>
+            </ul>
+          </li>
+          <li id="nav-font"><a href="https://2020.igem.org/Team:NJMU-China/Human_Practices">HUMAN PRACTICES</a></li>
+          <li id="nav-font"><a href="https://2020.igem.org/Team:NJMU-China/Safety">SAFETY</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">PROJECT <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Contribution" id="nav-font">Contribution</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Description" id="nav-font">Description</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Design" id="nav-font">Design</a></li>  
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Engineering" id="nav-font">Engineering</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Experiments" id="nav-font">Experiments</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Notebook" id="nav-font">Notebook</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Partnership" id="nav-font">Partnership</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Proof Of Concept" id="nav-font">Proof Of Concept</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Results" id="nav-font">Results</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" id="nav-font">PARTS <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Part Collection" id="nav-font">Part Collection</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Parts" id="nav-font">Parts</a></li>
+              <li><a href="https://2020.igem.org/Team:NJMU-China/Improve" id="nav-font">Improve</a></li>  
+            </ul>
+          </li>
+        </ul><!-- 大栏的结束标志 -->
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+</html>
