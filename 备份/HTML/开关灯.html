@@ -1,0 +1,47 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-24 20:07:27
+ * @LastEditTime: 2020-07-24 20:28:02
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\备份\HTML\开关灯.html
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #btn{
+            width: 240px;
+            height: 40px;
+            font: 1.5em 微软雅黑;
+            border-radius: 35px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
+    <script>
+        window.onload=function(){
+            let btn = document.getElementById('btn');
+            btn.onclick= function(){
+                if(btn.innerText =="关灯"){
+                    document.body.style.backgroundColor="black"
+                    btn.innerText="开灯"
+                }else{
+                    document.body.style.backgroundColor="white"
+                    btn.innerText="关灯";
+                }
+            }
+        }
+        
+        
+    </script>
+</head>
+<body>
+    <button id="btn">关灯</button>
+</body>
+</html>

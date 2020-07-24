@@ -1,0 +1,78 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-24 21:17:46
+ * @LastEditTime: 2020-07-24 22:30:36
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\备份\HTML\跑马灯.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <tscitle>Document</tscitle>
+    <script src="./jquery.min.js"></script>
+    <script>
+        $(function(){
+            let i=1;
+            setInterval(() => {
+                $("div[date-i="+i+"]").css("backgroundColor","red")
+                if(i++>=8)
+                i=1
+            }, 1000);
+        })
+    </script>
+    <style>
+        .top{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: beige;
+        }
+        .left{
+            width: 100px;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: beige;
+            float: left;
+        }
+        .right{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            background-color: beige;
+            float: right;
+            position: relative;
+            bottom: 500px;
+            right: 1200px;
+        }
+       
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="top" data-i="1">1</div>
+        <div class="top" data-i="2">2</div>
+        <div class="top" data-i="3">3</div>
+        <div class="top" data-i="4">4</div>
+    </div>
+    <div>
+        <div class="left" data-i="5">5</div>
+        <div class="left" data-i="6">6</div>
+        <div class="left" data-i="7">7</div>
+        <div class="left" data-i="8">8</div>
+    </div>
+    <div>
+        <div class="right" data-i="9"></div>
+        <div class="right" data-i="10"></div>
+        <div class="right" data-i="11"></div>
+        <div class="right" data-i="12"></div>
+    </div>
+    
+</body>
+
+</html>
