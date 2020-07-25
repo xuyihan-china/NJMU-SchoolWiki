@@ -1,0 +1,195 @@
+<!--
+ * @Author: your name
+ * @Date: 2020-07-25 16:32:21
+ * @LastEditTime: 2020-07-25 22:49:39
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\IGEM2\new.html
+-->
+<html>
+<link rel="stylesheet" href="./css/bootstrap.min.css">
+<link rel="stylesheet" href="./nomalize.css">
+<style>
+    body {
+        height: 3000px;
+    }
+
+    #nav-font {
+        font-size: 1.3em;
+    }
+
+    .navbar .nav>li .dropdown-menu {
+        margin: 0;
+    }
+
+    .navbar .nav>li:hover .dropdown-menu {
+        display: block;
+    }
+
+    .navbar-right>li {
+        padding-left: 30px;
+    }
+
+    .navbar-right>li:hover .dropdown-menu a:hover {
+
+        color: rgb(21, 194, 171);
+        /* transform: translateZ(15px); */
+        border-radius: 30px;
+        transform: scale(1.2);
+    }
+
+    ul .dropdown-menu {
+        background: #0d3155 !important;
+        border-radius: 15px;
+    }
+
+    ul .dropdown-menu>li a {
+        color: whitesmoke;
+    }
+
+    /* ul .dropdown-menu >li a:hover{
+    color: white;
+  } */
+    .dropdown-menu>li>a:hover {
+        transition: all 0.5s;
+        background-color: #0d3155 !important;
+        color: white;
+    }
+
+    #nav-font:hover {
+        color: rgb(21, 194, 171) !important;
+    }
+
+    .bg-dark {
+        background-color: #0d3155 !important;
+        transition: all 5s;
+        opacity: 0.9;
+    }
+
+    .navbar {
+        margin-top: 12px;
+    }
+    .navbar:hover{
+        transition:0.3s ease-in;
+        background-color: #0d3155;
+        opacity: 1 !important;
+    }
+    
+</style>
+
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid ">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    
+                </button>
+                <img src="./school.png" class="navbar-brand  " alt="">
+                <a class="navbar-brand " href="http://www.njmu.edu.cn/" id="nav-font" >NJMU</a>
+                
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- home -->
+                    <li><a href="https://2020.igem.org/Team:NJMU-China" id="nav-font"><span class=""></span> HOME</a>
+                    </li>
+                    <!--PROJECT  -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" id="nav-font">PROJECT <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Contribution"
+                                    id="nav-font">Contribution</a></li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Description"
+                                    id="nav-font">Description</a></li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Design" id="nav-font">Design</a></li>
+
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Experiments"
+                                    id="nav-font">Experiments</a></li>
+
+                        </ul>
+                    </li>
+                    <!-- Experiments -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" id="nav-font">EXPERIMENTS <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Results" id="nav-font">Results</a></li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Notebook" id="nav-font">Notebook</a></li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Protocol" id="nav-font">Protocol</a></li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Parts" id="nav-font">Parts</a></li>
+                        </ul>
+                    </li>
+                    <!-- Models -->
+                    <li><a href="https://2020.igem.org/Team:NJMU-China/Model" id="nav-font"><span class=""></span>
+                            MODELS</a></li>
+                    <!-- HUMAN PRACTICES -->
+                    <li><a href="https://2020.igem.org/Team:NJMU-China/Human_Practices" id="nav-font">HUMAN
+                            PRACTICES</a></li>
+
+
+                    <!-- 下拉栏 awards -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" id="nav-font">AWARDS <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Education" id="nav-font">Education</a>
+                            </li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Entrepreneurship"
+                                    id="nav-font">Entrepreneurship</a></li>
+                        </ul>
+                    </li>
+                    <!-- 下拉栏 team -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                            aria-expanded="false" id="nav-font">TEAM <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Team" id="nav-font">Team</a></li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Attributions"
+                                    id="nav-font">Attributions</a></li>
+                            <li><a href="https://2020.igem.org/Team:NJMU-China/Collaborations"
+                                    id="nav-font">Collaborations</a></li>
+                        </ul>
+                    </li>
+                </ul><!-- 大栏的结束标志 -->
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+</body>
+<script src="./js/jquery.min.js"></script>
+<script src="./js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        var $nav = $(".navbar");
+        $nav.css({'opacity': 0})
+   $(document).scroll(function () {
+     var $nav = $(".navbar");
+     var $window = $(window);
+     $nav.addClass('bg-dark');
+     console.log($window.scrollTop())
+     
+      if ( $window.scrollTop() <= 500 ) {
+         $nav.removeClass('bg-dark');
+         $nav.css({'opacity': 0})
+     }else{
+        $nav.css({'opacity': 0.95})
+     }
+   });
+   $(".navbar-toggler").click(function() {
+    $(".navbar").addClass('bg-dark');
+ });
+     
+ });
+
+   
+
+    
+</script>
+
+</html>
