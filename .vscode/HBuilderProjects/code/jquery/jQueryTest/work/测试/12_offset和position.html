@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2017-07-31 08:57:44
+ * @LastEditTime: 2020-07-29 15:14:04
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \test\.vscode\HBuilderProjects\code\jquery\jQueryTest\work\测试\12_offset和position.html
+--> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +16,6 @@
   * {
     margin: 0px;
   }
-
   .div1 {
     position: absolute;
     width: 200px;
@@ -62,7 +69,7 @@
   $('#btn1').click(function () {
 //    打印 div1 相对于页面左上角的位置
     var offset = $('.div1').offset()
-    console.log(offset.left, offset.top) // 10 20
+    console.log(offset) // 10 20
 //    打印 div2 相对于页面左上角的位置
     offset = $('.div2').offset()
     console.log(offset.left, offset.top) // 10 70
@@ -76,7 +83,7 @@
 
   $('#btn2').click(function () {
     $('.div2').offset({
-      left: 50,
+      left: 250,
       top: 100
     })
   })

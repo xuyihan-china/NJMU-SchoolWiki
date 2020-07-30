@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2017-07-31 08:57:44
+ * @LastEditTime: 2020-07-29 14:36:14
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit$
+ * @FilePath: \test\.vscode\HBuilderProjects\code\jquery\jQueryTest\work\测试\06_层次选择器.html
+--> 
 <!DOCTYPE html>
 <html>
 
@@ -17,7 +25,7 @@
 
 <!--
 层次选择器: 查找子元素, 后代元素, 兄弟元素的选择器
-1. ancestor descendant
+1. ancestor descendant $(ul span)
   在给定的祖先元素下匹配所有的后代元素
 2. parent>child
   在给定的父元素下匹配所有的子元素
@@ -31,10 +39,10 @@
 <script type="text/javascript">
   /*
    需求:
-   1. 选中ul下所有的的span
-   2. 选中ul下所有的子元素span
-   3. 选中class为box的下一个li
-   4. 选中ul下的class为box的元素后面的所有兄弟元素
+   1. 选中ul下所有的的span  $(ul span)
+   2. 选中ul下所有的子元素span $(ul>span)
+   3. 选中class为box的下一个li $(.box+li)
+   4. 选中ul下的class为box的元素后面的所有兄弟元素  $(.box~*)
    */
 
   //1. 选中ul下所有的的span

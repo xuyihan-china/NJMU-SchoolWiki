@@ -1,3 +1,11 @@
+<!--
+ * @Author: your name
+ * @Date: 2017-07-31 08:57:44
+ * @LastEditTime: 2020-07-29 14:44:21
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit 
+ * @FilePath: \test\.vscode\HBuilderProjects\code\jquery\jQueryTest\work\测试\07_过滤选择器.html
+--> 
 <!DOCTYPE html>
 <html>
 
@@ -33,9 +41,9 @@
 
   /*
    需求:
-   1. 选择第一个div
-   2. 选择最后一个class为box的元素
-   3. 选择所有class属性不为box的div
+   1. 选择第一个div $(div:first)
+   2. 选择最后一个class为box的元素 $(.box:last)
+   3. 选择所有class属性不为box的div $(div:not('.box'))
    4. 选择第二个和第三个li元素
    5. 选择内容为BBBBB的li
    6. 选择隐藏的li
@@ -66,7 +74,7 @@
 
   //8. 选择所有属性title为hello的li元素
   $('li[title="hello"]').css('background', 'red')
-
+ $('li[title="hello"]').css('background','blue')
 </script>
 </body>
 
