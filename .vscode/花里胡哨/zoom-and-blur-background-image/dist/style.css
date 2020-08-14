@@ -1,0 +1,46 @@
+* {box-sizing:border-box}
+body, html {padding:0; margin:0} 
+body {background:#232323; color:#fff}
+.opaque {position:absolute; top:0; left:0; right:0; bottom:0; opacity:0; background:#d2d6f1;}
+.lt-ie9 .opaque {display:none;}
+.feature {position:fixed;
+          top:0; z-index:0; width:100%; padding-top:50%; background: url(https://2020.igem.org/wiki/images/c/c1/T--NJMU-China--earth01.jpg) center center no-repeat;
+    -webkit-background-size:100%;
+       -moz-background-size:100%;
+         -o-background-size:100%;
+            background-size:100%;
+    -webkit-box-shadow: 0 -50px 20px -20px #232323 inset;
+       -moz-box-shadow: 0 -50px 20px -20px #232323 inset;
+            box-shadow: 0 -50px 20px -20px #232323 inset;
+            
+  }
+.content {position:relative; z-index:1; padding-top:45%; width:90%; margin:0 auto;}
+
+@media only screen and (min-width:36.250em) {
+  .content {width:60%; padding-top:35% }
+}
+mark{
+  background-color: transparent;
+  color:inherit;
+  background-image: linear-gradient(#f1ff6e,#f1ff6e);
+  background-repeat: no-repeat;
+  background-size: 0% 18%;
+  background-position: 0% 100%;
+}
+mark.animate{
+  
+  animation: 5s highLight ease-in-out forwards;
+  animation-delay: 0.5s;
+}
+@keyframes highLight{
+  to{
+      background-size: 100% 18%;
+  }
+}
+h1{
+  position: fixed;
+  font-size: 40px;
+
+  top:0px;
+  left: 20px;
+}
